@@ -1,0 +1,147 @@
+<style type="text/css">
+ 
+      #preloader  {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: white;
+      z-index: 1000;
+      height: 100%;
+     }
+       
+
+		#homeframe
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+		background-color: whitesmoke;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+	}
+
+	#seacontainer
+	{
+		position: absolute;
+		bottom: 0;
+		width: 250%;
+		z-index: 100;
+		overflow-y:hidden;
+	}
+
+	#sea
+	{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 110%;
+	}
+
+	#boatcontainer
+	{
+		position: absolute;
+		left: 0%;
+		bottom: -3.5%;
+		z-index: 80;
+		-ms-transform: translate(-50%,-50%); /* IE 9 */
+    	-webkit-transform: translate(-50%,-50%); /* Safari */
+    	transform: translate(-50%,-50%);
+	}
+
+	#boat
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	#anchorcontainer
+	{
+		position: absolute;
+		left: 20%;
+		bottom: 30%;
+		z-index: 90;
+		-ms-transform: translate(-50%,-50%); /* IE 9 */
+    	-webkit-transform: translate(-50%,-50%); /* Safari */
+    	transform: translate(-50%,-50%);
+	}
+
+	#anchor
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	#departmentlogo, #facebooklogo, #iitmlogo
+	{
+		background-color: #FFFFFF;
+		width: 100px;
+		height: 100px;
+		margin: .8em auto;
+		background-size: cover;
+		background-repeat: no-repeat;
+ 		background-position: center center;
+  		-webkit-border-radius: 99em;
+  		-moz-border-radius: 99em;
+  		border-radius: 99em;
+  		border: 3px solid #000000;
+  		box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+		-ms-transform: translate(-50%,-50%); /* IE 9 */
+    	-webkit-transform: translate(-50%,-50%); /* Safari */
+    	transform: translate(-50%,-50%);
+  		position: absolute;
+  		top: 50px;
+	}
+
+	#departmentlogo
+	{
+		background-image: url("assets/images/departmentlogo.jpg");
+  		z-index: 130;
+	}
+
+	#iitmlogo
+	{
+		background-image: url("assets/images/iitmlogo.png");
+  		z-index: 120;
+	}
+
+	#facebooklogo
+	{
+		background-image: url("assets/images/facebooklogo.png");
+  		z-index: 110;
+  	}
+
+	#departmentlogo:hover, #iitmlogo:hover, #facebooklogo:hover
+	{
+  		box-shadow: 0 9px 8px #FFFFFF;
+	}
+
+	#waveztextcontainer
+	{
+		-ms-transform: translate(-50%,-50%); /* IE 9 */
+    	-webkit-transform: translate(-50%,-50%); /* Safari */
+    	transform: translate(-50%,-50%);
+    	position: absolute;
+		left: 50%;
+		right: 50%;
+		bottom: 55%;
+		z-index: 80;
+	}
+
+	#waveztext
+	{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+		</style>

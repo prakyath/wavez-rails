@@ -1,0 +1,248 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<link rel="shortcut icon" type="image/png" href="../assets/images/wavezlogo.png">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<style type="text/css">
+			#topnav
+			{
+				height: 75px;
+				background-color: #596876;
+				width: 100%;
+				z-index: 1000;
+				border-style: solid;
+				border-color: #FFFFFF;
+			}
+			.logo
+			{
+				color: #FFFFFF;
+				margin-top: 2%;
+				margin-left: 1%;
+  				display: inline-flex;
+  				font-size: 200%;
+			}
+			.logo-head
+			{
+				font-size: 12px;
+  				font-weight: 300;
+			}
+			.rightbuttons
+			{
+				float: right;
+				margin-top: 11px;
+			}
+			.rightbuttons > a
+			{
+				color: #FFFFFF;
+				font-size: 45%;
+				font-weight: 50%;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+			.rightbuttons > a:hover
+			{
+				color: #B2B2B2;
+			}
+			#buttonbar > button
+			{
+				color: #FFFFFF;
+				background-color: #596876;
+				font-size: 150%;
+
+			}
+			#buttonbar > button:hover
+			{
+				background-color: #FFFFFF;
+				color: #596876;
+				border-style: solid;
+				border-color: #596876;
+				border-width: 3px;
+			}
+			#datasheet
+			{
+				overflow: scroll;
+			}
+			table > tbody
+			{
+				border-style: solid;
+				border-color: #596876;
+				border-width: 2px;
+			}
+			table > thead
+			{
+				border-style: solid;
+				border-color: #596876;
+				border-width: 3px;
+			}
+		</style>
+
+		<title>Wavez 2016: IIT Madras Naval Architecture and Ocean Engineering Department Annual Techno-Cultural Festival</title>
+
+		<!-- meta -->
+			<meta name="description" content="Wavez is the annual techno-cultural festival of the Department of Naval Architecture and Ocean Engineering at IIT Madras. It involves both Technical and Cultural events and is aimed at increasing the intra-department and inter-department interactions.">
+			<meta name="keywords" content="Wavez 2016">
+			<meta name="author" content="Wavez 2016 WebOps Team">
+			<meta charset="UTF-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"/>
+	</head>
+
+	<body>
+
+		<div id="topnav" class="container">
+			<h1 class="logo">Wavez 
+				<span class="logo-head">2016
+				</span>
+			</h1>
+			<h1 class="rightbuttons">
+				<a href=""><i class="fa fa-sign-out"></i> LogOut
+				</a>
+			</h1>
+		</div>
+
+		<br>
+
+		<div class="container" id="buttonbar">
+			<button type="button" class="btn btn-primary btn-block btn-lg" data-toggle="modal" data-target="#newpost">New Post</button>
+		</div>
+		<div class="modal fade" id="newpost" role="dialog">
+    		<div class="modal-dialog">
+
+      			<div class="modal-content">
+        			<div class="modal-header">
+          				<button type="button" class="close" data-dismiss="modal">&times;
+          				</button>
+          				<h4 class="modal-title">New Post
+          				</h4>
+        			</div>
+        			<div class="modal-body">
+        				<form class="form-horizontal" role="form">
+        					<div class="form-group">
+        						<label class="control-label col-sm-2">Title:
+        						</label>
+        						<div class="col-sm-10">
+        							<input class="form-control" id="titleofpost" placeholder="Enter Title">
+        						</div>
+        					</div>
+        					<div class="form-group">
+        						<label class="control-label col-sm-2">Description:
+        						</label>
+        						<div class="col-sm-10">
+        							<textarea class="form-control" rows="5" id="postdescription" placeholder="Description">
+        							</textarea>
+        						</div>
+        					</div>
+
+        					<div class="form-group">
+        						<label class="control-label col-sm-2">Type:
+        						</label>
+
+        						<div class="radio col-sm-10">
+      								<label class="radio-inline">
+      									<input type="radio" name="optradio">Income
+      								</label>
+      								<label class="radio-inline">
+      									<input type="radio" name="optradio" checked="">Expense
+      								</label>
+    							</div>
+    						</div>
+    						<div class="form-group">
+        						<label class="control-label col-sm-2">Amount:
+        						</label>
+        						<div class="col-sm-10">
+        							<input class="form-control" id="titleofpost" placeholder="Enter Amount in Rs">
+        						</div>
+        					</div>
+        					<div class="form-group">
+        						<div class="col-sm-offset-2 col-sm-10">
+        							<button type="submit" class="btn btn-default">Submit
+        							</button>
+      							</div>
+        					</div>
+        				</form>
+        			</div>
+      			</div>
+    		</div>
+  		</div>
+
+		
+		<br>
+
+		<div class="container" id="totaldatasheet">
+			<table class="table table-bordered table-striped table-hover">
+    			<thead>
+      				<tr>
+        				<th>Net Income</th>
+        				<th>Net Expense</th>
+        				<th>Balance</th>
+      				</tr>
+    			</thead>
+    			<tbody>
+      				<tr>
+        				<td>500</td>
+        				<td>400</td>
+        				<td>100</td>
+      				</tr>
+    			</tbody>
+  			</table>
+		</div>
+
+		<br>
+
+		<div class="container" id="datasheet">
+			<table class="table table-bordered table-striped table-hover">
+    			<thead>
+      				<tr>
+        				<th>Date</th>
+        				<th>Name</th>
+        				<th>Title</th>
+        				<th>Income</th>
+        				<th>Expense</th>
+        				<th>Balance</th>
+      				</tr>
+    			</thead>
+    			<tbody>
+      				<tr title="Description" data-toggle="popover" data-trigger="hover" data-content="Blah Blah" data-placement="top">
+        				<td>17th March</td>
+        				<td>Doe</td>
+        				<td>blah</td>
+        				<td>500</td>
+        				<td></td>
+        				<td>500</td>
+      				</tr>
+      				<tr title="Description" data-toggle="popover" data-trigger="hover" data-content="Blah Blah" data-placement="top">
+        				<td>17th March</td>
+        				<td>Doe</td>
+        				<td>blah</td>
+        				<td></td>
+        				<td>200</td>
+        				<td>300</td>
+      				</tr>
+      				<tr title="Description" data-toggle="popover" data-trigger="hover" data-content="Blah Blah" data-placement="top">
+        				<td>17th March</td>
+        				<td>Doe</td>
+        				<td>blah</td>
+        				<td></td>
+        				<td>200</td>
+        				<td>100</td>
+      				</tr>
+    			</tbody>
+  			</table>
+		</div>
+		
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  		<script type="text/javascript">
+  			$(document).ready(function()
+  			{
+    			$('[data-toggle="popover"]').popover();   
+			});
+  		</script>
+	</body>
+
+</html>

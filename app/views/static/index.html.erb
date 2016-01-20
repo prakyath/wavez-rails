@@ -1,0 +1,2802 @@
+
+	<body>
+     
+      <style type="text/css">
+ 
+      #preloader  {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: white;
+      z-index: 1000;
+      height: 100%;
+     }
+       
+
+		#homeframe
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+		background-color: whitesmoke;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+	}
+
+	#seacontainer
+	{
+		position: absolute;
+		bottom: 0;
+		width: 250%;
+		z-index: 100;
+		overflow-y:hidden;
+	}
+
+	#sea
+	{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 110%;
+	}
+
+	#boatcontainer
+	{
+		position: absolute;
+		left: 0%;
+		bottom: -3.5%;
+		z-index: 80;
+		-ms-transform: translate(-50%,-50%); /* IE 9 */
+    	-webkit-transform: translate(-50%,-50%); /* Safari */
+    	transform: translate(-50%,-50%);
+	}
+
+	#boat
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	#anchorcontainer
+	{
+		position: absolute;
+		left: 20%;
+		bottom: 30%;
+		z-index: 90;
+		-ms-transform: translate(-50%,-50%); /* IE 9 */
+    	-webkit-transform: translate(-50%,-50%); /* Safari */
+    	transform: translate(-50%,-50%);
+	}
+
+	#anchor
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	#departmentlogo, #facebooklogo, #iitmlogo
+	{
+		background-color: #FFFFFF;
+		width: 100px;
+		height: 100px;
+		margin: .8em auto;
+		background-size: cover;
+		background-repeat: no-repeat;
+ 		background-position: center center;
+  		-webkit-border-radius: 99em;
+  		-moz-border-radius: 99em;
+  		border-radius: 99em;
+  		border: 3px solid #000000;
+  		box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+		-ms-transform: translate(-50%,-50%); /* IE 9 */
+    	-webkit-transform: translate(-50%,-50%); /* Safari */
+    	transform: translate(-50%,-50%);
+  		position: absolute;
+  		top: 50px;
+	}
+
+	#departmentlogo
+	{
+		background-image: url("assets/departmentlogo.jpg");
+  		z-index: 130;
+	}
+
+	#iitmlogo
+	{
+		background-image: url("assets/iitmlogo.png");
+  		z-index: 120;
+	}
+
+	#facebooklogo
+	{
+		background-image: url("assets/facebooklogo.png");
+  		z-index: 110;
+  	}
+
+	#departmentlogo:hover, #iitmlogo:hover, #facebooklogo:hover
+	{
+  		box-shadow: 0 9px 8px #FFFFFF;
+	}
+
+	#waveztextcontainer
+	{
+		-ms-transform: translate(-50%,-50%); /* IE 9 */
+    	-webkit-transform: translate(-50%,-50%); /* Safari */
+    	transform: translate(-50%,-50%);
+    	position: absolute;
+		left: 50%;
+		right: 50%;
+		bottom: 55%;
+		z-index: 80;
+	}
+
+	#waveztext
+	{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+		</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       	<div id="preloader">
+          <div id="status">&nbsp;</div>
+        </div> 
+
+		<header class="top-header" style="background: rgba(43, 62, 81, 0.77) none repeat scroll 0% 0%; visibilty:visible">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-xs-5 col-sm-3 header-logo">
+						<br>
+						<a href="index.html"> 
+							<h1 class="logo">Wavez <span class="logo-head">2016</span></h1>
+						</a>
+					</div>
+
+					<div class="col-md-9 col-xs-7 col-sm-9">
+						<nav class="navbar navbar-default">
+						  	<div class="container-fluid nav-bar">
+						    <!-- Brand and toggle get grouped for better mobile display -->
+							    <div class="navbar-header">
+							      	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								        <span class="sr-only">Toggle navigation</span>
+								        <span class="icon-bar"></span>
+								        <span class="icon-bar"></span>
+								        <span class="icon-bar"></span>
+							      	</button>
+							    </div>
+
+						    	<!-- Collect the nav links, forms, and other content for toggling -->
+							    <div class="collapse navbar-collapse navbar-def" id="bs-example-navbar-collapse-1">
+							      
+							      	<ul class="nav navbar-nav navbar-right">
+							        	<li>
+											<a href="#wrapper"><i class="fa fa-home"></i> Home</a>
+										</li>
+										<li>
+											<a href="#about"><i class="fa fa-question-circle"></i>About</a>
+										</li>
+										<li>
+											<a href="#portfolio"><i class="fa fa-bookmark"></i> Events</a>
+										</li>
+										<li>
+											<a href="#schedule"><i class="fa fa-clock-o"></i> Schedule</a>
+										</li>
+										<li>
+											<a href="#services"><i class="fa fa-hospital-o"></i>Hospitality</a>
+										</li>
+										<li>
+											<a href="#testimonials"><i class="fa fa-money"></i>Sponsors</a>
+										</li>
+										<li>
+											<a href="#footer"><i class="fa fa-phone"></i>Contact</a>
+										</li>
+										<li>
+											<a><span class="e" style="cursor: pointer"><i class="fa fa-user"></i>Login/Register</span></a>
+										</li>
+
+
+                            
+
+							      	</ul>
+							    </div><!-- /navbar-collapse -->
+						  	
+                                <div class="modal fade eventname" role="dialog" tabindex='-1'>
+    							<div class="modal-dialog">
+    
+      								<div class="modal-content">
+        								<div class="modal-header">
+          									<button type="button" class="close" data-dismiss="modal">&times;
+          									</button>
+          									<h4 class="modal-title">Getting Started
+          									<br>
+ 											<a class="btn btn-info btn-lg livetab elogin" role="button" id="elogin">Login
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eregister" role="button" id="eregister">Register
+ 											</a>&nbsp;
+ 											
+          									</h4>
+        								</div>
+        								<div class="modal-body">
+          									<div id="plogin" class="plogin">
+                                                <i class="fa fa-user" id="login-fa"></i> 
+                                                <div class="row" style="padding-top:50px"> 
+          									        <div style="text-align: center" >
+          									            <input name="enter_email" id="enter_email" class="col-xs-10 col-sm-8 col-sm-offset-2 col-xs-offset-1 col-md-6 col-md-offset-3 " placeholder="Enter email id" type="text" required style="letter-spacing:1px; ">
+          									        </div>
+          									    </div>
+          									    <div class="row" style="padding-bottom:50px"> 
+          									        <div style="text-align: center" >
+          									            <input name="enter_email" id="enter_email" class="col-xs-10 col-sm-8 col-sm-offset-2 col-xs-offset-1 col-md-6 col-md-offset-3 " placeholder="Enter password" type="text" required style="letter-spacing:1px;">
+          									        </div>
+          									    </div>
+                                                <div class="row" id="choose-buttons">
+                                                <a class="btn btn-info btn-lg " role="button" id="login-button" style="margin-top:5px; width:180.063px;">Login
+ 											    </a>
+ 											    <a class="btn btn-info btn-lg " role="button" id="login-button" style="margin-top: 5px;">Forgot Password?
+ 											    </a>
+ 											    </div>
+                                            </div>
+ 											
+
+ 											<div id="pregister" class="phidden pregister row" display="table" >
+                                                <!-- <div class="input-group row" text-align="center" > -->
+                                                    <div class="col-md-offset-1 col-md-4 col-xs-10 col-xs-offset-1">
+                                                      <span class="input-group-addon" width="30px">
+                                                	    <i class="fa fa-user" height="20px" width="20px"></i>
+                                                	    <input name="enter_name" id="enter_name"  placeholder="Enter your First Name" type="text" required style="letter-spacing:1px; margin-left:5px; border-top:none">
+                                                	  </span>
+                                                	</div>
+                                                	
+                                                	<div class="col-md-offset-2 col-md-4 col-xs-10 col-xs-offset-1" style="padding-bottom:40px">
+                                                      <span class="input-group-addon" width="30px">
+                                                	    <i class="fa fa-user" height="20px" width="20px"></i>
+                                                	    <input name="enter_name" id="enter_name"  placeholder="Enter your Second Name" type="text" required style="letter-spacing:1px; margin-left:5px;border-top:none">
+                                                	  </span>
+                                                	</div>
+
+                                                    
+                                                    <div class="col-md-offset-1 col-md-4 col-xs-10 col-xs-offset-1">
+                                                      <span class="input-group-addon" width="30px">
+                                                	    <i class="fa fa-lock" height="20px" width="20px"></i>
+                                                	    <input name="enter_name" id="enter_name"  placeholder="Enter Password" type="text" required style="letter-spacing:1px; margin-left:5px; border-top:none">
+                                                	  </span>
+                                                	</div>
+                                                	
+                                                	<div class="col-md-offset-2 col-md-4 col-xs-10 col-xs-offset-1" style="padding-bottom:40px">
+                                                      <span class="input-group-addon" width="30px">
+                                                	    <i class="fa fa-lock" height="20px" width="20px"></i>
+                                                	    <input name="enter_name" id="enter_name"  placeholder="Confirm Password" type="text" required style="letter-spacing:1px; margin-left:5px; border-top:none">
+                                                	  </span>
+                                                	</div>
+
+
+                                                	<div class="col-md-offset-1 col-md-6 col-xs-10 col-xs-offset-1">
+                                                      <span class="input-group-addon" width="30px">
+                                                	    <i class="fa fa-envelope" height="20px" width="20px"></i>
+                                                	    <input name="enter_name" id="enter_name"  placeholder="Enter a valid email id" type="text" required style="letter-spacing:1px; margin-left:5px; margin-right:9px; border-top:none">
+                                                	  </span>
+                                                	</div>
+                                                	
+                                                	<div class="col-md-offset-1 col-md-3 col-xs-10 col-xs-offset-1" style="padding-bottom:40px">
+                                                      <span class="input-group-addon" width="30px">
+                                                	    <i class="fa fa-mobile" height="20px" width="20px"></i>
+                                                	    <input name="enter_name" id="enter_name"  placeholder="Mobile Number" type="text" required style="letter-spacing:1px; margin-left:5px; border-top:none">
+                                                	  </span>
+                                                	</div>
+
+
+                                                	<div class="col-md-offset-1 col-md-3 col-xs-10 col-xs-offset-1" style="padding-bottom:40px">
+                                                      <span class="input-group-addon" width="30px">
+                                                	    <i class="fa fa-home" height="20px" width="20px"></i>
+                                                	    <input name="enter_name" id="enter_name"  placeholder="Enter your City" type="text" required style="letter-spacing:1px; margin-left:5px; border-top:none">
+                                                	  </span>
+                                                	</div>
+                                                	
+                                                	<div class="col-md-offset-1 col-md-3 col-xs-10 col-xs-offset-1" style="padding-bottom:40px">
+                                                      <span class="input-group-addon" width="30px">
+                                                	    <i class="fa fa-outdent" height="20px" width="20px"></i>
+                                                	    <input name="enter_name" id="enter_name"  placeholder="Enter your age" type="text" required style="letter-spacing:1px; margin-left:5px; border-top:none">
+                                                	  </span>
+                                                	</div>
+
+                                                    <div class="col-md-offset-1 col-md-3  col-xs-offset-2 col-sm-offset-3" style="padding-top:8px; padding-bottom:20px" id="checkboxes">
+                                                    	<form action="">
+                                                            <input type="checkbox" name="gender" value="male">Male
+                                                            <input type="checkbox" name="gender" value="female"  style="margin-left:20px">Female 
+                                                        </form>
+                                                    </div>
+
+                                                    <div id="choose-buttons" text-align="center">
+                                                
+          									    <a class="btn btn-info btn-lg " role="button" id="login-button" style="margin-left:20vw; margin-right:20vw; margin-top:30px;" >Register
+ 											    </a>
+ 											    </div>
+
+
+
+                                                </div>
+
+ 											</div>
+ 											
+        								</div>
+      								</div>
+      
+    							</div>
+ 							</div>
+
+
+
+						  	</div><!-- / .container-fluid -->
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		
+
+		<div id="wrapper">
+			
+			<div id="header" class="content-block">
+				<section class="center">
+					<div id="homeframe">
+		<a href="http://www.doe.iitm.ac.in/blog/naval-architecture/"><div id="departmentlogo"> </div></a>
+		<a href="https://www.iitm.ac.in/"><div id="iitmlogo"> </div></a>
+		<a href="https://www.facebook.com/Wavez.iitm/"><div id="facebooklogo"> </div></a>
+		
+		<!-- <a href="https://www.facebook.com/Wavez.iitm/" id="facebooklogo">facebook</a>
+		 --><!-- <div id="facebooklogo">
+		</div> -->
+		<div id="waveztextcontainer">
+			<img id="waveztext" src="assets/waveztext.png" alt="Wavez 2016">
+		</div>
+		<div id="boatcontainer">
+			<img id="boat" src="assets/wavezboat.png" alt="Wavez logo boat">
+			<div id="anchorcontainer">
+				<img id="anchor" src="assets/wavezanchor.png" alt="Wavez logo anchor">
+			</div>
+		</div>
+		<div id="seacontainer">
+			<img id="sea" src="assets/wavezsea.png" alt="Sea">
+		</div>
+	</div>
+
+	
+				</section>
+			</div><!-- header -->
+
+			<!-- About us -->
+	        <div id="about" class="about-us">
+	            <div class="container about-sec">
+	               
+
+
+	                <header class="block-heading cleafix">
+							<div class="title-page">
+								<p class="main-header ">Wavez 2016</p>
+							    <p class="sub-header">Make sure you know about us</p>
+							</div>
+						</header>
+	                <div class="divide50"></div>
+	                <div class="row">
+	                    <div class="col-md-6  col-xs-12 ">
+                            <img src="assets/department2-new-edited.jpg" style="margin-top:30px !important; border-radius:45px; border: solid " width="100%" height="100%" class="about-img" alt="Ocean Engineering Department, IIT Madras" >
+	                    </div>
+	                    <div class="col-md-6 col-xs-12 text-center">
+	                        <div class="aboutus-item">
+	                            <p class="aboutus-desc ">Wavez is the annual techno-cultural festival of the Department of Ocean Engineering at IIT Madras. It involves both Technical and Cultural events and is aimed at increasing the intra-department and inter-department interactions. It is attended by roughly 500 students of IIT Madras and many more across chennai. It is considered as knowledge hub of Naval architecture and ocean engineering field. The festival provides a solid platform for people to learn about our work and develop an interest, also a place for those in our department to pit their skills and knowledge against each other. </p>
+	                        </div>
+	                    </div>
+	                    
+	                    
+	                </div>
+	            </div>
+	        </div>
+
+			<div class="content-block" id="portfolio">
+				<div class="container portfolio-sec">
+					<header class="block-heading cleafix">
+						<div class="title-page">
+							<p class="main-header">Our Events </p>
+						    <p class="sub-header">Lift your spirits to look at this!</p>
+					    </div>
+					</header>
+
+
+	
+
+
+
+
+     							<section class="block-body" id="ep1">
+
+						<div class="row">
+
+							<div class="col-sm-4">
+								<a class="recent-work e" style="background-image:url(assets/e1.png)" id="e1">
+									<span class="btn btn-o-white">Roboceana</span>
+								</a>
+							</div>
+
+							<!--roboceana modal-->
+							<div class="modal fade eventname" id="roboceana" role="dialog" tabindex='-1'>
+    							<div class="modal-dialog">
+    
+      								<div class="modal-content">
+        								<div class="modal-header">
+          									<button type="button" class="close" data-dismiss="modal">&times;
+          									</button>
+          									<h4 class="modal-title">Roboceana
+          									<br>
+ 											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eprize" role="button" id="eprize">Prize
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eprblmstmt" role="button" id="eprblmstmt">Problem Statement
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
+ 											</a>
+          									</h4>
+        								</div>
+        								<div class="modal-body">
+          									<p id="poverview" class="poverview">
+          									Roboceana is the flagship event of Wavez.<br> The proficiency in handling circuits, motors and 
+
+											manoeuvring is anticipated out of the contestants. The participants’ bots are expected to resist 
+
+											the oncoming waves and stay afloat all through the event. The problem statement would be 
+
+											attention-grabbing with innovative and tough problems. The exciting face-off in a vast pool 
+
+											makes Roboceana, stands as a special attraction.
+
+ 											A workshop for the same would also be conducted.
+
+ 											</p>
+
+ 											<p id="pprize" class="phidden pprize">amount</p>
+ 											<p id="pprblmstmt" class="phidden pprblmstmt">Not Published yet</p>
+ 											<p id="pcontact" class="phidden pcontact">Contact Details</p>
+
+        								</div>
+      								</div>
+      
+    							</div>
+ 							</div>
+							<!--end of roboceana modal-->
+
+
+							<div class="col-sm-4">
+								<a class="recent-work e" style="background-image:url(assets/e2.png)" id="e2">
+									<span class="btn btn-o-white">RC Boats</span>
+								</a>
+							</div>
+
+
+							<!--rcboats modal-->
+							<div class="modal fade eventname" id="rcboats" role="dialog" tabindex='-1'>
+    							<div class="modal-dialog">
+    
+      								<div class="modal-content">
+        								<div class="modal-header">
+          									<button type="button" class="close" data-dismiss="modal">&times;
+          									</button>
+          									<h4 class="modal-title">RC Boats
+          									<br>
+ 											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eprize" role="button" id="eprize">Prize
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eprblmstmt" role="button" id="eprblmstmt">Problem Statement
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
+ 											</a>
+          									</h4>
+        								</div>
+        								<div class="modal-body">
+          									<p id="poverview" class="poverview">
+          									Remote Controlled Boats, a spine-chilling event is another flagship event of Wavez.<br> This is a stop 
+
+											for fun on water. First time ever, Wavez is conducting a racing competition. Participants use 
+
+											their creativity in modifying their boats according to the given problem statement. This is a 
+
+											promising crowd puller as it induces curiosity and thrill in audience.
+ 											</p>
+ 											<p id="pprize" class="phidden pprize">amount</p>
+ 											<p id="pprblmstmt" class="phidden pprblmstmt">Not Published yet</p>
+ 											<p id="pcontact" class="phidden pcontact">Contact Details</p>
+
+
+        								</div>
+      								</div>
+      
+    							</div>
+ 							</div>
+							<!--end of rcboats modal-->
+
+
+							
+                        	<div class="col-sm-4">
+								<a class="recent-work e" style="background-image:url(assets/e19.jpg)">
+									<span class="btn btn-o-white">Autonomous Watercraft</span>
+								</a>
+							</div>
+
+							<!--autonomouswatercraft modal-->
+							<div class="modal fade eventname" id="watercraft" role="dialog" tabindex='-1'>
+    							<div class="modal-dialog">
+    
+      								<div class="modal-content">
+        								<div class="modal-header">
+          									<button type="button" class="close" data-dismiss="modal">&times;
+          									</button>
+          									<h4 class="modal-title">Autonomous Watercraft
+          									<br>
+ 											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eprize" role="button" id="eprize">Prize
+ 											</a>&nbsp;
+ 											<!-- <a class="btn btn-info btn-lg eprblmstmt" role="button" id="eprblmstmt">Problem Statement
+ 											</a>&nbsp; -->
+ 											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
+ 											</a>
+          									</h4>
+        								</div>
+        								<div class="modal-body">
+          									<p id="poverview" class="poverview">
+          									This event takes your arduino skills to next level, where teams compete to build and code crafts which would cross the treacherous arena autonomously.<br> It will be a real thrilling experience to watch these bots perform, so don't miss the fun!
+
+ 											</p>
+
+ 											<p id="pprize" class="phidden pprize">amount</p>
+ 											<p id="pprblmstmt" class="phidden pprblmstmt">Not Published yet</p>
+ 											<p id="pcontact" class="phidden pcontact">Contact Details</p>
+
+        								</div>
+      								</div>
+      
+    							</div>
+ 							</div>
+							
+                        
+
+
+							
+
+						</div>
+
+
+						<div class="row">
+
+
+							<div class="col-sm-4">
+								<a class="recent-work e" style="background-image:url(assets/e4.png)" id="e4">
+									<span class="btn btn-o-white">IDP</span>
+								</a>
+							</div>
+
+							<!--idp modal-->
+							<div class="modal fade eventname" id="idp" role="dialog" tabindex='-1'>
+    							<div class="modal-dialog">
+    
+      								<div class="modal-content">
+        								<div class="modal-header">
+          									<button type="button" class="close" data-dismiss="modal">&times;
+          									</button>
+          									<h4 class="modal-title">IDP
+          									<br>
+ 											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eprize" role="button" id="eprize">Prize
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eprblmstmt" role="button" id="eprblmstmt">Problem Statement
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
+ 											</a>
+          									</h4>
+        								</div>
+        								<div class="modal-body">
+          									<p id="poverview" class="poverview">
+          									This is a platform where participants comprehend a realistic industrial problem.<br> A technical 
+
+											problem encountered by a company from the diverse areas of Design, Building and Repair is to 
+
+											be solved. The most practical and cost-effective solution is a key for this event. The solutions are 
+
+											judged by esteemed of our department.
+ 											</p>
+ 											<p id="pprize" class="phidden pprize">amount</p>
+ 											<p id="pprblmstmt" class="phidden pprblmstmt">Not Published yet</p>
+ 											<p id="pcontact" class="phidden pcontact">Contact Details</p>
+
+        								</div>
+      								</div>
+      
+    							</div>
+ 							</div>
+							<!--end of idp modal-->
+
+
+							<div class="col-sm-4">
+								<a class="recent-work e" style="background-image:url(assets/e5.png)" id="e5">
+									<span class="btn btn-o-white">Standup Comedy</span>
+								</a>
+							</div>
+
+							<!--standupcomedy modal-->
+							<div class="modal fade eventname" id="standupcomedy" role="dialog" tabindex='-1'>
+    							<div class="modal-dialog">
+    
+      								<div class="modal-content">
+        								<div class="modal-header">
+          									<button type="button" class="close" data-dismiss="modal">&times;
+          									</button>
+          									<h4 class="modal-title">Standup Comedy
+          									<br>
+ 											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
+ 											</a>
+          									</h4>
+        								</div>
+        								<div class="modal-body">
+          									<p id="poverview" class="poverview">
+          									This is yet another fantastic event that is being organized for the first time in the history of 
+
+											Wavez.<br> It is where the audience would be provided an enthralling experience by the comedian, 
+
+											performing live. The event would positively stand out as one of the significant highlights of fest.
+ 											
+ 											</p>
+ 											<p id="pcontact" class="phidden pcontact">Contact Details</p>
+
+        								</div>
+      								</div>
+      
+    							</div>
+ 							</div>
+							<!--end of standupcomedy modal-->
+
+							<div class="col-sm-4">
+								<a class="recent-work e" style="background-image:url(assets/e6.png)" id="e6">
+									<span class="btn btn-o-white">Freestyle Solo</span>
+								</a>
+							</div>
+
+							<!--freestylesolo modal-->
+							<div class="modal fade eventname" id="freestylesolo" role="dialog" tabindex='-1'>
+    							<div class="modal-dialog">
+    
+      								<div class="modal-content">
+        								<div class="modal-header">
+          									<button type="button" class="close" data-dismiss="modal">&times;
+          									</button>
+          									<h4 class="modal-title">Freestyle Solo
+          									<br>
+ 											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eprize" role="button" id="eprize">Prize
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg erules" role="button" id="erules">Rules
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
+ 											</a>
+          									</h4>
+        								</div>
+        								<div class="modal-body">
+          									<p id="poverview" class="poverview">
+          									It's a place where you find yourself and loose yourself at the same time.<br> Whether it is 
+
+											contemporary or hip-hop we have it all. The audience witness an exciting dance battle where the 
+
+											participants go neck to neck to come on top. The participation is immense, not only from IIT 
+
+											Madras but also from colleges in and around Chennai.
+
+ 											</p>
+ 											<p id="pprize" class="phidden pprize">amount</p>
+ 											<p id="prules" class="phidden prules">Will be published soon.</p>
+ 											<p id="pcontact" class="phidden pcontact">Contact Details</p>
+
+        								</div>
+      								</div>
+      
+    							</div>
+ 							</div>
+							<!--end of freestylesolo modal-->
+
+
+						</div>
+
+
+					</section>
+
+
+
+
+      						
+
+      					
+
+
+
+
+      						<section class="block-body" id="ep2">
+
+						<div class="row">
+
+							<div class="col-sm-4">
+								<a class="recent-work e" style="background-image:url(assets/e7.png)" id="e7">
+									<span class="btn btn-o-white">Treasure Hunt</span>
+								</a>
+							</div>
+
+							<!--treasurehunt modal-->
+							<div class="modal fade eventname" id="treasurehunt" role="dialog" tabindex='-1'>
+    							<div class="modal-dialog">
+    
+      								<div class="modal-content">
+        								<div class="modal-header">
+          									<button type="button" class="close" data-dismiss="modal">&times;
+          									</button>
+          									<h4 class="modal-title">Treasure Hunt
+          									<br>
+ 											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eprize" role="button" id="eprize">Prize
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
+ 											</a>
+          									</h4>
+        								</div>
+        								<div class="modal-body">
+          									<p id="poverview" class="poverview">
+          									Treasure Hunt is an exciting event that brings out the Sherlock in the participants.<br> Secret spots 
+
+											with hidden clues boost up their energy and enthusiasm to discover them. They come in teams 
+
+											and hunt for the mystery places all evening.
+ 											</p>
+ 											<p id="pprize" class="phidden pprize">amount</p>
+ 											<p id="pcontact" class="phidden pcontact">Contact Details</p>
+
+        								</div>
+      								</div>
+      
+    							</div>
+ 							</div>
+							<!--end of treasurehunt modal-->
+
+
+							<div class="col-sm-4">
+								<a class="recent-work e" style="background-image:url(assets/e8.png)" id="e8">
+									<span class="btn btn-o-white">Splash</span>
+								</a>
+							</div>
+
+
+							<!--splash modal-->
+							<div class="modal fade eventname" id="splash" role="dialog" tabindex='-1'>
+    							<div class="modal-dialog">
+    
+      								<div class="modal-content">
+        								<div class="modal-header">
+          									<button type="button" class="close" data-dismiss="modal">&times;
+          									</button>
+          									<h4 class="modal-title">Splash
+          									<br>
+ 											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eprize" role="button" id="eprize">Prize
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg erules" role="button" id="erules">Rules
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
+ 											</a>
+          									</h4>
+        								</div>
+        								<div class="modal-body">
+          									<p id="poverview" class="poverview">
+          									We believe that everyone has an artist within & what better a platform to prove it than at 
+
+											Wavez?<br> Splash, a painting competition organised by Wavez is known to let your creativity run 
+
+											berserk. We witness a large and diverse footfall of participants owing to no age 
+
+											boundaries. Splash also attracts a huge audience making it a major cultural event of Wavez.
+ 											
+ 											</p>
+ 											<p id="pprize" class="phidden pprize">amount</p>
+ 											<p id="prules" class="phidden prules">Will be published soon.</p>
+ 											<p id="pcontact" class="phidden pcontact">Contact Details</p>
+
+        								</div>
+      								</div>
+      
+    							</div>
+ 							</div>
+							<!--end of splash modal-->
+
+
+							<div class="col-sm-4">
+								<a class="recent-work e" style="background-image:url(assets/e9.png)" id="e9">
+									<span class="btn btn-o-white">Kryptx</span>
+								</a>
+							</div>
+
+
+							<!--kryptx modal-->
+							<div class="modal fade eventname" id="kryptx" role="dialog" tabindex='-1'>
+    							<div class="modal-dialog">
+    
+      								<div class="modal-content">
+        								<div class="modal-header">
+          									<button type="button" class="close" data-dismiss="modal">&times;
+          									</button>
+          									<h4 class="modal-title">Kryptx
+          									<br>
+ 											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eprize" role="button" id="eprize">Prize
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg erules" role="button" id="erules">Rules
+ 											</a>&nbsp;
+          									</h4>
+        								</div>
+        								<div class="modal-body">
+          									<p id="poverview" class="poverview">
+          									We need a tool to publicize something.<br> So, here is our tool, an online quizzing event called 
+
+											Kryptx. Codes and puzzles are put up on Wavez Facebook page for the participants to crack them 
+
+											and win cash prize. Being an online event, people can participate from anywhere in Chennai.
+ 											
+
+ 											
+ 											</p>
+ 											<p id="pprize" class="phidden pprize">amount</p>
+ 											<p id="prules" class="phidden prules">Will be published soon.</p>
+
+        								</div>
+      								</div>
+      
+    							</div>
+ 							</div>
+							<!--end of kryptx modal-->
+
+						</div>
+
+
+						<div class="row">
+
+
+							<div class="col-sm-4">
+								<a class="recent-work e" style="background-image:url(assets/e10.png)" id="e10">
+									<span class="btn btn-o-white">Gamedrome</span>
+								</a>
+							</div>
+
+							<!--gamedrome modal-->
+							<div class="modal fade eventname" id="gamedrome" role="dialog" tabindex='-1'>
+    							<div class="modal-dialog">
+    
+      								<div class="modal-content">
+        								<div class="modal-header">
+          									<button type="button" class="close" data-dismiss="modal">&times;
+          									</button>
+          									<h4 class="modal-title">Gamedrome
+          									<br>
+ 											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eprize" role="button" id="eprize">Prize
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg erules" role="button" id="erules">Rules
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
+ 											</a>
+          									</h4>
+        								</div>
+        								<div class="modal-body">
+          									<p id="poverview" class="poverview">
+          									For all the gamers out there, we conduct this breathtaking event called Gamedrome.<br> Trending 
+
+											games like FIFA, Counter Strike and Need for Speed are held with exciting cash prizes. This 
+
+											complete package stretches over the entire festival.
+
+ 											</p>
+ 											<p id="pprize" class="phidden pprize">amount</p>
+ 											<p id="prules" class="phidden prules">Will be published soon.</p>
+ 											<p id="pcontact" class="phidden pcontact">Contact Details</p>
+
+        								</div>
+      								</div>
+      
+    							</div>
+ 							</div>
+							<!--end of gamedrome modal-->
+
+
+							<div class="col-sm-4">
+								<a class="recent-work e" style="background-image:url(assets/e11.png)" id="e11">
+									<span class="btn btn-o-white">Project X</span>
+								</a>
+							</div>
+
+							<!--projectx modal-->
+							<div class="modal fade eventname" id="projectx" role="dialog" tabindex='-1'>
+    							<div class="modal-dialog">
+    
+      								<div class="modal-content">
+        								<div class="modal-header">
+          									<button type="button" class="close" data-dismiss="modal">&times;
+          									</button>
+          									<h4 class="modal-title">Project X
+          									<br>
+ 											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eprize" role="button" id="eprize">Prize
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg erules" role="button" id="erules">Rules
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
+ 											</a>
+          									</h4>
+        								</div>
+        								<div class="modal-body">
+          									<p id="poverview" class="poverview">
+          									Project X is a challenging event in which participants experience the thrill of creating something 
+
+											out of nothing.<br> They make real life entity in small scale with basic materials like ice cream sticks, 
+
+											straws, glue, thread etc. This event is definitely a crowd puller because of its simplicity.
+
+
+ 											
+ 											</p>
+ 											<p id="pprize" class="phidden pprize">amount</p>
+ 											<p id="prules" class="phidden prules">Will be published soon.</p>
+ 											<p id="pcontact" class="phidden pcontact">Contact Details</p>
+
+        								</div>
+      								</div>
+      
+    							</div>
+ 							</div>
+							<!--end of projectx modal-->
+
+							<div class="col-sm-4">
+								<a class="recent-work e" style="background-image:url(assets/e12.png)" id="e12">
+									<span class="btn btn-o-white">Wavez Quiz</span>
+								</a>
+							</div>
+
+							<!--wavezquiz modal-->
+							<div class="modal fade eventname" id="wavezquiz" role="dialog" tabindex='-1'>
+    							<div class="modal-dialog">
+    
+      								<div class="modal-content">
+        								<div class="modal-header">
+          									<button type="button" class="close" data-dismiss="modal">&times;
+          									</button>
+          									<h4 class="modal-title">Wavez Quiz
+          									<br>
+ 											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eprize" role="button" id="eprize">Prize
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
+ 											</a>
+          									</h4>
+        								</div>
+        								<div class="modal-body">
+          									<p id="poverview" class="poverview">
+          									Wavez Quiz is one of the most anticipated events.<br> People come not only from IIT madras but also 
+
+											from different colleges in and around Chennai and participate in this event. It is a great 
+
+											opportunity for quizzing enthusiasts. Participants shoot their answers and compete with raging 
+
+											speed. 
+
+
+ 											</p>
+ 											<p id="pprize" class="phidden pprize">amount</p>
+ 											<p id="pcontact" class="phidden pcontact">Contact Details</p>
+
+        								</div>
+      								</div>
+      
+    							</div>
+ 							</div>
+							<!--end of wavezquiz modal-->
+
+
+						</div>
+
+
+					</section>
+
+
+
+
+      					
+    
+      					
+
+
+
+      					<section class="block-body" id="ep3">
+
+						<div class="row">
+
+							<div class="col-sm-4">
+								<a class="recent-work e" style="background-image:url(assets/e13.png)" id="e13">
+									<span class="btn btn-o-white">Open House</span>
+								</a>
+							</div>
+
+							<!--openhouse modal-->
+							<div class="modal fade eventname" id="openhouse" role="dialog" tabindex='-1'>
+    							<div class="modal-dialog">
+    
+      								<div class="modal-content">
+        								<div class="modal-header">
+          									<button type="button" class="close" data-dismiss="modal">&times;
+          									</button>
+          									<h4 class="modal-title">Open House
+          									<br>
+ 											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
+ 											</a>
+          									</h4>
+        								</div>
+        								<div class="modal-body">
+          									<p id="poverview" class="poverview">
+          									Open house is all about providing invaluable exposure to school students about our field and the 
+
+											ongoing works in the diversified field of Naval Architecture.<br> This helps in developing interest and 
+
+											passion for our department. All new developments done by the faculty and the exciting stuff we 
+
+											do in the department will be exhibited.
+
+ 											
+ 											</p>
+ 											<p id="pcontact" class="phidden pcontact">Contact Details</p>
+
+        								</div>
+      								</div>
+      
+    							</div>
+ 							</div>
+							<!--end of openhouse modal-->
+
+
+							<div class="col-sm-4">
+								<a class="recent-work e" style="background-image:url(assets/e14.png)" id="e14">
+									<span class="btn btn-o-white">Daily Events</span>
+								</a>
+							</div>
+
+
+							<!--dailyevents modal-->
+							<div class="modal fade eventname" id="dailyevents" role="dialog" tabindex='-1'>
+    							<div class="modal-dialog">
+    
+      								<div class="modal-content">
+        								<div class="modal-header">
+          									<button type="button" class="close" data-dismiss="modal">&times;
+          									</button>
+          									<h4 class="modal-title">Daily Events
+          									<br>
+ 											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eprize" role="button" id="eprize">Prize
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
+ 											</a>
+          									</h4>
+        								</div>
+        								<div class="modal-body">
+          									<p id="poverview" class="poverview">
+          									Daily events is a collection of puzzles, crosswords and other brain teasers that keep the 
+
+											attendees engrossed throughout their presence at the festival.<br> Everyone at the fest is seen 
+
+											racking their brains over these little pieces of intriguing puzzles having their bit of enjoyment.
+
+ 											
+ 											</p>
+ 											<p id="pprize" class="phidden pprize">amount</p>
+ 											<p id="pcontact" class="phidden pcontact">Contact Details</p>
+
+        								</div>
+      								</div>
+      
+    							</div>
+ 							</div>
+							<!--end of dailyevents modal-->
+
+
+							<div class="col-sm-4">
+								<a class="recent-work e" style="background-image:url(assets/e15.png)" id="e15">
+									<span class="btn btn-o-white">Lectures</span>
+								</a>
+							</div>
+
+
+							<!--lectures modal-->
+							<div class="modal fade eventname" id="lectures" role="dialog" tabindex='-1'>
+    							<div class="modal-dialog">
+    
+      								<div class="modal-content">
+        								<div class="modal-header">
+          									<button type="button" class="close" data-dismiss="modal">&times;
+          									</button>
+          									<h4 class="modal-title">Lectures
+          									<br>
+ 											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eschedule" role="button" id="eschedule">Schedule
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
+ 											</a>
+          									</h4>
+        								</div>
+        								<div class="modal-body">
+          									<p id="poverview" class="poverview">
+          									Class room lectures are usually boring, but lectures are never the same.<br> Wavez presents you 
+
+											lectures by innovators and successful engineers from the field of Naval Architecture and Ocean 
+
+											engineering.
+
+ 											
+ 											</p>
+ 											<p id="pschedule" class="phidden pschedule">Will be published soon.</p>
+ 											<p id="pcontact" class="phidden pcontact">Contact Details</p>
+
+        								</div>
+      								</div>
+      
+    							</div>
+ 							</div>
+							<!--end of lectures modal-->
+
+						</div>
+
+
+						<div class="row">
+
+
+							<div class="col-sm-4">
+								<a class="recent-work e" style="background-image:url(assets/e16.png)" id="e16">
+									<span class="btn btn-o-white">Workshops</span>
+								</a>
+							</div>
+
+							<!--workshops modal-->
+							<div class="modal fade eventname" id="workshops" role="dialog" tabindex='-1'>
+    							<div class="modal-dialog">
+    
+      								<div class="modal-content">
+        								<div class="modal-header">
+          									<button type="button" class="close" data-dismiss="modal">&times;
+          									</button>
+          									<h4 class="modal-title">Workshops
+          									<br>
+ 											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eschedule" role="button" id="eschedule">Schedule
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eregister" role="button" id="eregister">Register
+ 											</a>
+          									</h4>
+        								</div>
+        								<div class="modal-body">
+          									<p id="poverview" class="poverview">
+          									Ocean Engineering has a diverse range of software for Design, Construction and Hydrodynamics 
+
+											of ships.<br> Workshops have always been a tool for the participants to get an insight into them.
+ 											</p>
+ 											<p id="pschedule" class="phidden pschedule">Will be published soon.</p>
+ 											<p id="pregister" class="phidden pregister">Not started yet.</p>
+ 											<p id="pcontact" class="phidden pcontact">Contact Details</p>
+
+        								</div>
+      								</div>
+      
+    							</div>
+ 							</div>
+							<!--end of workshops modal-->
+
+
+							<div class="col-sm-4">
+								<a class="recent-work e" style="background-image:url(assets/e17.png)" id="e17">
+									<span class="btn btn-o-white">Marine Cleanup</span>
+								</a>
+							</div>
+
+							<!--marinecleanup modal-->
+							<div class="modal fade eventname" id="marinecleanup" role="dialog" tabindex='-1'>
+    							<div class="modal-dialog">
+    
+      								<div class="modal-content">
+        								<div class="modal-header">
+          									<button type="button" class="close" data-dismiss="modal">&times;
+          									</button>
+          									<h4 class="modal-title">Marine Cleanup
+          									<br>
+ 											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eschedule" role="button" id="eschedule">Schedule
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
+ 											</a>
+          									</h4>
+        								</div>
+        								<div class="modal-body">
+          									<p id="poverview" class="poverview">
+          									This is an act by Wavez for a noble cause.<br> By carrying out a marine cleanup on foot you can stop 
+
+											litter travelling out to sea as well as making the beach a nicer place for everyone to safely enjoy. 
+
+											About 100 people from Ocean Engineering Department remove litter on the Shore line of 
+
+											Chennai Beach.
+
+
+ 											
+ 											</p>
+ 											<p id="pschedule" class="phidden pschedule">Will be published soon.</p>
+ 											<p id="pcontact" class="phidden pcontact">Contact Details</p>
+
+        								</div>
+      								</div>
+      
+    							</div>
+ 							</div>
+							<!--end of marinecleanup modal-->
+
+							<div class="col-sm-4">
+								<a class="recent-work e" style="background-image:url(assets/e18.png)" id="e18">
+									<span class="btn btn-o-white">Online T-Shirt Design</span>
+								</a>
+							</div>
+
+							<!--otsdesign modal-->
+							<div class="modal fade eventname" id="otsdesign" role="dialog" tabindex='-1'>
+    							<div class="modal-dialog">
+    
+      								<div class="modal-content">
+        								<div class="modal-header">
+          									<button type="button" class="close" data-dismiss="modal">&times;
+          									</button>
+          									<h4 class="modal-title">Online T-Shirt Design
+          									<br>
+ 											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eprize" role="button" id="eprize">Prize
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg erules" role="button" id="erules">Rules
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
+ 											</a>
+          									</h4>
+        								</div>
+        								<div class="modal-body">
+          									<p  id="poverview" class="poverview">
+          									Online T-shirt Design is a publicity event where the participants are given the task of designing 
+
+											the shirts for Wavez.<br> The creativity of the participants is put to test and the best design is 
+
+											selected to represent Wavez.
+
+
+ 											
+ 											</p>
+ 											<p id="pprize" class="phidden pprize">amount</p>
+ 											<p id="prules" class="phidden prules">Will be published soon.</p>
+ 											<p id="pcontact" class="phidden pcontact">Contact Details</p>
+
+        								</div>
+      								</div>
+      
+    							</div>
+ 							</div>
+							<!--end of otsdesign modal-->
+
+
+						</div>
+                        
+
+                        <div class="row">
+                        	<div class="col-sm-4">
+								<a class="recent-work e" style="background-image:url(assets/e3.png)" id="e3">
+									<span class="btn btn-o-white">Research Expo</span>
+								</a>
+							</div>
+
+
+							<!--researchexpo modal-->
+							<div class="modal fade eventname" id="researchexpo" role="dialog" tabindex='-1'>
+    							<div class="modal-dialog">
+    
+      								<div class="modal-content">
+        								<div class="modal-header">
+          									<button type="button" class="close" data-dismiss="modal">&times;
+          									</button>
+          									<h4 class="modal-title">Research Expo
+          									<br>
+ 											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
+ 											</a>
+          									</h4>
+        								</div>
+        								<div class="modal-body">
+          									<p id="poverview" class="poverview">
+          									Expo provides both graduate and undergraduates with the opportunity to share their research 
+
+											with a larger audience.<br> This event showcases the work and research done by our scholars in 
+
+											various fields of Naval Architecture & Ocean Engineering.
+ 											
+ 											</p>
+ 											<p id="pcontact" class="phidden pcontact">Contact Details</p>
+
+        								</div>
+      								</div>
+      
+    							</div>
+ 							</div>
+							<!--end of researchexpo modal-->
+							
+                        </div>
+
+					</section>
+
+
+
+				</div>
+			</div><!-- #events -->
+
+
+
+<!---schedule tab- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - -->
+
+			<div class="content-block parallax" id="schedule">
+				<div class="container services-sec">
+					<div class="title-page">
+						<p class="main-header">Schedule</p>
+					    <p class="sub-header">A little about what we do</p>
+					</div>
+					<section class="block-body">
+						<div class="row">
+							<div class="col-md-4 col-lg-4 col-xs-12 col-sm-12 dtgo">
+								<div id="sglass">
+									<p class="dtg adtg">
+										
+								    </p>
+    								<div id="swater">
+    								</div>
+								</div>
+							</div>
+
+							
+							
+
+
+						
+							
+							<div class="col-md-8 col-lg-8 col-xs-12 col-sm-12">
+									<div class="scheduletabd container">
+
+										<h1 class="hd1">Day 1</h1>
+										<h1 class="hd2">Day 2</h1>
+
+
+
+
+
+
+
+										<table class="table table-hover table-condensed schedtab">
+    										<thead>
+     	 										<tr>
+        											<th class="schedtabe">Event</th>
+        											<th>Time</th>
+      											</tr>
+    										</thead>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    										<tbody class="schedtabb1">
+
+      											<tr>
+        											<td class="schedtabe">Open House</td>
+        											<td>9:00 - 10:30</td>
+      											</tr>
+
+      											<tr>
+        											<td class="schedtabe">Splash</td>
+        											<td>10:30 - 11:30</td>
+      											</tr>
+
+      											<tr>
+        											<td class="schedtabe">Wavez Quiz Prelims</td>
+        											<td>11:30 - 12:30</td>
+      											</tr>
+
+      											<tr>
+        											<td class="schedtabe">RC Boats</td>
+        											<td>1:00 - 3:00</td>
+      											</tr>
+
+      											<tr>
+        											<td class="schedtabe">Gamedrome</td>
+        											<td>2:30 - 5:30</td>
+      											</tr>
+
+      											<tr>
+        											<td class="schedtabe">Standup Comedy</td>
+        											<td>4:00 - 6:00</td>
+      											</tr>
+     									 		
+    										</tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    										<tbody class="schedtabb2">
+      											<tr>
+        											<td class="schedtabe">Research Expo</td>
+        											<td>9:00 - 11:00</td>
+      											</tr>
+
+      											<tr>
+        											<td class="schedtabe">IDP</td>
+        											<td>11:30 - 12:30</td>
+      											</tr>
+
+      											<tr>
+        											<td class="schedtabe">Project X</td>
+        											<td>11:00 - 12:00</td>
+      											</tr>
+
+      											<tr>
+        											<td class="schedtabe">Wavez Quiz Finals</td>
+        											<td>12:00 - 12:30</td>
+      											</tr>
+
+      											<tr>
+        											<td class="schedtabe">Roboceana</td>
+        											<td>1:00 - 3:00</td>
+      											</tr>
+
+      											<tr>
+        											<td class="schedtabe">Free Style Solo</td>
+        											<td>3:00 - 4:30</td>
+      											</tr>
+
+      											<tr>
+        											<td class="schedtabe">Gamedrome</td>
+        											<td>2:30 - 5:30</td>
+      											</tr>
+
+      											<tr>
+        											<td class="schedtabe">Treasure Hunt</td>
+        											<td>4:30 - 6:00</td>
+      											</tr>
+     									 		
+    										</tbody>
+  										</table>
+
+
+
+
+
+
+
+  										<br>
+  										<br>
+  										<h1 class="shedresp">Day 2</h1>
+  										<table class="table table-hover table-condensed shedresp">
+    										<thead>
+     	 										<tr>
+        											<th class="schedtabe">Event</th>
+        											<th>Time</th>
+      											</tr>
+    										</thead>
+
+    										<tbody>
+      											<tr>
+        											<td class="schedtabe">Research Expo</td>
+        											<td>9:00 - 11:00</td>
+      											</tr>
+
+      											<tr>
+        											<td class="schedtabe">IDP</td>
+        											<td>11:30 - 12:30</td>
+      											</tr>
+
+      											<tr>
+        											<td class="schedtabe">Project X</td>
+        											<td>11:00 - 12:00</td>
+      											</tr>
+
+      											<tr>
+        											<td class="schedtabe">Wavez Quiz Finals</td>
+        											<td>12:00 - 12:30</td>
+      											</tr>
+
+      											<tr>
+        											<td class="schedtabe">Roboceana</td>
+        											<td>1:00 - 3:00</td>
+      											</tr>
+
+      											<tr>
+        											<td class="schedtabe">Free Style Solo</td>
+        											<td>3:00 - 4:30</td>
+      											</tr>
+
+      											<tr>
+        											<td class="schedtabe">Gamedrome</td>
+        											<td>2:30 - 5:30</td>
+      											</tr>
+
+      											<tr>
+        											<td class="schedtabe">Treasure Hunt</td>
+        											<td>4:30 - 6:00</td>
+      											</tr>
+     									 		
+    										</tbody>
+  										</table>
+
+									</div>
+							</div>
+
+							<div class="col-md-8" id="schedbutton">
+									<div class="scheduletab container">
+								
+										<div id="d1" class="col-md-4">
+											<a class="btn btn-o btn-lg disabled">Day 1
+											</a>
+										</div>
+										<div id="d2" class="col-md-4">
+											<a class="btn btn-o btn-lg">Day 2
+											</a>
+										</div>
+
+									</div>
+							</div>
+
+						
+						</div>
+					</section>
+				</div>
+			</div>
+
+
+
+
+
+
+
+			<!-- #schedule -->
+
+			<div class="content-block parallax" id="services">
+				<div class="container services-sec">
+					<div class="title-page" >
+						<p class="main-header text-center" style="font-weight:bold; margin-top:10px">Reaching IIT Madras</p>
+					    <!-- <p class="sub-header">A little about what we do</p> -->
+					</div>
+					<section class="block-body">
+						<div class="row">
+							<div class="col-md-4" style="padding-right: 20px">
+								<div class="service">
+									<div class="bar">
+										<i class="fa fa-train"></i>
+									</div>
+									<h2 class="service-head">From Chennai Central</h2>
+									<p>Catch 18B or 19S buses to Gandhi Mandapam/IIT Madras or take 1LSS, 4LSS, 6LSS, 6A to Adyar and from the Adyar signal you can get to IIT easily by bus.</p>
+									<h2 class="service-head">From Egmore</h2>
+									<p>Catch 23C which is direct bus to IIT Madras. Or take any one of 23E, 23A or 23G to Adyar from where there are number of buses to IIT Madras.</p>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="service">
+									<div class="bar">
+										<i class="fa fa-bus"></i>
+									</div>	
+									<h2 class="service-head">From CMBT</h2>
+									<p>Catch the bus PP21 to IIT Madras or 21G to Gandhi Mandapam.</p>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="service">
+									<div class="bar">
+										<i class="fa fa-plane"></i>
+									</div>	
+									<h2 class="service-head">Airport</h2>
+									<p>Catch the bus PP21 to IIT Madras or 21G to Gandhi Mandapam.</p>
+								</div>
+							</div>
+						</div>
+                  </section>					
+         </div>				
+			<!-- car animation -->
+			<div class="country-wrap">
+
+  <div class="street">
+    <div class="car">
+      <div class="car-base"></div>
+      <div class="car-body">
+        <div class="car-top-back">
+          <div class="back-curve"></div>
+        </div>
+        <div class="car-gate"></div>
+        <div class="car-top-front">
+          <div class="wind-sheild"></div>
+        </div>
+        <div class="bonet-front"></div>
+        <div class="stepney"></div>
+      </div>
+      <div class="boundary-tyre-cover">
+        <div class="boundary-tyre-cover-back-bottom"></div>
+        <div class="boundary-tyre-cover-inner"></div>
+      </div>
+      <div class="tyre-cover-front">
+        <div class="boundary-tyre-cover-inner-front"></div>
+      </div>
+      <div class="base-axcel">
+
+      </div>
+      <div class="front-bumper"></div>
+      <div class="tyre">
+        <div class="gap"></div>
+      </div>
+      <div class="tyre front">
+        <div class="gap"></div>
+      </div>
+      <div class="car-shadow"></div>
+    </div>
+  </div>
+  <div class="street-stripe"></div>
+  </div>
+
+</div>
+<!-- car animation ends -->
+
+
+
+
+
+
+			</div><!-- #services -->
+
+			<div class="content-block" id="testimonials">
+				<div class="container testimonial-sec">
+
+					<header class="block-heading cleafix">
+						<div class="title-page  pull-left">
+							<p class="main-header">Previous Sponsors</p>
+						    <p class="sub-header">Helping WAVEZ 2016 happen</p>
+						</div>
+					</header>
+					
+					<section class="block-body">
+						<div class="row">
+							<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+							  	<!-- Indicators -->
+							  	<ol class="carousel-indicators">
+								    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+								    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+								    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+							  	</ol><!-- /.carousel-indicators -->
+
+
+							  	<!-- Wrapper for slides -->
+							  	<div class="carousel-inner" role="listbox">
+								    <div class="item active">
+								      	<div class="img-center">	
+								      		<div class="col-md-6" style="padding-bottom:40px"><img class="img-circle circular-img" width="180" height="220" src="assets/spon1.jpg" alt="Garware-Wall Ropes Limited"></div>
+								      		<div class="col-md-6" style="padding-bottom:40px"><img class="img-circle circular-img" height="220" src="assets/spon2.jpg" alt="Larsen & Toubro"></div>
+								      	</div>	
+								      	<!-- <h3>
+								      		Create a website that you are gonna be proud of. Be it Business, Portfolio, Photography, eCommerce & much more.
+								      	</h3> -->
+								      
+								    </div><!-- /.item -->
+								    <div class="item">
+								    	<div class="img-center">	
+								      		<div class="col-md-6" style="padding-bottom:40px; border-radius:10%"><img class="img-circle circular-img" height="220" src="assets/spon3.png" alt="Safeway Dredging Enterprises"></div>
+								      		<div class="col-md-6" style="padding-bottom:40px; border-radius:10%"><img class="img-circle circular-img" height="220" width="220" src="assets/spon4.png" alt="Mars Synergy Geotech Pvt Ltd"></div>
+								      	</div>
+								       	
+								      
+								    </div><!-- /.item -->
+								    <div class="item">
+								    	<div class="img-center">	
+								      		<div class="col-md-6" style="padding-bottom:40px"><img class="img-circle circular-img"  height="170" src="assets/spon5.jpg" alt="Rigwise Rigging Services Limited"></div>
+								      		<div class="col-md-6" style="padding-bottom:40px"><img class="img-circle circular-img"  height="220" src="assets/spon6.jpeg" alt="Vedam Design & Technical Consultancy Pvt Ltd."></div>
+								        </div>
+								       	
+								    </div><!-- /.item -->
+							  	</div><!-- /.carousel-inner -->
+							</div><!-- /.carousel slide -->
+						</div>	
+					</section><!-- /.block-body -->
+				</div>
+			</div><!-- /#testimonials -->
+                                             
+			<div class="content-block" id="footer">
+				<div class="container">
+	                <div class=" col-sm-12" style="text-align:center"><h1 style="color:#FFFFFF; margin-top: 60px"><b>Ping us for any queries</b></h1></div>
+	                
+                                         
+                    <div class="row">
+							<div class="col-sm-6 col-sm-offset-0  blog-post " style="text-align:center" >
+								
+								<h1 class="footer-block-top  " >Secretary</h1>
+								<ul>
+								    <h4 style="color:#FFFFFF" >Srinadh Nidadana</h4>
+								    <img  src="assets/srinadh.jpg" style="margin-bottom:5px; border-radius:50%" width="150" height="150" alt="Srinadh Nidadana, Secratary Wavez 2016">
+									    <li class="address-sub ">
+									        <i class="fa fa-phone" style="margin-bottom:2px"></i> +918438980903</li>
+									    <li>   
+									        <i class="fa fa-envelope-o"></i> <a href="">secretary@wavez.org.in</a></li>
+									    
+							</div>
+
+                           <!--  <div class="col-md-1">
+                            	<h1 class="footer-block animated bounceInDown">Secretary</h1>
+								
+                            </div> -->
+
+
+                            <div class="col-sm-6 col-sm-offset-0  blog-post" style="text-align:center">
+								
+								<h1 class="footer-block-top">Secretary</h1>
+								<ul>
+
+								    <h4 style="color:#FFFFFF">Karanam Gowtham</h4>
+								    <img  src="assets/gowtham2.jpg" style="margin-bottom:5px; border-radius:50%" width="150" height="150" alt="Karanam Gowtham, Secratary Wavez 2016">
+
+									    <li class="address-sub">
+									        <i class="fa fa-phone" style="margin-bottom:2px"></i> +91967719273</li>
+									    <li >   
+									        <i class="fa fa-envelope-o"></i> <a href="">secretary@wavez.org.in</a></li>
+                            </div>
+
+					</div> 
+
+
+	                <div class=" col-sm-12" style="text-align:center"><h1 class="footer-block-top ">Spons Team</h1></div>			
+					<div class="row">
+							<div class=" col-sm-4 col-sm-offset-2  blog-post" style="text-align:center" >
+								
+								<!-- <h1 class="footer-block-top  " data-id="1">Secretary</h1> -->
+								<ul>
+								    <h4 style="color:#FFFFFF" class="left">Prasanna Venkatesh</h4>
+								    <img  src="assets/pvenkatesh.jpg" style="margin-bottom:5px; border-radius:50%" class="left" width="150" height="150" alt="Prasanna Venkatesh, Sponsership Team Wavez 2016">
+									    <li class="left">
+									        <i class="fa fa-phone" style="margin-bottom:2px"></i> +919952938937</li>
+									    <li class="left">   
+									        <i class="fa fa-envelope-o"></i> <a href="">sponsorship@wavez.org.in</a></li>
+									    
+							</div>
+
+                           
+
+                            <div class="col-sm-4 col-sm-offset-0  blog-post" style="text-align:center">
+								
+								<!-- <h1 class="footer-block-top">Secretary</h1> -->
+								<ul>
+								    <h4 style="color:#FFFFFF" style="margin-bottom:5px" class="right">Vishal Venkatesh</h4>
+								    <img  src="assets/vishal.jpg" style="border-radius:50%" width="150" height="150" class="right" alt="Vishal Venkatesh, Sponsership Team Wavez 2016">
+									    <li class="right">
+									        <i class="fa fa-phone" style="margin-bottom:2px"></i>9962670955</li>
+									    <li class="right">   
+									        <i class="fa fa-envelope-o"></i> <a href="">sponsorship@wavez.org.in</a></li>
+                            </div>
+
+					</div>
+
+
+                    <div class=" col-sm-12" style="text-align:center"><h1 class="footer-block-top ">Events</h1></div>			
+					<div class="row">
+							<div class=" col-sm-4 col-sm-offset-2  blog-post" style="text-align:center" >
+								
+								<!-- <h1 class="footer-block-top  " data-id="1">Secretary</h1> -->
+								<ul>
+								    <h4 style="color:#FFFFFF" class="left">Ravali K</h4>
+								    <img  src="assets/ravali.jpg" style="margin-bottom:5px; border-radius:50%" class="left" width="150" height="150" alt="Ravali K, Events Team Wavez 2016">
+									    <li class="left">
+									        <i class="fa fa-phone" style="margin-bottom:2px"></i> +919710291142</li>
+									    <li class="left">   
+									        <i class="fa fa-envelope-o"></i> <a href="">events@wavez.org.in</a></li>
+									    
+							</div>
+
+                           
+
+                            <div class="col-sm-4 col-sm-offset-0  blog-post" style="text-align:center">
+								
+								<!-- <h1 class="footer-block-top">Secretary</h1> -->
+								<ul>
+								    <h4 style="color:#FFFFFF" style="margin-bottom:5px" class="right">Rithish</h4>
+								    <img  src="assets/rithish2.jpg" style="border-radius:50%" width="150" height="150" class="right" alt="Rithish, Events Team Wavez 2016">
+									    <li class="right">
+									        <i class="fa fa-phone" style="margin-bottom:2px"></i> +919884180378</li>
+									    <li class="right">   
+									        <i class="fa fa-envelope-o"></i> <a href="">events@wavez.org.in</a></li>
+                            </div>
+
+					</div>
+
+
+
+					<div class="row">
+							<div class=" col-sm-4 col-sm-offset-0  blog-post" style="text-align:center" >
+								
+								<h1 class="footer-block-top  " data-id="1">Treasurer</h1>
+								<ul>
+								    <h4 style="color:#FFFFFF" class="left">Devi Amulya</h4>
+								    <img  src="assets/amulya2.jpg" style="margin-bottom:5px; border-radius:50%" class="left" width="150" height="150" alt="Devi Amulya, Tresurer Wavez 2016">
+									    <li class="left">
+									        <i class="fa fa-phone" style="margin-bottom:2px"></i> +919043812203</li>
+									    <li class="left">   
+									        <i class="fa fa-envelope-o"></i> <a href="">contact@wavez.org.in</a></li>
+									    
+							</div>
+
+                           
+
+                            <div class="col-sm-4 col-sm-offset-0  blog-post" style="text-align:center">
+								
+								<h1 class="footer-block-top">WebOps</h1>
+								<ul>
+								    <h4 style="color:#FFFFFF" style="margin-bottom:5px" class="right">Prakhyat Shankesi</h4>
+								    <img  src="assets/prakyath1.jpg" style="border-radius:50%" width="150" height="150" class="right" alt="S. Prakyath, WebOps Wavez 2016">
+									    <li class="right">
+									        <i class="fa fa-phone" style="margin-bottom:2px"></i>+919003112334</li>
+									    <li class="right">   
+									        <i class="fa fa-envelope-o"></i> <a href="">webops@wavez.org.in</a></li>
+                            </div>
+
+
+                            <div class="col-sm-4 col-sm-offset-0  blog-post" style="text-align:center">
+								
+								<h1 class="footer-block-top">Design & ambi</h1>
+								<ul>
+								    <h4 style="color:#FFFFFF" style="margin-bottom:5px" class="right">Sandeep</h4>
+								    <img  src="assets/sandeep1.jpg" style="border-radius:50%" width="150" height="150" class="right" alt="Sandeep, Design & ambi Wavez 2016">
+									    <li class="right">
+									        <i class="fa fa-phone" style="margin-bottom:2px"></i>9043255977</li>
+									    <li class="right">   
+									        <i class="fa fa-envelope-o"></i> <a href="">design@wavez.org.in</a></li>
+                            </div>
+
+					</div>
+
+					<div class=" col-sm-12" style="text-align:center"><h1 class="footer-block-top ">Publicity</h1></div>			
+					<div class="row">
+							<div class=" col-sm-4 col-sm-offset-2  blog-post" style="text-align:center" >
+								
+								<!-- <h1 class="footer-block-top  " data-id="1">Secretary</h1> -->
+								<ul>
+								    <h4 style="color:#FFFFFF" class="left">Sreeshyam C A</h4>
+								    <img  src="assets/sreeshyam1.jpg" style="margin-bottom:5px; border-radius:50%" class="left" width="150" height="150" alt="Sreeshyam C A, Publicity Wavez 2016">
+									    <li class="left">
+									        <i class="fa fa-phone" style="margin-bottom:2px"></i> +919940504400</li>
+									    <li class="left">   
+									        <i class="fa fa-envelope-o"></i> <a href="">publicity@wavez.org.in</a></li>
+									    
+							</div>
+
+                           
+
+                            <div class="col-sm-4 col-sm-offset-0  blog-post" style="text-align:center">
+								
+								<!-- <h1 class="footer-block-top">Secretary</h1> -->
+								<ul>
+								    <h4 style="color:#FFFFFF" style="margin-bottom:5px" class="right">Sivaramakrishnan</h4>
+								    <img  src="assets/sivram2.jpg" style="border-radius:50%" width="150" height="150" class="right" alt="Sivaramakrishnan, Publicity Wavez 2016">
+									    <li class="right">
+									        <i class="fa fa-phone" style="margin-bottom:2px"></i>+919150532024</li>
+									    <li class="right">   
+									        <i class="fa fa-envelope-o"></i> <a href="">publicity@wavez.org.in</a></li>
+                            </div>
+
+					</div>
+
+                    <div class=" col-sm-12" style="text-align:center"><h1 class="footer-block-top ">Facilities</h1></div>			
+					<div class="row">
+							<div class=" col-sm-4 col-sm-offset-2  blog-post" style="text-align:center" >
+								
+								<!-- <h1 class="footer-block-top  " data-id="1">Secretary</h1> -->
+								<ul>
+								    <h4 style="color:#FFFFFF" class="left">Dikshant Telang</h4>
+								    <img  src="assets/dikshant.jpg" style="margin-bottom:5px; border-radius:50%" class="left" width="150" height="150" alt="Dikshant Telang, Facilities Wavez 2016">
+									    <li class="left">
+									        <i class="fa fa-phone" style="margin-bottom:2px"></i> +919962878360</li>
+									    <li class="left">   
+									        <i class="fa fa-envelope-o"></i> <a href="">facilities@wavez.org.in</a></li>
+									    
+							</div>
+
+                           
+
+                            <div class="col-sm-4 col-sm-offset-0  blog-post" style="text-align:center">
+								
+								<!-- <h1 class="footer-block-top">Secretary</h1> -->
+								<ul>
+								    <h4 style="color:#FFFFFF" style="margin-bottom:5px" class="right">Navaneeth D</h4>
+								    <img  src="assets/navneet2.jpg" style="border-radius:50%" width="150" height="150" class="right" alt="Navaneeth D, Facilities Wavez 2016">
+									    <li class="right">
+									        <i class="fa fa-phone" style="margin-bottom:2px"></i>+919940398984</li>
+									    <li class="right">   
+									        <i class="fa fa-envelope-o"></i> <a href="">facilities@wavez.org.in</a></li>
+                            </div>
+
+					</div>
+
+							
+					<div class="row">
+							<div class=" col-sm-4 col-sm-offset-2  blog-post" style="text-align:center" >
+								
+								<h1 class="footer-block-top  " data-id="1">QMS</h1>
+								<ul>
+								    <h4 style="color:#FFFFFF" class="left">Jerick R</h4>
+								    <img  src="assets/jerick1.jpg" style="margin-bottom:5px; border-radius:50%" class="left" width="150" height="150" alt="Jerick R, QMS Wavez 2016">
+									    <li class="left">
+									        <i class="fa fa-phone" style="margin-bottom:2px"></i> +918883990286</li>
+									    <li class="left">   
+									        <i class="fa fa-envelope-o"></i> <a href="">qms@wavez.org.in</a></li>
+									    
+							</div>
+
+                           
+
+                            <div class="col-sm-4 col-sm-offset-0  blog-post" style="text-align:center">
+								
+								<h1 class="footer-block-top">Sports</h1>
+								<ul>
+								    <h4 style="color:#FFFFFF" style="margin-bottom:5px" class="right">Kishore S A</h4>
+								    <img  src="assets/kishore.jpg" style="border-radius:50%" width="150" height="150" class="right" alt="Kishore S A, Sports Wavez 2016">
+									    <li class="right">
+									        <i class="fa fa-phone" style="margin-bottom:2px"></i>+919489742148</li>
+									    <li class="right">   
+									        <i class="fa fa-envelope-o"></i> <a href="">events@wavez.org.in</a></li>
+                            </div>
+
+					</div>
+
+                     					
+				</div>
+			</div>
+			
+			</div>
+			<!-- #footer -->
+
+		</div><!--/#wrapper-->
+
+        
+
+		<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+		-->
+
+		<!-- <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		-->
+
+		<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.actual/1.0.17/jquery.actual.min.js"></script>
+		-->
+
+		<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+		-->
+
+		<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenLite.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/easing/EasePack.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/plugins/CSSPlugin.min.js"></script>
+		-->
+
+        <script src="assets/javascripts/jquery-2.1.3.min.js"></script>
+		<script type="text/javascript" src="assets/javascripts/materialPreloader.js"></script>
+		<script src="assets/javascripts/bootstrap.js"></script>
+		<script src="assets/javascripts/jquery.actual.min.js"></script>
+		<script src="assets/javascripts/jquery.scrollTo.min.js"></script>
+		<script src="assets/javascripts/contact.js"></script>
+		<script src="assets/javascripts/script.js"></script>
+		<script src="assets/javascripts/smoothscroll.js"></script>
+		<script src="assets/javascripts/CSSPlugin.min.js"></script>
+  		<script src="assets/javascripts/EasePack.min.js"></script>
+  		<script src="assets/javascripts/wow.js"></script>
+		<script src="assets/javascripts/TweenLite.min.js"></script>
+		
+
+        
+
+        <script type="text/javascript"> 
+       
+        preloader = new $.materialPreloader({
+        position: 'top',
+        height: '5px',
+        col_1: '#159756',
+        col_2: '#da4733',
+        col_3: '#3b78e7',
+        col_4: '#fdba2c',
+        fadeIn: 200,
+        fadeOut: 200
+        });
+              
+        preloader.on();
+         
+        $( window ).load(function() { 
+
+        preloader.off();
+        jQuery("#preloader").fadeOut("slow");
+
+
+
+       })
+		
+
+            jQuery(document).ready(function($){
+
+
+		  	  
+  
+               $(window).scroll(function() {
+		  		
+		  		
+				if ($(window).scrollTop() > 100 ){
+		    
+		 		$('.top-header').addClass('shows'); 
+		    
+		  		} else {
+		    
+		   	 	$('.top-header').removeClass('shows');
+		    
+		 		};   	
+			});
+/*....................home animations starts............................*/
+
+
+    var windowheight = $(window).height();
+  	var windowwidth = $(window).width();
+  	
+  	document.getElementById('homeframe').style.height = windowheight + "px";
+  	document.getElementById('header').style.height = windowheight + "px";
+  	document.getElementById('seacontainer').style.height = 0.15*windowheight + "px";
+  	document.getElementById('boatcontainer').style.height = 0.3*windowheight + "px";
+  	document.getElementById('boatcontainer').style.width = 0.4*windowheight + "px";
+  	document.getElementById('boat').style.height = 0.3*windowheight + "px";
+  	document.getElementById('boat').style.width = 0.4*windowheight + "px";
+  	document.getElementById('anchorcontainer').style.height = 0.04*windowheight + "px";
+  	document.getElementById('anchorcontainer').style.width = 0.025*windowheight + "px";
+  	document.getElementById('anchor').style.height = 0.04*windowheight + "px";
+  	document.getElementById('anchor').style.width = 0.025*windowheight + "px";
+  	document.getElementById('departmentlogo').style.left = (0.95*windowwidth) + "px";
+  	document.getElementById('iitmlogo').style.left = (0.95*windowwidth) + "px";
+  	document.getElementById('facebooklogo').style.left = (0.95*windowwidth) + "px";
+  	document.getElementById('waveztextcontainer').style.width = 0.5*windowheight + "px";
+  	document.getElementById('waveztextcontainer').style.height = 0.125*windowheight + "px";
+
+  	if (windowwidth<=1000) {
+  		document.getElementById('schedule').style.height = "1500px";
+  		document.getElementById('schedbutton').style.display = "none";
+  	}
+
+  	
+
+  	 $( window ).load(function() {  
+
+  	TweenLite.to(boatcontainer, 5.7, {left:(0.5*windowwidth), ease:Power1.easeOut});
+  	TweenLite.to(sea, 5.7, {left:(-1*windowwidth), ease:Power1.easeOut});
+
+
+
+
+
+  	TweenLite.to(boatcontainer, 1, {rotation:-5, transformOrigin:"50% 100%"});
+  	TweenLite.to(anchorcontainer, 1, {rotation:10, transformOrigin:"50% 03%"});
+
+  	TweenLite.to(boatcontainer, 1, {rotation:0, transformOrigin:"50% 100%", delay:1});
+  	TweenLite.to(anchorcontainer, 1, {rotation:0, transformOrigin:"50% 03%", delay:1});
+
+  	TweenLite.to(anchorcontainer, 0.7, {rotationY:180, delay:2});
+  	TweenLite.to(boatcontainer, 0.7, {transformOrigin:"50% 100%",
+  									  delay:2,
+  									  ease:Power0.easeInOut});
+
+  	TweenLite.to(boatcontainer, 1, {rotation:5, transformOrigin:"50% 100%", delay:2.7});
+  	TweenLite.to(anchorcontainer, 1, {rotation:-10, transformOrigin:"50% 03%", delay:2.7});
+
+  	TweenLite.to(boatcontainer, 1, {rotation:0, transformOrigin:"50% 100%", delay:3.7});
+  	TweenLite.to(anchorcontainer, 1, {rotation:0, transformOrigin:"50% 03%", delay:3.7});
+
+  	
+  	TweenLite.to(anchorcontainer, 0.7, {rotationY:0, delay:4.7});
+
+
+
+
+  	$("#boatcontainer").mouseenter(function(){
+  		TweenLite.to(anchorcontainer, 0.7, {rotationY:360});
+  		TweenLite.to(anchorcontainer, 0.7, {rotationY:0, delay:0.7});
+  		TweenLite.to(anchorcontainer, 0.7, {rotation:10, transformOrigin:"50% 03%"});
+  		TweenLite.to(anchorcontainer, 0.7, {rotation:-10, transformOrigin:"50% 03%", delay:0.7});
+  		TweenLite.set(anchorcontainer, {rotation:0, delay:1.4});
+  	});
+
+  	$("#waveztextcontainer").mouseenter(function(){
+  		TweenLite.fromTo(waveztextcontainer, 1, {autoAlpha:0, scale:0.7}, {autoAlpha:1, scale:1});
+  	});
+
+
+  	TweenLite.to(departmentlogo, 1.9, {
+ 									   top:(windowheight-40),
+  									   scale:0.5,
+  									   ease:Bounce.easeOut});
+  	TweenLite.to(boatcontainer, 1.9, {scale:1.1, ease:Bounce.easeOut});
+  	TweenLite.to(departmentlogo, 3.8, {rotation:-1080,
+ 									   left:(0.9*windowwidth-104), delay:1.9});
+
+
+
+
+
+
+
+ 	TweenLite.to(iitmlogo, 1.9, {
+ 							     top:(windowheight-40),
+  							     scale:0.5,
+  								 ease:Bounce.easeOut,
+  								 delay:1.9});
+  	TweenLite.to(boatcontainer, 1.9, {scale:1.2,
+  									  ease:Bounce.easeOut,
+  								   	  delay:1.9});
+  	TweenLite.to(iitmlogo, 1.9, {rotation:-720,
+ 									   left:(0.9*windowwidth-52), delay:3.8});
+
+
+
+
+
+
+
+ 	TweenLite.to(facebooklogo, 1.9, {
+ 									 top:(windowheight-40),
+  									 scale:0.5,
+  									 ease:Bounce.easeOut,
+  									 delay:3.8});
+  	TweenLite.to(boatcontainer, 1.9, {scale:1.3, ease:Bounce.easeOut,
+  									 delay:3.8});
+  	TweenLite.to(facebooklogo, 1, {rotation:-360,
+ 									   left:(0.9*windowwidth), delay:5.7});
+
+
+  	TweenLite.from(waveztextcontainer,  1, {scale:0.01, autoAlpha:0, delay:5.7});
+  	
+
+
+
+});
+
+$(window).resize(function(){
+	var windowheight = $(window).height();
+  	var windowwidth = $(window).width();
+  	
+  	document.getElementById('homeframe').style.height = windowheight + "px";
+  	document.getElementById('header').style.height = windowheight + "px";
+  	document.getElementById('seacontainer').style.height = 0.15*windowheight + "px";
+  	document.getElementById('boatcontainer').style.height = 0.3*windowheight + "px";
+  	document.getElementById('boatcontainer').style.width = 0.4*windowheight + "px";
+  	document.getElementById('boat').style.height = 0.3*windowheight + "px";
+  	document.getElementById('boat').style.width = 0.4*windowheight + "px";
+  	document.getElementById('anchorcontainer').style.height = 0.04*windowheight + "px";
+  	document.getElementById('anchorcontainer').style.width = 0.025*windowheight + "px";
+  	document.getElementById('anchor').style.height = 0.04*windowheight + "px";
+  	document.getElementById('anchor').style.width = 0.025*windowheight + "px";
+  	document.getElementById('departmentlogo').style.left = (0.95*windowwidth) + "px";
+  	document.getElementById('iitmlogo').style.left = (0.95*windowwidth) + "px";
+  	document.getElementById('facebooklogo').style.left = (0.95*windowwidth) + "px";
+  	document.getElementById('waveztextcontainer').style.width = 0.5*windowheight + "px";
+  	document.getElementById('waveztextcontainer').style.height = 0.125*windowheight + "px";
+
+  	if (windowwidth<=1000) {
+  		document.getElementById('schedule').style.height = "1500px";
+  		document.getElementById('schedbutton').style.display = "none";
+  	}
+
+  	TweenLite.to(boatcontainer, 5.7, {left:(0.5*windowwidth), ease:Power1.easeOut});
+  	TweenLite.to(sea, 5.7, {left:(-1*windowwidth), ease:Power1.easeOut});
+
+
+
+
+
+  	TweenLite.to(boatcontainer, 1, {rotation:-5, transformOrigin:"50% 100%"});
+  	TweenLite.to(anchorcontainer, 1, {rotation:10, transformOrigin:"50% 03%"});
+
+  	TweenLite.to(boatcontainer, 1, {rotation:0, transformOrigin:"50% 100%", delay:1});
+  	TweenLite.to(anchorcontainer, 1, {rotation:0, transformOrigin:"50% 03%", delay:1});
+
+  	TweenLite.to(anchorcontainer, 0.7, {rotationY:180, delay:2});
+  	TweenLite.to(boatcontainer, 0.7, {transformOrigin:"50% 100%",
+  									  delay:2,
+  									  ease:Power0.easeInOut});
+
+  	TweenLite.to(boatcontainer, 1, {rotation:5, transformOrigin:"50% 100%", delay:2.7});
+  	TweenLite.to(anchorcontainer, 1, {rotation:-10, transformOrigin:"50% 03%", delay:2.7});
+
+  	TweenLite.to(boatcontainer, 1, {rotation:0, transformOrigin:"50% 100%", delay:3.7});
+  	TweenLite.to(anchorcontainer, 1, {rotation:0, transformOrigin:"50% 03%", delay:3.7});
+
+  	
+  	TweenLite.to(anchorcontainer, 0.7, {rotationY:0, delay:4.7});
+
+
+
+
+  	$("#boatcontainer").mouseenter(function(){
+  		TweenLite.to(anchorcontainer, 0.7, {rotationY:360});
+  		TweenLite.to(anchorcontainer, 0.7, {rotationY:0, delay:0.7});
+  		TweenLite.to(anchorcontainer, 0.7, {rotation:10, transformOrigin:"50% 03%"});
+  		TweenLite.to(anchorcontainer, 0.7, {rotation:-10, transformOrigin:"50% 03%", delay:0.7});
+  		TweenLite.set(anchorcontainer, {rotation:0, delay:1.4});
+  	});
+
+  	$("#waveztextcontainer").mouseenter(function(){
+  		TweenLite.fromTo(waveztextcontainer, 1, {autoAlpha:0, scale:0.7}, {autoAlpha:1, scale:1});
+  	});
+
+
+  	TweenLite.to(departmentlogo, 1.9, {
+ 									   top:(windowheight-40),
+  									   scale:0.5,
+  									   ease:Bounce.easeOut});
+  	TweenLite.to(boatcontainer, 1.9, {scale:1.1, ease:Bounce.easeOut});
+  	TweenLite.to(departmentlogo, 3.8, {rotation:-1080,
+ 									   left:(0.9*windowwidth-104), delay:1.9});
+
+
+
+
+
+
+
+ 	TweenLite.to(iitmlogo, 1.9, {
+ 							     top:(windowheight-40),
+  							     scale:0.5,
+  								 ease:Bounce.easeOut,
+  								 delay:1.9});
+  	TweenLite.to(boatcontainer, 1.9, {scale:1.2,
+  									  ease:Bounce.easeOut,
+  								   	  delay:1.9});
+  	TweenLite.to(iitmlogo, 1.9, {rotation:-720,
+ 									   left:(0.9*windowwidth-52), delay:3.8});
+
+
+
+
+
+
+
+ 	TweenLite.to(facebooklogo, 1.9, {
+ 									 top:(windowheight-40),
+  									 scale:0.5,
+  									 ease:Bounce.easeOut,
+  									 delay:3.8});
+  	TweenLite.to(boatcontainer, 1.9, {scale:1.3, ease:Bounce.easeOut,
+  									 delay:3.8});
+  	TweenLite.to(facebooklogo, 1, {rotation:-360,
+ 									   left:(0.9*windowwidth), delay:5.7});
+
+
+  	TweenLite.from(waveztextcontainer,  1, {scale:0.01, autoAlpha:0, delay:5.7});
+  	
+
+});
+
+
+
+/*....................home animations ends............................*/
+/* ...................events triggers starts........................... */
+
+		
+
+
+
+
+
+
+
+			$(".e").click(function(){
+				$(this).closest("div").next().modal();
+			});
+
+				$(".elogin").click(function(){
+					$(this).closest("h4").children("a").removeClass("livetab");
+					$(this).addClass("livetab");
+					$(this).closest("div").next().children("div").hide(10);
+					$(this).closest("div").next().children(".plogin").slideDown();
+				});
+				$(".eregister").click(function(){
+					$(this).closest("h4").children("a").removeClass("livetab");
+					$(this).addClass("livetab");
+					$(this).closest("div").next().children("div").hide(10);
+					$(this).closest("div").next().children(".pregister").slideDown();
+				});
+
+
+				$(".eoverview").click(function(){
+					$(this).closest("h4").children("a").removeClass("livetab");
+					$(this).addClass("livetab");
+					$(this).closest("div").next().children("p").hide(10);
+					$(this).closest("div").next().children(".poverview").slideDown();
+				});
+				$(".eprize").click(function(){
+					$(this).closest("h4").children("a").removeClass("livetab");
+					$(this).addClass("livetab");
+					$(this).closest("div").next().children("p").hide(10);
+					$(this).closest("div").next().children(".pprize").slideDown();
+
+				});
+				$(".eprblmstmt").click(function(){
+					$(this).closest("h4").children("a").removeClass("livetab");
+					$(this).addClass("livetab");
+					$(this).closest("div").next().children("p").hide(10);
+					$(this).closest("div").next().children(".pprblmstmt").slideDown();
+
+				});
+
+				$(".econtact").click(function(){
+					$(this).closest("h4").children("a").removeClass("livetab");
+					$(this).addClass("livetab");
+					$(this).closest("div").next().children("p").hide(10);
+					$(this).closest("div").next().children(".pcontact").slideDown();
+
+				});
+
+				$(".erules").click(function(){
+					$(this).closest("h4").children("a").removeClass("livetab");
+					$(this).addClass("livetab");
+					$(this).closest("div").next().children("p").hide(10);
+					$(this).closest("div").next().children(".prules").slideDown();
+
+				});
+
+				$(".eregister").click(function(){
+					$(this).closest("h4").children("a").removeClass("livetab");
+					$(this).addClass("livetab");
+					$(this).closest("div").next().children("p").hide(10);
+					$(this).closest("div").next().children(".pregister").slideDown();
+
+				});
+
+				$(".eschedule").click(function(){
+					$(this).closest("h4").children("a").removeClass("livetab");
+					$(this).addClass("livetab");
+					$(this).closest("div").next().children("p").hide(10);
+					$(this).closest("div").next().children(".pschedule").slideDown();
+
+				});
+/* ...................events triggers ends........................... */
+
+/* ...................schedule triggers starts........................... */
+
+			
+
+
+
+			var flag=1;
+			var d= new Date();
+			var ddate = d.getDate();
+			var dmonth = d.getMonth();
+			var n;
+			var f;
+			if (dmonth==11) {
+				n = 100 - ddate;
+			}
+			else if (dmonth == 0){
+				n = 69 - ddate;
+			}
+			else if (dmonth == 1){
+				n = 38 - ddate;
+			}
+			else if (dmonth == 2){
+				n = 9 - ddate;
+			}
+			else {
+				n=-1;
+			}
+
+			f = ((n*2.5)+100) + "px";
+
+
+  			var windowwidth1 = $(window).width();
+
+			if(windowwidth1<1000)
+			{
+				$("#swater:not(.animated)").animate({
+						height: f
+					});
+				if(n>0)
+				{
+
+					$(".dtg").text( n + " days to go...");
+				}
+				else
+				{
+
+					$(".dtg").text( "Sorry you are late");
+				}
+
+
+				$(".scheduletabd").prepend("<br><br>");
+				
+
+			}
+
+
+
+			else
+			{
+
+
+
+
+
+
+
+			
+			$("#schedule").hover(function(){
+
+					if(1)
+
+					{
+
+
+
+
+
+
+				
+					if(flag)
+					{
+					$("#swater:not(.animated)").animate({
+						height: f
+					});
+
+					$({countNum:0}).animate(
+						{countNum:n},
+						{
+							duration:3000,
+							easing:"linear",
+							step: function() {
+								$(".dtg").text(Math.floor(this.countNum) + " days to go...");
+											 },
+							complete: function() {
+								if(n>0)
+								{
+
+								$(".dtg").text( n + " days to go...");
+								}
+								else
+								{
+
+								$(".dtg").text( "Sorry you are late");
+								}
+
+							}
+
+						}
+						);
+
+					$(".scheduletab > div > a").show();
+					$(".scheduletab > div > a").animate({top : "+=350px",
+														 width:"300px",
+														 height:"300px",
+														 borderRadius:"150px",
+														 fontSize:"300%"}, 200);
+
+					flag=0;
+				 	}
+					$("#swater").addClass("animated");
+
+
+				}
+
+				});
+
+		}
+
+
+		$(window).resize(function(){
+			var windowwidth1 = $(window).width();
+
+			if(windowwidth1<1000)
+			{
+				$("#swater:not(.animated)").animate({
+						height: f
+					});
+				if(n>0)
+				{
+
+					$(".dtg").text( n + " days to go...");
+				}
+				else
+				{
+
+					$(".dtg").text( "Sorry you are late");
+				}
+
+
+				$(".scheduletabd").prepend("<br><br>");
+				
+
+			}
+
+
+
+			else
+			{
+
+
+
+
+
+
+
+			
+			$("#schedule").hover(function(){
+
+					if(1)
+
+					{
+
+
+				
+					if(flag)
+					{
+					$("#swater:not(.animated)").animate({
+						height: f
+					});
+
+					$({countNum:0}).animate(
+						{countNum:n},
+						{
+							duration:3000,
+							easing:"linear",
+							step: function() {
+								$(".dtg").text(Math.floor(this.countNum) + " days to go...");
+											 },
+							complete: function() {
+								if(n>0)
+								{
+
+								$(".dtg").text( n + " days to go...");
+								}
+								else
+								{
+
+								$(".dtg").text( "Sorry you are late");
+								}
+
+							}
+
+						}
+						);
+
+					$(".scheduletab > div > a").show();
+					$(".scheduletab > div > a").animate({top : "+=350px",
+														 width:"300px",
+														 height:"300px",
+														 borderRadius:"150px",
+														 fontSize:"300%"}, 200);
+
+					flag=0;
+				 	}
+					$("#swater").addClass("animated");
+
+
+				}
+
+				});
+
+		}
+			
+		});
+			$("#d1").click(function(){
+
+				$(".schedtab").hide("slow");
+				$(".hd2").hide();
+				$(".schedtabb2").hide();
+				$(".hd1").fadeIn("slow");
+				$(".schedtab").show("slow");
+				$(".schedtabb1").fadeIn("slow");
+				$("#d1 > a").addClass("disabled");
+				$("#d2 > a").removeClass("disabled");
+
+
+			});
+
+			$("#d2").click(function(){
+
+				$(".schedtab").hide("slow");
+				$(".hd1").hide();
+				$(".schedtabb1").hide();
+				$(".hd2").fadeIn("slow");
+				$(".schedtab").show("slow");
+				$(".schedtabb2").fadeIn("slow");
+				$("#d2 > a").addClass("disabled");
+				$("#d1 > a").removeClass("disabled");
+
+			});
+
+
+
+
+			
+
+				
+				
+			
+			
+
+/* ...................schedule triggers ends........................... */
+
+
+		  });
+
+		jQuery('.scroll').on('click', function(e){		
+				e.preventDefault()
+		    
+		  jQuery('html, body').animate({
+		      scrollTop : jQuery(this.hash).offset().top
+		    }, 1500);
+		});
+
+
+		</script>
+
+        <script >
+         //$('.footer-block-top').addClass('wow bounceInDown');
+         //$('.top').addClass('wow bounceInDown');
+         //$('.footer-block-left').addClass('wow slideInLeft');
+         //$('.left').addClass('wow slideInLeft');
+         //$('.footer-block-right').addClass('wow slideInRight');
+         //$('.right').addClass('wow slideInRight');
+         // $('.main-header').addClass('wow bounceInUp');
+         // $('.sub-header').addClass('wow bounceInUp');
+         $('.aboutus-desc').addClass('wow bounceInRight');
+         $('.about-img').addClass('wow bounceInLeft');
+         $('.top-header').addClass('wow slideInDown');
+         
+         
+        </script>
+
+        <script >
+          //$('.footer-block-top').attr({'data-wow-duration':'2s', 'data-wow-delay':'0.1s'});
+          //$('.top').attr({'data-wow-duration':'2s', 'data-wow-delay':'0.1s'});
+          //$('.footer-block-left').attr({'data-wow-duration':'1s', 'data-wow-delay':'0.2s'});
+          //$('.left').attr({'data-wow-duration':'1s', 'data-wow-delay':'0.3s'});
+          //$('.footer-block-right').attr({'data-wow-duration':'1s', 'data-wow-delay':'0.2s'});
+          //$('.right').attr({'data-wow-duration':'1s', 'data-wow-delay':'0.2s'});
+          // $('.main-header').attr({'data-wow-duration':'2.5s', 'data-wow-delay':'0.5s'});
+          // $('.sub-header').attr({'data-wow-duration':'2.5s', 'data-wow-delay':'0.2s'});
+          $('.aboutus-desc').attr({'data-wow-duration':'1s', 'data-wow-delay':'0.1s'});
+          $('.about-img').attr({'data-wow-duration':'1s', 'data-wow-delay':'0.1s'});
+          $('.top-header').attr({ 'data-wow-delay':'5.7s', 'data-wow-duration':'1s'});
+          
+        </script>
+
+
+        <script>
+             $( window ).load(function() { 
+              new WOW().init();
+          })
+        </script>
+
+		
+
+
+	</body>
+
