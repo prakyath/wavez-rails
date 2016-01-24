@@ -7,8 +7,8 @@ class Users::SessionsController < Devise::SessionsController
   return invalid_login_attempt unless resource
 
   if resource.valid_password?(params[:user][:password])
-    sign_in :user, resource
-    return render nothing: true
+    sign_in :user, resource 
+    return render :json => resource
     
   end
 
