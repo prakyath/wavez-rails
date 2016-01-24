@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   get 'static/index'
   root 'static#index'
+  devise_for :users, controllers: {
+        sessions: 'users/sessions'
+      }
+    # devise_for :users, :controllers => {sessions: 'sessions', registrations: 'registrations'}  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -147,6 +147,15 @@
 		width: 100%;
 		height: 100%;
 	}
+
+	.input_field
+    {
+      letter-spacing:1px; 
+      margin-left:5px;
+      border-top:none;
+
+    }
+
 		</style>
 
 
@@ -247,23 +256,39 @@
           									</h4>
         								</div>
         								<div class="modal-body">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), :remote => true ) do |f| %>  
+    								
           									<div id="plogin" class="plogin">
                                                 <i class="fa fa-user" id="login-fa"></i> 
                                                 <div class="row" style="padding-top:50px"> 
           									        <div style="text-align: center" >
-          									            <input name="enter_email" id="enter_email" class="col-xs-10 col-sm-8 col-sm-offset-2 col-xs-offset-1 col-md-6 col-md-offset-3 " placeholder="Enter email id" type="text" required style="letter-spacing:1px; ">
+          									            <%= f.email_field :email,:id =>'enter_email', :class => 'col-xs-10 col-sm-8 col-sm-offset-2 col-xs-offset-1 col-md-6 col-md-offset-3 ', :placeholder =>'Enter Email ID' %>
           									        </div>
           									    </div>
           									    <div class="row" style="padding-bottom:50px"> 
           									        <div style="text-align: center" >
-          									            <input name="enter_email" id="enter_email" class="col-xs-10 col-sm-8 col-sm-offset-2 col-xs-offset-1 col-md-6 col-md-offset-3 " placeholder="Enter password" type="text" required style="letter-spacing:1px;">
+          									            <%= f.password_field :password,:id =>'enter_email', :class =>'col-xs-10 col-sm-8 col-sm-offset-2 col-xs-offset-1 col-md-6 col-md-offset-3 ', :placeholder=>'Enter password',:style=>'letter-spacing:1px', autocomplete: "off" %>
           									        </div>
           									    </div>
                                                 <div class="row" id="choose-buttons">
-                                                <a class="btn btn-info btn-lg " role="button" id="login-button" style="margin-top:5px; width:180.063px;">Login
- 											    </a>
- 											    <a class="btn btn-info btn-lg " role="button" id="login-button" style="margin-top: 5px;">Forgot Password?
- 											    </a>
+                                                  <%= f.submit "Sign in", :class =>'btn btn-info btn-lg', :id =>'login-button',:style =>'margin-top:5px; width:180.063px;'  %> 
+
+ <% end %>
+  <script type="text/javascript">
+$(document).ready(function() {
+   
+    $('#new_user')
+    .bind('ajax:success', function(evt, data, status, xhr) {
+    	  alert('supp dude');
+          console.log('success');
+    })
+    .bind("ajax:error", function(evt, xhr, status, error) {
+      alert('cupped da'); 
+      console.log(xhr.responseText);
+    });
+  });
+ </script>     
+
  											    </div>
                                             </div>
  											
@@ -2096,7 +2121,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/plugins/CSSPlugin.min.js"></script>
 		-->
 
-        <script src="assets/javascripts/jquery-2.1.3.min.js"></script>
+        
 		<script type="text/javascript" src="assets/javascripts/materialPreloader.js"></script>
 		<script src="assets/javascripts/bootstrap.js"></script>
 		<script src="assets/javascripts/jquery.actual.min.js"></script>
