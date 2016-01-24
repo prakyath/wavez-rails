@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20160121071313) do
     t.string   "last_sign_in_ip",        limit: 255
     t.datetime "created_at",                                        null: false
     t.datetime "updated_at",                                        null: false
-    t.integer  "phone",                  limit: 4
+    t.integer  "phone",                  limit: 8
     t.text     "roll",                   limit: 65535
     t.text     "college",                limit: 65535
     t.integer  "event_ids",              limit: 4

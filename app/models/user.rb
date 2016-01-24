@@ -7,7 +7,8 @@ class User < ActiveRecord::Base
   validates :password, confirmation: true
   validates :password_confirmation, presence: true 
   validates :name, presence: true
-  validates :nick, presence: true, uniqueness: true
+  validates :nick, presence: true
+  validates :phone, presence: true
   validates :email, presence: true, uniqueness: true
   validates :college, presence: true
   validates :roll, presence: true, uniqueness: true     

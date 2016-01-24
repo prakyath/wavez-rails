@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   get 'static/index'
   root 'static#index'
   devise_for :users, controllers: {
-        sessions: 'users/sessions'
+        sessions: 'users/sessions',
+        registrations: 'users/registrations'
       }
     # devise_for :users, :controllers => {sessions: 'sessions', registrations: 'registrations'}  
 
