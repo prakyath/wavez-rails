@@ -221,9 +221,9 @@
 										<li>
 											<a href="#schedule"><i class="fa fa-clock-o"></i> Schedule</a>
 										</li>
-										<li>
+						<!--				<li>
 											<a href="#services"><i class="fa fa-hospital-o"></i>Hospitality</a>
-										</li>
+										</li> -->
 										<li>
 											<a href="#testimonials"><i class="fa fa-money"></i>Sponsors</a>
 										</li>
@@ -307,47 +307,58 @@ $(document).ready(function($) {
  											
 
  											<div id="pregister" class="phidden pregister row" display="table" >
-<%= form_for(resource, :html=> {:id => 'create_user'}, as: resource_name, url: registration_path(resource_name),:format => :json, :remote => true) do |f| %> 											
-                                                <!-- <div class="input-group row" text-align="center" > -->
+<%= form_for(resource, :html=> {:id => 'create_user'}, as: resource_name, url: registration_path(resource_name),:format => :json, :remote => true) do |f| %>
+                                        <!-- <div class="input-group row" text-align="center" > -->                    
+
                                                     <div class="col-md-offset-1 col-md-4 col-xs-10 col-xs-offset-1">
+                                  <span id="name_errors" class="prakyath" style="color:red"></span>                  
                                                       <span class="input-group-addon" width="30px">
                                                 	    <i class="fa fa-user" height="20px" width="20px"></i>
                                                 <!--	    <input name="enter_name" id="enter_name"  placeholder="Enter your First Name" type="text" required style="letter-spacing:1px; margin-left:5px; border-top:none"> -->
+                                              
                                                 	    <%= f.text_field :name,:id=>'enter_name',:class =>'input_field',:placeholder=>'Enter your name' %>
                                                 	   
                                                 	  </span>
                                                 	</div>
                                                 	
                                                 	<div class="col-md-offset-2 col-md-4 col-xs-10 col-xs-offset-1" style="padding-bottom:40px">
+                                                	<span id="nick_errors" class="prakyath" style="color:red"></span>
                                                       <span class="input-group-addon" width="30px">
                                                 	    <i class="fa fa-user" height="20px" width="20px"></i>
+                                                	    
                                                 	    <%= f.text_field :nick,:id=>'enter_name',:class =>'input_field',:placeholder=>'Enter your nick name' %>
                                                 	  </span>
                                                 	</div>
 
                                                     
                                                     <div class="col-md-offset-1 col-md-4 col-xs-10 col-xs-offset-1">
+                                                    <span id="password_errors" style="color:red"></span>
                                                       <span class="input-group-addon" width="30px">
                                                 	    <i class="fa fa-lock" height="20px" width="20px"></i>
                                                <!-- 	    <input name="enter_name" id="enter_name"  placeholder="Enter Password" type="text" required style="letter-spacing:1px; margin-left:5px; border-top:none"> -->
+                                               
                                                <%= f.password_field :password,:id=>'enter_name',:class =>'input_field',:placeholder=>'Enter your Password' %>
                                                 	  </span>
                                                 	  
                                                 	</div>
                                                 	
                                                 	<div class="col-md-offset-2 col-md-4 col-xs-10 col-xs-offset-1" style="padding-bottom:40px">
+                                                	<span id="passwordconform_errors" style="color:red" class="prakyath"></span>
                                                       <span class="input-group-addon" width="30px">
                                                 	    <i class="fa fa-lock" height="20px" width="20px"></i>
                                             <!--    	    <input name="enter_name" id="enter_name"  placeholder="Confirm Password" type="text" required style="letter-spacing:1px; margin-left:5px; border-top:none"> -->
+                                             
                                                 	    <%= f.password_field :password_confirmation,:id=>'enter_name',:class =>'input_field',:placeholder=>'Confirm the password' %>
                                                 	  </span>
                                                 	</div>
 
 
                                                 	<div class="col-md-offset-1 col-md-6 col-xs-10 col-xs-offset-1">
+                                                	<span id="email_errors" style="color:red;display:inline" class="prakyath"></span>
                                                       <span class="input-group-addon" width="30px">
                                                 	    <i class="fa fa-envelope" height="20px" width="20px"></i>
                                            <!--     	    <input name="enter_name" id="enter_name"  placeholder="Enter a valid email id" type="text" required style="letter-spacing:1px; margin-left:5px; margin-right:9px; border-top:none"> -->
+                                           
                                                 	    <%= f.email_field :email,:id=>'enter_name',:class =>'input_field',:placeholder=>'Enter a valid email address' %>
 
 
@@ -355,10 +366,12 @@ $(document).ready(function($) {
                                                 	</div>
                                                 	
                                                 	<div class="col-md-offset-1 col-md-3 col-xs-10 col-xs-offset-1" style="padding-bottom:40px">
+                                                	 <span id="phone_errors" style="color:red" class="prakyath"></span>
                                                       <span class="input-group-addon" width="30px">
                                                 	    <i class="fa fa-mobile" height="20px" width="20px"></i><!--
                                                 	    <input name="enter_name" id="enter_name"  placeholder="Mobile Number" type="text" required style="letter-spacing:1px; margin-left:5px; border-top:none">
                                                 	    -->
+                                                	     
                                                 	    <%= f.telephone_field :phone,:id=>'enter_name',:class =>'input_field',:placeholder=>'Enter a valid phone number' %>
 
                                                 	  </span>
@@ -366,19 +379,23 @@ $(document).ready(function($) {
 
 
                                                 	<div class="col-md-offset-1 col-md-3 col-xs-10 col-xs-offset-1" style="padding-bottom:40px">
+                                                	<span id="college_errors" style="color:red" class="prakyath"></span>
                                                       <span class="input-group-addon" width="30px">
                                                 	    <i class="fa fa-home" height="20px" width="20px"></i><!--
                                                 	    <input name="enter_name" id="enter_name"  placeholder="Enter your City" type="text" required style="letter-spacing:1px; margin-left:5px; border-top:none">
                                                 	    -->
-                                                	    <%= f.text_field :college,:id=>'enter_name',:class =>'input_field',:placeholder=>'Enter your college name' %>
+                                                	       
+                                                	    <%= f.text_field :college,:id=>'enter_name',:class =>'input_field',:placeholder=>'college name' %>
                                                 	  </span>
                                                 	</div>
                                                 	
                                                 	<div class="col-md-offset-1 col-md-3 col-xs-10 col-xs-offset-1" style="padding-bottom:40px">
+                                                	<span id="roll_errors" style="color:red" class="prakyath"></span>
                                                       <span class="input-group-addon" width="30px">
                                                 	    <i class="fa fa-outdent" height="20px" width="20px"></i><!--
                                                 	    <input name="enter_name" id="enter_name"  placeholder="Enter your age" type="text" required style="letter-spacing:1px; margin-left:5px; border-top:none">
                                                 	    -->
+                                                	       
                                                 	    <%= f.text_field :roll,:id=>'enter_name',:class =>'input_field',:placeholder=>'college roll number' %>
 
                                                 	  </span>
@@ -396,19 +413,47 @@ $(document).ready(function($) {
           									    <a class="btn btn-info btn-lg " role="button" id="login-button" style="margin-left:20vw; margin-right:20vw; margin-top:30px;" >Register
  											    </a>
  											    -->
- 											    <%= f.submit "Sign up", :class =>'btn btn-info btn-lg', :id =>'login-button',:style =>'margin-left:20vw; margin-right:20vw; margin-top:30px;'  %>
+ 											    <%= f.submit "Sign up", :class =>'btn btn-info btn-lg', :id =>'login-button',:style =>'align:center;margin-left:33vw; margin-right:20vw; margin-top:30px;'  %>
  											    </div>
 
 <% end %>
 <script type="text/javascript">
+var obj2=document.getElementsByClassName('prakyath');
 $(document).ready(function($) {
    
     $('#create_user')
     .bind('ajax:success', function(evt, data, status, xhr) {
-     console.log(xhr	);
+     $('#main_login_button').hide(); 	
+     $('#login_model').modal('hide');
+     $('#main_logout_button').show();
+
+
+
     })
     .bind("ajax:error", function(evt, xhr, status, error) {
-      alert('Invalid Email or Password');
+      var obj = JSON.parse(xhr.responseText);
+      for(i=0;i<obj2.length;i++)
+      {
+      	obj2[i].innerHTML="";
+      }
+      if(obj.name)
+      $('#name_errors').text(obj.name[0]);
+      if(obj.nick)
+      $('#nick_errors').text(obj.nick[0]);
+      if(obj.email)
+      $('#email_errors').text(obj.email[0]);
+      if(obj.password)
+      $('#password_errors').text(obj.password_confirmation[0]);
+       if(obj.password_confirmation)
+      $('#passwordconform_errors').text(obj.password_confirmation[0]);
+      if(obj.college)
+      $('#college_errors').text(obj.college[0]);
+      if(obj.roll)
+      $('#roll_errors').text(obj.roll[0]);
+      if(obj.phone)
+      $('#phone_errors').text(obj.phone[0]);
+
+
     });
   });
  </script>

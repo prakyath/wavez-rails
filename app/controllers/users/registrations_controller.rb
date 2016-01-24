@@ -14,7 +14,7 @@ def create
       end
     else
       clean_up_passwords resource
-      return render :json => {:success => false}
+      return render :json => resource.errors, status: 401
     end
   end
  
