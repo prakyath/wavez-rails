@@ -1,4 +1,3 @@
-
 	<body>
      
       <style type="text/css">
@@ -14,7 +13,6 @@
       height: 100%;
      }
        
-
 		#homeframe
 	{
 		position: absolute;
@@ -28,7 +26,6 @@
 		background-attachment: fixed;
 		background-size: cover;
 	}
-
 	#seacontainer
 	{
 		position: absolute;
@@ -37,7 +34,6 @@
 		z-index: 100;
 		overflow-y:hidden;
 	}
-
 	#sea
 	{
 		position: absolute;
@@ -46,7 +42,6 @@
 		width: 100%;
 		height: 110%;
 	}
-
 	#boatcontainer
 	{
 		position: absolute;
@@ -57,14 +52,12 @@
     	-webkit-transform: translate(-50%,-50%); /* Safari */
     	transform: translate(-50%,-50%);
 	}
-
 	#boat
 	{
 		position: absolute;
 		top: 0;
 		left: 0;
 	}
-
 	#anchorcontainer
 	{
 		position: absolute;
@@ -75,14 +68,12 @@
     	-webkit-transform: translate(-50%,-50%); /* Safari */
     	transform: translate(-50%,-50%);
 	}
-
 	#anchor
 	{
 		position: absolute;
 		top: 0;
 		left: 0;
 	}
-
 	#departmentlogo, #facebooklogo, #iitmlogo
 	{
 		background-color: #FFFFFF;
@@ -103,30 +94,25 @@
   		position: absolute;
   		top: 50px;
 	}
-
 	#departmentlogo
 	{
 		background-image: url("assets/departmentlogo.jpg");
   		z-index: 130;
 	}
-
 	#iitmlogo
 	{
 		background-image: url("assets/iitmlogo.png");
   		z-index: 120;
 	}
-
 	#facebooklogo
 	{
 		background-image: url("assets/facebooklogo.png");
   		z-index: 110;
   	}
-
 	#departmentlogo:hover, #iitmlogo:hover, #facebooklogo:hover
 	{
   		box-shadow: 0 9px 8px #FFFFFF;
 	}
-
 	#waveztextcontainer
 	{
 		-ms-transform: translate(-50%,-50%); /* IE 9 */
@@ -138,7 +124,6 @@
 		bottom: 55%;
 		z-index: 80;
 	}
-
 	#waveztext
 	{
 		position: absolute;
@@ -147,15 +132,12 @@
 		width: 100%;
 		height: 100%;
 	}
-
 	.input_field
     {
       letter-spacing:1px; 
       margin-left:5px;
       border-top:none;
-
     }
-
 		</style>
 
 
@@ -291,10 +273,13 @@ $(document).ready(function($) {
    
     $('#new_user')
     .bind('ajax:success', function(evt, data, status, xhr) {
-     console.log(xhr.responseText);
+     var obj_1 = JSON.parse(xhr.responseText);
+     var nam=obj_1.name;
      $('#main_login_button').hide(); 	
      $('#login_model').modal('hide');
      $('#main_logout_button').show();
+     $.alert("Welcome "+nam,"Wavez 2016 Team");
+
     })
     .bind("ajax:error", function(evt, xhr, status, error) {
       alert('Invalid Email or Password');
@@ -406,11 +391,19 @@ $(document).ready(function($) {
                                                             <input type="checkbox" name="gender" value="male">Male
                                                             <input type="checkbox" name="gender" value="female"  style="margin-left:20px">Female 
                                                         </form>
-                                                    </div>
-
+                                                    </div>  
                                                     <div id="choose-buttons" text-align="center">
-                                                
-          									    <a class="btn btn-info btn-lg " role="button" id="login-button" style="margin-left:20vw; margin-right:20vw; margin-top:30px;" >Register
+   -->  <div class="form-group">
+<div class="col-sm-offset-2 col-sm-10">
+<label for="inputEvent" style="align:center">Events you want to register</label>
+ <label class="radio-inline">
+   <% Event.all.each do |event| %>
+     <%= check_box_tag "user[event_ids][]", event.id %>
+     <%= event.name %>
+    <% end %>  
+</div>                                                          
+   </div>                                                   
+          									  <!--  <a class="btn btn-info btn-lg " role="button" id="login-button" style="margin-left:20vw; margin-right:20vw; margin-top:30px;" >Register
  											    </a>
  											    -->
  											    <%= f.submit "Sign up", :class =>'btn btn-info btn-lg', :id =>'login-button',:style =>'align:center;margin-left:33vw; margin-right:20vw; margin-top:30px;'  %>
@@ -423,11 +416,12 @@ $(document).ready(function($) {
    
     $('#create_user')
     .bind('ajax:success', function(evt, data, status, xhr) {
+     var Obj = JSON.parse(xhr.responseText);
+     var Nam = Obj.name;
      $('#main_login_button').hide(); 	
      $('#login_model').modal('hide');
      $('#main_logout_button').show();
-
-
+     $.alert("Welcome "+Nam,"Wavez 2016 Team"); 
 
     })
     .bind("ajax:error", function(evt, xhr, status, error) {
@@ -452,8 +446,6 @@ $(document).ready(function($) {
       $('#roll_errors').text(obj.roll[0]);
       if(obj.phone)
       $('#phone_errors').text(obj.phone[0]);
-
-
     });
   });
  </script>
@@ -2224,6 +2216,7 @@ $(document).ready(function($) {
   		<script src="assets/javascripts/EasePack.min.js"></script>
   		<script src="assets/javascripts/wow.js"></script>
 		<script src="assets/javascripts/TweenLite.min.js"></script>
+
 		
 
         
@@ -2244,18 +2237,11 @@ $(document).ready(function($) {
         preloader.on();
          
         $( window ).load(function() { 
-
         preloader.off();
         jQuery("#preloader").fadeOut("slow");
-
-
-
        })
 		
-
             jQuery(document).ready(function($){
-
-
 		  	  
   
                $(window).scroll(function() {
@@ -2272,8 +2258,6 @@ $(document).ready(function($) {
 		 		};   	
 			});
 /*....................home animations starts............................*/
-
-
     var windowheight = $(window).height();
   	var windowwidth = $(window).width();
   	
@@ -2293,46 +2277,28 @@ $(document).ready(function($) {
   	document.getElementById('facebooklogo').style.left = (0.95*windowwidth) + "px";
   	document.getElementById('waveztextcontainer').style.width = 0.5*windowheight + "px";
   	document.getElementById('waveztextcontainer').style.height = 0.125*windowheight + "px";
-
   	if (windowwidth<=1000) {
   		document.getElementById('schedule').style.height = "1500px";
   		document.getElementById('schedbutton').style.display = "none";
   	}
-
   	
-
   	 $( window ).load(function() {  
-
   	TweenLite.to(boatcontainer, 5.7, {left:(0.5*windowwidth), ease:Power1.easeOut});
   	TweenLite.to(sea, 5.7, {left:(-1*windowwidth), ease:Power1.easeOut});
-
-
-
-
-
   	TweenLite.to(boatcontainer, 1, {rotation:-5, transformOrigin:"50% 100%"});
   	TweenLite.to(anchorcontainer, 1, {rotation:10, transformOrigin:"50% 03%"});
-
   	TweenLite.to(boatcontainer, 1, {rotation:0, transformOrigin:"50% 100%", delay:1});
   	TweenLite.to(anchorcontainer, 1, {rotation:0, transformOrigin:"50% 03%", delay:1});
-
   	TweenLite.to(anchorcontainer, 0.7, {rotationY:180, delay:2});
   	TweenLite.to(boatcontainer, 0.7, {transformOrigin:"50% 100%",
   									  delay:2,
   									  ease:Power0.easeInOut});
-
   	TweenLite.to(boatcontainer, 1, {rotation:5, transformOrigin:"50% 100%", delay:2.7});
   	TweenLite.to(anchorcontainer, 1, {rotation:-10, transformOrigin:"50% 03%", delay:2.7});
-
   	TweenLite.to(boatcontainer, 1, {rotation:0, transformOrigin:"50% 100%", delay:3.7});
   	TweenLite.to(anchorcontainer, 1, {rotation:0, transformOrigin:"50% 03%", delay:3.7});
-
   	
   	TweenLite.to(anchorcontainer, 0.7, {rotationY:0, delay:4.7});
-
-
-
-
   	$("#boatcontainer").mouseenter(function(){
   		TweenLite.to(anchorcontainer, 0.7, {rotationY:360});
   		TweenLite.to(anchorcontainer, 0.7, {rotationY:0, delay:0.7});
@@ -2340,12 +2306,9 @@ $(document).ready(function($) {
   		TweenLite.to(anchorcontainer, 0.7, {rotation:-10, transformOrigin:"50% 03%", delay:0.7});
   		TweenLite.set(anchorcontainer, {rotation:0, delay:1.4});
   	});
-
   	$("#waveztextcontainer").mouseenter(function(){
   		TweenLite.fromTo(waveztextcontainer, 1, {autoAlpha:0, scale:0.7}, {autoAlpha:1, scale:1});
   	});
-
-
   	TweenLite.to(departmentlogo, 1.9, {
  									   top:(windowheight-40),
   									   scale:0.5,
@@ -2353,13 +2316,6 @@ $(document).ready(function($) {
   	TweenLite.to(boatcontainer, 1.9, {scale:1.1, ease:Bounce.easeOut});
   	TweenLite.to(departmentlogo, 3.8, {rotation:-1080,
  									   left:(0.9*windowwidth-104), delay:1.9});
-
-
-
-
-
-
-
  	TweenLite.to(iitmlogo, 1.9, {
  							     top:(windowheight-40),
   							     scale:0.5,
@@ -2370,13 +2326,6 @@ $(document).ready(function($) {
   								   	  delay:1.9});
   	TweenLite.to(iitmlogo, 1.9, {rotation:-720,
  									   left:(0.9*windowwidth-52), delay:3.8});
-
-
-
-
-
-
-
  	TweenLite.to(facebooklogo, 1.9, {
  									 top:(windowheight-40),
   									 scale:0.5,
@@ -2386,15 +2335,9 @@ $(document).ready(function($) {
   									 delay:3.8});
   	TweenLite.to(facebooklogo, 1, {rotation:-360,
  									   left:(0.9*windowwidth), delay:5.7});
-
-
   	TweenLite.from(waveztextcontainer,  1, {scale:0.01, autoAlpha:0, delay:5.7});
   	
-
-
-
 });
-
 $(window).resize(function(){
 	var windowheight = $(window).height();
   	var windowwidth = $(window).width();
@@ -2415,42 +2358,26 @@ $(window).resize(function(){
   	document.getElementById('facebooklogo').style.left = (0.95*windowwidth) + "px";
   	document.getElementById('waveztextcontainer').style.width = 0.5*windowheight + "px";
   	document.getElementById('waveztextcontainer').style.height = 0.125*windowheight + "px";
-
   	if (windowwidth<=1000) {
   		document.getElementById('schedule').style.height = "1500px";
   		document.getElementById('schedbutton').style.display = "none";
   	}
-
   	TweenLite.to(boatcontainer, 5.7, {left:(0.5*windowwidth), ease:Power1.easeOut});
   	TweenLite.to(sea, 5.7, {left:(-1*windowwidth), ease:Power1.easeOut});
-
-
-
-
-
   	TweenLite.to(boatcontainer, 1, {rotation:-5, transformOrigin:"50% 100%"});
   	TweenLite.to(anchorcontainer, 1, {rotation:10, transformOrigin:"50% 03%"});
-
   	TweenLite.to(boatcontainer, 1, {rotation:0, transformOrigin:"50% 100%", delay:1});
   	TweenLite.to(anchorcontainer, 1, {rotation:0, transformOrigin:"50% 03%", delay:1});
-
   	TweenLite.to(anchorcontainer, 0.7, {rotationY:180, delay:2});
   	TweenLite.to(boatcontainer, 0.7, {transformOrigin:"50% 100%",
   									  delay:2,
   									  ease:Power0.easeInOut});
-
   	TweenLite.to(boatcontainer, 1, {rotation:5, transformOrigin:"50% 100%", delay:2.7});
   	TweenLite.to(anchorcontainer, 1, {rotation:-10, transformOrigin:"50% 03%", delay:2.7});
-
   	TweenLite.to(boatcontainer, 1, {rotation:0, transformOrigin:"50% 100%", delay:3.7});
   	TweenLite.to(anchorcontainer, 1, {rotation:0, transformOrigin:"50% 03%", delay:3.7});
-
   	
   	TweenLite.to(anchorcontainer, 0.7, {rotationY:0, delay:4.7});
-
-
-
-
   	$("#boatcontainer").mouseenter(function(){
   		TweenLite.to(anchorcontainer, 0.7, {rotationY:360});
   		TweenLite.to(anchorcontainer, 0.7, {rotationY:0, delay:0.7});
@@ -2458,12 +2385,9 @@ $(window).resize(function(){
   		TweenLite.to(anchorcontainer, 0.7, {rotation:-10, transformOrigin:"50% 03%", delay:0.7});
   		TweenLite.set(anchorcontainer, {rotation:0, delay:1.4});
   	});
-
   	$("#waveztextcontainer").mouseenter(function(){
   		TweenLite.fromTo(waveztextcontainer, 1, {autoAlpha:0, scale:0.7}, {autoAlpha:1, scale:1});
   	});
-
-
   	TweenLite.to(departmentlogo, 1.9, {
  									   top:(windowheight-40),
   									   scale:0.5,
@@ -2471,13 +2395,6 @@ $(window).resize(function(){
   	TweenLite.to(boatcontainer, 1.9, {scale:1.1, ease:Bounce.easeOut});
   	TweenLite.to(departmentlogo, 3.8, {rotation:-1080,
  									   left:(0.9*windowwidth-104), delay:1.9});
-
-
-
-
-
-
-
  	TweenLite.to(iitmlogo, 1.9, {
  							     top:(windowheight-40),
   							     scale:0.5,
@@ -2488,13 +2405,6 @@ $(window).resize(function(){
   								   	  delay:1.9});
   	TweenLite.to(iitmlogo, 1.9, {rotation:-720,
  									   left:(0.9*windowwidth-52), delay:3.8});
-
-
-
-
-
-
-
  	TweenLite.to(facebooklogo, 1.9, {
  									 top:(windowheight-40),
   									 scale:0.5,
@@ -2504,30 +2414,15 @@ $(window).resize(function(){
   									 delay:3.8});
   	TweenLite.to(facebooklogo, 1, {rotation:-360,
  									   left:(0.9*windowwidth), delay:5.7});
-
-
   	TweenLite.from(waveztextcontainer,  1, {scale:0.01, autoAlpha:0, delay:5.7});
   	
-
 });
-
-
-
 /*....................home animations ends............................*/
 /* ...................events triggers starts........................... */
-
 		
-
-
-
-
-
-
-
 			$(".e").click(function(){
 				$(this).closest("div").next().modal();
 			});
-
 				$(".elogin").click(function(){
 					$(this).closest("h4").children("a").removeClass("livetab");
 					$(this).addClass("livetab");
@@ -2540,8 +2435,6 @@ $(window).resize(function(){
 					$(this).closest("div").next().children("div").hide(10);
 					$(this).closest("div").next().children(".pregister").slideDown();
 				});
-
-
 				$(".eoverview").click(function(){
 					$(this).closest("h4").children("a").removeClass("livetab");
 					$(this).addClass("livetab");
@@ -2553,55 +2446,40 @@ $(window).resize(function(){
 					$(this).addClass("livetab");
 					$(this).closest("div").next().children("p").hide(10);
 					$(this).closest("div").next().children(".pprize").slideDown();
-
 				});
 				$(".eprblmstmt").click(function(){
 					$(this).closest("h4").children("a").removeClass("livetab");
 					$(this).addClass("livetab");
 					$(this).closest("div").next().children("p").hide(10);
 					$(this).closest("div").next().children(".pprblmstmt").slideDown();
-
 				});
-
 				$(".econtact").click(function(){
 					$(this).closest("h4").children("a").removeClass("livetab");
 					$(this).addClass("livetab");
 					$(this).closest("div").next().children("p").hide(10);
 					$(this).closest("div").next().children(".pcontact").slideDown();
-
 				});
-
 				$(".erules").click(function(){
 					$(this).closest("h4").children("a").removeClass("livetab");
 					$(this).addClass("livetab");
 					$(this).closest("div").next().children("p").hide(10);
 					$(this).closest("div").next().children(".prules").slideDown();
-
 				});
-
 				$(".eregister").click(function(){
 					$(this).closest("h4").children("a").removeClass("livetab");
 					$(this).addClass("livetab");
 					$(this).closest("div").next().children("p").hide(10);
 					$(this).closest("div").next().children(".pregister").slideDown();
-
 				});
-
 				$(".eschedule").click(function(){
 					$(this).closest("h4").children("a").removeClass("livetab");
 					$(this).addClass("livetab");
 					$(this).closest("div").next().children("p").hide(10);
 					$(this).closest("div").next().children(".pschedule").slideDown();
-
 				});
 /* ...................events triggers ends........................... */
-
 /* ...................schedule triggers starts........................... */
-
 			
-
-
-
 			var flag=1;
 			var d= new Date();
 			var ddate = d.getDate();
@@ -2623,12 +2501,8 @@ $(window).resize(function(){
 			else {
 				n=-1;
 			}
-
 			f = ((n*2.5)+100) + "px";
-
-
   			var windowwidth1 = $(window).width();
-
 			if(windowwidth1<1000)
 			{
 				$("#swater:not(.animated)").animate({
@@ -2636,51 +2510,27 @@ $(window).resize(function(){
 					});
 				if(n>0)
 				{
-
 					$(".dtg").text( n + " days to go...");
 				}
 				else
 				{
-
 					$(".dtg").text( "Sorry you are late");
 				}
-
-
 				$(".scheduletabd").prepend("<br><br>");
 				
-
 			}
-
-
-
 			else
 			{
-
-
-
-
-
-
-
 			
 			$("#schedule").hover(function(){
-
 					if(1)
-
 					{
-
-
-
-
-
-
 				
 					if(flag)
 					{
 					$("#swater:not(.animated)").animate({
 						height: f
 					});
-
 					$({countNum:0}).animate(
 						{countNum:n},
 						{
@@ -2692,42 +2542,29 @@ $(window).resize(function(){
 							complete: function() {
 								if(n>0)
 								{
-
 								$(".dtg").text( n + " days to go...");
 								}
 								else
 								{
-
 								$(".dtg").text( "Sorry you are late");
 								}
-
 							}
-
 						}
 						);
-
 					$(".scheduletab > div > a").show();
 					$(".scheduletab > div > a").animate({top : "+=350px",
 														 width:"300px",
 														 height:"300px",
 														 borderRadius:"150px",
 														 fontSize:"300%"}, 200);
-
 					flag=0;
 				 	}
 					$("#swater").addClass("animated");
-
-
 				}
-
 				});
-
 		}
-
-
 		$(window).resize(function(){
 			var windowwidth1 = $(window).width();
-
 			if(windowwidth1<1000)
 			{
 				$("#swater:not(.animated)").animate({
@@ -2735,47 +2572,27 @@ $(window).resize(function(){
 					});
 				if(n>0)
 				{
-
 					$(".dtg").text( n + " days to go...");
 				}
 				else
 				{
-
 					$(".dtg").text( "Sorry you are late");
 				}
-
-
 				$(".scheduletabd").prepend("<br><br>");
 				
-
 			}
-
-
-
 			else
 			{
-
-
-
-
-
-
-
 			
 			$("#schedule").hover(function(){
-
 					if(1)
-
 					{
-
-
 				
 					if(flag)
 					{
 					$("#swater:not(.animated)").animate({
 						height: f
 					});
-
 					$({countNum:0}).animate(
 						{countNum:n},
 						{
@@ -2787,41 +2604,30 @@ $(window).resize(function(){
 							complete: function() {
 								if(n>0)
 								{
-
 								$(".dtg").text( n + " days to go...");
 								}
 								else
 								{
-
 								$(".dtg").text( "Sorry you are late");
 								}
-
 							}
-
 						}
 						);
-
 					$(".scheduletab > div > a").show();
 					$(".scheduletab > div > a").animate({top : "+=350px",
 														 width:"300px",
 														 height:"300px",
 														 borderRadius:"150px",
 														 fontSize:"300%"}, 200);
-
 					flag=0;
 				 	}
 					$("#swater").addClass("animated");
-
-
 				}
-
 				});
-
 		}
 			
 		});
 			$("#d1").click(function(){
-
 				$(".schedtab").hide("slow");
 				$(".hd2").hide();
 				$(".schedtabb2").hide();
@@ -2830,12 +2636,8 @@ $(window).resize(function(){
 				$(".schedtabb1").fadeIn("slow");
 				$("#d1 > a").addClass("disabled");
 				$("#d2 > a").removeClass("disabled");
-
-
 			});
-
 			$("#d2").click(function(){
-
 				$(".schedtab").hide("slow");
 				$(".hd1").hide();
 				$(".schedtabb1").hide();
@@ -2844,24 +2646,14 @@ $(window).resize(function(){
 				$(".schedtabb2").fadeIn("slow");
 				$("#d2 > a").addClass("disabled");
 				$("#d1 > a").removeClass("disabled");
-
 			});
-
-
-
-
 			
-
 				
 				
 			
 			
-
 /* ...................schedule triggers ends........................... */
-
-
 		  });
-
 		jQuery('.scroll').on('click', function(e){		
 				e.preventDefault()
 		    
@@ -2869,8 +2661,6 @@ $(window).resize(function(){
 		      scrollTop : jQuery(this.hash).offset().top
 		    }, 1500);
 		});
-
-
 		</script>
 
         <script >
@@ -2914,5 +2704,4 @@ $(window).resize(function(){
 		
 
 
-	</body>
-
+</body>

@@ -6,7 +6,7 @@ def create
       if resource.active_for_authentication?
         set_flash_message :notice, :signed_up if is_navigational_format?
         sign_up(resource_name, resource)
-        return render :json => {:success => true}
+        return render :json => resource
       else
         set_flash_message :notice, :"signed_up_but_#{resource.inactive_message}" if is_navigational_format?
         expire_session_data_after_sign_in!
@@ -26,7 +26,6 @@ def create
   def sign_up_params
   #devise_parameter_sanitizer.sanitize(:sign_up).push(:name,:nick,:roll,:college)
  # devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name, :nick, :roll,:college, :email, :password, :password_confirmation) }
-
-   params.require(:user).permit(:phone,:email, :password, :password_confirmation, :name, :nick,:roll,:college)
+   params.require(:user).permit(:phone,:email, :password, :password_confirmation, :name, :nick,:roll,:college, event_ids: [])
   end
 end
