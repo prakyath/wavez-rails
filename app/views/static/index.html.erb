@@ -282,7 +282,8 @@ $(document).ready(function($) {
 
     })
     .bind("ajax:error", function(evt, xhr, status, error) {
-      alert('Invalid Email or Password');
+     $.alert("Please try again","error",{type: 'danger'
+});  
     });
   });
  </script> 	  
@@ -425,6 +426,8 @@ $(document).ready(function($) {
 
     })
     .bind("ajax:error", function(evt, xhr, status, error) {
+     $.alert("Please try again","error",{type: 'danger'
+});
       var obj = JSON.parse(xhr.responseText);
       for(i=0;i<obj2.length;i++)
       {
