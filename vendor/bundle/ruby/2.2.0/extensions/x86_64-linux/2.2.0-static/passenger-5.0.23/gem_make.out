@@ -1,0 +1,13 @@
+/home/jobs/.rbenv/versions/2.2.3/bin/ruby -r ./siteconf20160126-17046-1ysqfgk.rb extconf.rb
+Attempting to download https://oss-binaries.phusionpassenger.com/binaries/passenger/by_release/5.0.23/rubyext-ruby-2.2.3-x86_64-linux.tar.gz into /home/jobs/wavez-rails/vendor/bundle/ruby/2.2.0/gems/passenger-5.0.23/download_cache
+Attempting to download https://oss-binaries.phusionpassenger.com/binaries/passenger/by_release/5.0.23/nginx-1.8.0-x86_64-linux.tar.gz into /home/jobs/wavez-rails/vendor/bundle/ruby/2.2.0/gems/passenger-5.0.23/download_cache
+Attempting to download https://oss-binaries.phusionpassenger.com/binaries/passenger/by_release/5.0.23/agent-x86_64-linux.tar.gz into /home/jobs/wavez-rails/vendor/bundle/ruby/2.2.0/gems/passenger-5.0.23/download_cache
+
+make "DESTDIR=" clean
+true
+
+make "DESTDIR="
+true
+
+make "DESTDIR=" install
+true
