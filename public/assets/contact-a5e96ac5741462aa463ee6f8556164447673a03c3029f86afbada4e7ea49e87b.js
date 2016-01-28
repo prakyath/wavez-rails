@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#contactForm").submit(function(t){t.preventDefault();var r=jQuery,e=r(this).serializeArray(),n=r(this).attr("action"),a=r("#contactFormResponse"),c=r("#cfsubmit"),o=c.text();return c.text("Sending..."),r.ajax({url:n,type:"POST",data:e,success:function(t){a.html(t),c.text(o)},error:function(t){alert("Error occurd! Please try again")}}),!1})});
