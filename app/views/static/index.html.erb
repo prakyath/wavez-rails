@@ -270,6 +270,23 @@
  <% end %>
   <script type="text/javascript">
 $(document).ready(function($) {
+
+
+    function show_alert(){  
+   $.alert("Problem statements for Roboceana and RC Boats released!!",{
+         title : "wavez 2016",
+       position: ['top-left', [-0.42, 0]],
+       type: 'success',
+       minTop: 100
+  })
+
+ }
+
+  setTimeout(show_alert, 8000);
+
+
+
+
    
     $('#new_user')
     .bind('ajax:success', function(evt, data, status, xhr) {
