@@ -6,9 +6,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   
-
+  mount_uploader :avatar, AvatarUploader
   validates :password, confirmation: true
-  validates :password_confirmation, presence: true 
+#  validates :password_confirmation, presence: true 
   validates :name, presence: true
   validates :nick, presence: true
   validates :phone, presence: true

@@ -1,4 +1,4 @@
-class Users::RegistrationsController < Devise::RegistrationsController
+class Users::RegistrationsController < Devise::RegistrationsController  
 def create
     build_resource(sign_up_params)
  
@@ -23,9 +23,15 @@ def create
   def sign_up(resource_name, resource)
     sign_in(resource_name, resource)
   end
+  
   def sign_up_params
   #devise_parameter_sanitizer.sanitize(:sign_up).push(:name,:nick,:roll,:college)
  # devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name, :nick, :roll,:college, :email, :password, :password_confirmation) }
    params.require(:user).permit(:phone,:email, :password, :password_confirmation, :name, :nick,:roll,:college, event_ids: [])
   end
+   
+  def update_resource(resource, params)
+    resource.update_without_password(params)
+  end
+
 end

@@ -7,9 +7,7 @@ def resource_name
 end
 
 def resource
-
-@resource ||= User.new
-
+  @resource ||= User.new
 end
 
 def devise_mapping
