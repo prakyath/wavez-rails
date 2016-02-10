@@ -289,13 +289,14 @@ $(document).ready(function($) {
 
    
     $('#new_user')
-    .bind('ajax:success', function(evt, data, status, xhr) {
+    .bind('ajax:success', function(evt, data, status, xhr) { 	
      var obj_1 = JSON.parse(xhr.responseText);
      var nam=obj_1.name;
      $('#main_login_button').hide(); 	
      $('#login_model').modal('hide');
      $('#main_logout_button').show();
      $.alert("Welcome "+nam,"Wavez 2016 Team");
+     location.reload();
 
     })
     .bind("ajax:error", function(evt, xhr, status, error) {
@@ -378,7 +379,7 @@ $(document).ready(function($) {
                                                 	    <%= f.telephone_field :phone,:id=>'enter_name',:class =>'input_field',:placeholder=>'Enter a valid phone number' %>
 
                                                 	  </span>
-                                                	</div>
+                                                	</div>RoboceanRoboceana ERoboceana Ea E
 
 
                                                 	<div class="col-md-offset-1 col-md-3 col-xs-10 col-xs-offset-1" style="padding-bottom:40px">
@@ -542,7 +543,7 @@ $(document).ready(function($) {
 	                    </div>
 	                    <div class="col-md-6 col-xs-12 text-center">
 	                        <div class="aboutus-item">
-	                            <p class="aboutus-desc ">Wavez is the annual techno-cultural festival of the Department of Ocean Engineering at IIT Madras. It involves both Technical and Cultural events and is aimed at increasing the intra-department and inter-department interactions. It is attended by roughly 500 students of IIT Madras and many more across chennai. It is considered as knowledge hub of Naval architecture and ocean engineering field. The festival provides a solid platform for people to learn about our work and develop an interest, also a place for those in our department to pit their skills and knowledge against each other. </p>
+	                            <p class="aboutus-desc ">Wavez is the annual techno-cultural festival of the Department of Ocean Engineering at IIT Madras. It involves both Technical and Cultural events and is aimed at increasing the intra-department and inter-department interactions. It is attended by roughly 800 students of IIT Madras and many more across chennai. It is considered as knowledge hub of Naval architecture and ocean engineering field. The festival provides a solid platform for people to learn about our work and develop an interest, also a place for those in our department to pit their skills and knowledge against each other. </p>
 	                        </div>
 	                    </div>
 	                    
@@ -572,7 +573,7 @@ $(document).ready(function($) {
 
 							<div class="col-sm-4">
 								<a class="recent-work e" style="background-image:url(assets/e1.png)" id="e1">
-									<span class="btn btn-o-white">Roboceana</span>
+									<span class="btn btn-o-white">Roboceana Event</span>
 								</a>
 							</div>
                                           						<!--roboceana modal-->
@@ -591,7 +592,7 @@ $(document).ready(function($) {
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg eprblmstmt" role="button" id="eprblmstmt">Problem Statement
  											</a>&nbsp;
- 											<a class="btn btn-info btn-lg eregister" role="button" id="eregister">Registration
+ 											<a class="btn btn-success btn-lg eregister" role="button" id="eregister">Registration status
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
  											</a>
@@ -620,8 +621,18 @@ $(document).ready(function($) {
  											<p id="pprblmstmt" class="phidden pprblmstmt"><a href="http://www.filehosting.org/file/details/540770/Roboceana%20PS.pdf" download="problem statement">Problem Statement</a></p>
  											<p id="pcontact" class="phidden pcontact">Tony-+919791483921,Yashdhar-+919940115352,Sandeep goerge-+919447881702</p>
 
- 											<p id="pregister" class="phidden pregister"
-                                            </p>
+ 											<p id="pregister" class="phidden pregister">
+ 											 <% if user_signed_in? %>
+ 											    <% if current_user.expo=="true" %>
+                                                    <%= "Thanks for registering with this event, our team will be in touch with you soon!!" %>
+                                                 <% elsif %>
+                                                 <%= "You have not registered yourself with this event,please visit the profile link to regster" %>
+                                                 <%= link_to "Profile page", :controller => :profiles, :action => :show%>
+                                                 <% end %>
+                                              <% elsif %>
+                                                <%="please login to see your registration status"%>
+                                               <% end %>          
+                                             </p>
 
         								</div>
       								</div>
@@ -784,20 +795,20 @@ $(document).ready(function($) {
 
 
 							<div class="col-sm-4">
-								<a class="recent-work e" style="background-image:url(assets/e5.png)" id="e5">
-									<span class="btn btn-o-white">Standup Comedy</span>
+								<a class="recent-work e" style="background-image:url(assets/e3.png)" id="e5">
+									<span class="btn btn-o-white">Research Expo</span>
 								</a>
 							</div>
 
-							<!--standupcomedy modal-->
-							<div class="modal fade eventname" id="standupcomedy" role="dialog" tabindex='-1'>
+							<!--researchexpo modal-->
+							<div class="modal fade eventname" id="researchexpo" role="dialog" tabindex='-1'>
     							<div class="modal-dialog">
     
       								<div class="modal-content">
         								<div class="modal-header">
           									<button type="button" class="close" data-dismiss="modal">&times;
           									</button>
-          									<h4 class="modal-title">Standup Comedy
+          									<h4 class="modal-title">Research Expo
           									<br>
  											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
  											</a>&nbsp;
@@ -807,22 +818,21 @@ $(document).ready(function($) {
         								</div>
         								<div class="modal-body">
           									<p id="poverview" class="poverview">
-          									This is yet another fantastic event that is being organized for the first time in the history of 
+          									Expo provides both graduate and undergraduates with the opportunity to share their research 
 
-											Wavez.<br> It is where the audience would be provided an enthralling experience by the comedian, 
+											with a larger audience.<br> This event showcases the work and research done by our scholars in 
 
-											performing live. The event would positively stand out as one of the significant highlights of fest.
+											various fields of Naval Architecture & Ocean Engineering.
  											
  											</p>
- 											<p id="pcontact" class="phidden pcontact">Contact Details</p>
+ 											<p id="pcontact" class="phidden pcontact">Jyotsna-+919444291472</p>
 
         								</div>
       								</div>
       
     							</div>
  							</div>
-							<!--end of standupcomedy modal-->
-
+							<!--end of researchexpo modal-->
 							<div class="col-sm-4">
 								<a class="recent-work e" style="background-image:url(assets/e6.png)" id="e6">
 									<span class="btn btn-o-white">Freestyle Solo</span>
@@ -1242,50 +1252,53 @@ $(document).ready(function($) {
 
 
 							<div class="col-sm-4">
-								<a class="recent-work e" style="background-image:url(assets/e14.png)" id="e14">
-									<span class="btn btn-o-white">Daily Events</span>
+								<a class="recent-work e" style="background-image:url(assets/e18.png)" id="e14">
+									<span class="btn btn-o-white">Online T-Shirt Design</span>
 								</a>
 							</div>
 
 
-							<!--dailyevents modal-->
-							<div class="modal fade eventname" id="dailyevents" role="dialog" tabindex='-1'>
+	                        <!--otsdesign modal-->
+							<div class="modal fade eventname" id="otsdesign" role="dialog" tabindex='-1'>
     							<div class="modal-dialog">
     
       								<div class="modal-content">
         								<div class="modal-header">
           									<button type="button" class="close" data-dismiss="modal">&times;
           									</button>
-          									<h4 class="modal-title">Daily Events
+          									<h4 class="modal-title">Online T-Shirt Design
           									<br>
  											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg eprize" role="button" id="eprize">Prize
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg erules" role="button" id="erules">Rules
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
  											</a>
           									</h4>
         								</div>
         								<div class="modal-body">
-          									<p id="poverview" class="poverview">
-          									Daily events is a collection of puzzles, crosswords and other brain teasers that keep the 
+          									<p  id="poverview" class="poverview">
+          									Online T-shirt Design is a publicity event where the participants are given the task of designing 
 
-											attendees engrossed throughout their presence at the festival.<br> Everyone at the fest is seen 
+											the shirts for Wavez.<br> The creativity of the participants is put to test and the best design is 
 
-											racking their brains over these little pieces of intriguing puzzles having their bit of enjoyment.
+											selected to represent Wavez.
+
 
  											
  											</p>
  											<p id="pprize" class="phidden pprize">amount</p>
- 											<p id="pcontact" class="phidden pcontact">Contact Details</p>
+ 											<p id="prules" class="phidden prules">Will be published soon.</p>
+ 											<p id="pcontact" class="phidden pcontact">Sandeep-9043255977</p>
 
         								</div>
       								</div>
       
     							</div>
  							</div>
-							<!--end of dailyevents modal-->
-
+							<!--end of otsdesign modal-->
 
 							<div class="col-sm-4">
 								<a class="recent-work e" style="background-image:url(assets/e15.png)" id="e15">
@@ -1340,7 +1353,7 @@ $(document).ready(function($) {
 
 							<div class="col-sm-4">
 								<a class="recent-work e" style="background-image:url(assets/e16.png)" id="e16">
-									<span class="btn btn-o-white">Workshops</span>
+									<span class="btn btn-o-white">Extempore</span>
 								</a>
 							</div>
 
@@ -1352,7 +1365,7 @@ $(document).ready(function($) {
         								<div class="modal-header">
           									<button type="button" class="close" data-dismiss="modal">&times;
           									</button>
-          									<h4 class="modal-title">Workshops
+          									<h4 class="modal-title">Extempore
           									<br>
  											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
  											</a>&nbsp;
@@ -1366,9 +1379,7 @@ $(document).ready(function($) {
         								</div>
         								<div class="modal-body">
           									<p id="poverview" class="poverview">
-          									Ocean Engineering has a diverse range of software for Design, Construction and Hydrodynamics 
-
-											of ships.<br> Workshops have always been a tool for the participants to get an insight into them.
+          									AN SPE sponsored event which questions your basic knowledge in oil and gas industry and offshore structures.This event challenges your oral presentation skills and spontaneity 
  											</p>
  											<p id="pschedule" class="phidden pschedule">Will be published soon.</p>
  											<p id="pregister" class="phidden pregister">Not started yet.</p>
@@ -1431,7 +1442,7 @@ $(document).ready(function($) {
 
 							<div class="col-sm-4">
 								<a class="recent-work e" style="background-image:url(assets/e18.png)" id="e18">
-									<span class="btn btn-o-white">Online T-Shirt Design</span>
+									<span class="btn btn-o-white">Roboceana Workshop</span>
 								</a>
 							</div>
 
@@ -1443,13 +1454,13 @@ $(document).ready(function($) {
         								<div class="modal-header">
           									<button type="button" class="close" data-dismiss="modal">&times;
           									</button>
-          									<h4 class="modal-title">Online T-Shirt Design
+          									<h4 class="modal-title">Roboceana Workshop
           									<br>
  											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
  											</a>&nbsp;
- 											<a class="btn btn-info btn-lg eprize" role="button" id="eprize">Prize
+ 											<a class="btn btn-info btn-lg erules" role="button" id="eprize">Rules
  											</a>&nbsp;
- 											<a class="btn btn-info btn-lg erules" role="button" id="erules">Rules
+ 											<a class="btn btn-info btn-lg eprize" role="button" id="erules">Registration Status
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
  											</a>
@@ -1457,18 +1468,14 @@ $(document).ready(function($) {
         								</div>
         								<div class="modal-body">
           									<p  id="poverview" class="poverview">
-          									Online T-shirt Design is a publicity event where the participants are given the task of designing 
-
-											the shirts for Wavez.<br> The creativity of the participants is put to test and the best design is 
-
-											selected to represent Wavez.
+          								    writeup yet to be posted!!
 
 
  											
  											</p>
- 											<p id="pprize" class="phidden pprize">amount</p>
- 											<p id="prules" class="phidden prules">Will be published soon.</p>
- 											<p id="pcontact" class="phidden pcontact">Sandeep-9043255977</p>
+ 											<p id="pprize" class="phidden prules">Rules</p>
+ 											<p id="prules" class="phidden pprize">Will be published soon.</p>
+ 											<p id="pcontact" class="phidden pcontact">Ritish Lalam.</p>
 
         								</div>
       								</div>
@@ -1484,7 +1491,7 @@ $(document).ready(function($) {
                         <div class="row">
                         	<div class="col-sm-4">
 								<a class="recent-work e" style="background-image:url(assets/e3.png)" id="e3">
-									<span class="btn btn-o-white">Research Expo</span>
+									<span class="btn btn-o-white">Ansys Workshop</span>
 								</a>
 							</div>
 
@@ -1497,7 +1504,7 @@ $(document).ready(function($) {
         								<div class="modal-header">
           									<button type="button" class="close" data-dismiss="modal">&times;
           									</button>
-          									<h4 class="modal-title">Research Expo
+          									<h4 class="modal-title">Ansys workshop
           									<br>
  											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
  											</a>&nbsp;
@@ -1507,11 +1514,7 @@ $(document).ready(function($) {
         								</div>
         								<div class="modal-body">
           									<p id="poverview" class="poverview">
-          									Expo provides both graduate and undergraduates with the opportunity to share their research 
-
-											with a larger audience.<br> This event showcases the work and research done by our scholars in 
-
-											various fields of Naval Architecture & Ocean Engineering.
+          									writeup pending!!!
  											
  											</p>
  											<p id="pcontact" class="phidden pcontact">Jyotsna-+919444291472</p>
@@ -1521,9 +1524,96 @@ $(document).ready(function($) {
       
     							</div>
  							</div>
-							<!--end of researchexpo modal-->
-							
-                        </div>
+							<!--end of researchexpo moda -->
+			        
+							<div class="col-sm-4">
+								<a class="recent-work e" style="background-image:url(assets/e17.png)" id="e17">
+									<span class="btn btn-o-white">Matlab Workshop</span>
+								</a>
+							</div>
+
+							<!--marinecleanup modal-->
+							<div class="modal fade eventname" id="marinecleanup" role="dialog" tabindex='-1'>
+    							<div class="modal-dialog">
+    
+      								<div class="modal-content">
+        								<div class="modal-header">
+          									<button type="button" class="close" data-dismiss="modal">&times;
+          									</button>
+          									<h4 class="modal-title">Marine Cleanup
+          									<br>
+ 											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eschedule" role="button" id="eschedule">Schedule
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
+ 											</a>
+          									</h4>
+        								</div>
+        								<div class="modal-body">
+          									<p id="poverview" class="poverview">
+          									writeup to be prepared!!
+
+
+ 											
+ 											</p>
+ 											<p id="pschedule" class="phidden pschedule">Will be published soon.</p>
+ 										
+
+        								</div>
+      								</div>
+      
+    							</div>
+ 							</div>
+							<!--end of marinecleanup modal-->
+
+                             <div class="col-sm-4">
+								<a class="recent-work e" style="background-image:url(assets/e17.png)" id="e17">
+									<span class="btn btn-o-white">Web Development Workshop</span>
+								</a>
+							</div>
+
+							<!--marinecleanup modal-->
+							<div class="modal fade eventname" id="marinecleanup" role="dialog" tabindex='-1'>
+    							<div class="modal-dialog">
+    
+      								<div class="modal-content">
+        								<div class="modal-header">
+          									<button type="button" class="close" data-dismiss="modal">&times;
+          									</button>
+          									<h4 class="modal-title">Marine Cleanup
+          									<br>
+ 											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eschedule" role="button" id="eschedule">Schedule
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
+ 											</a>
+          									</h4>
+        								</div>
+        								<div class="modal-body">
+          									<p id="poverview" class="poverview">
+          									 writeup to be posted!
+
+ 											
+ 											</p>
+ 											<p id="pschedule" class="phidden pschedule">Will be published soon.</p>
+ 										
+
+        								</div>
+      								</div>
+      
+    							</div>
+ 							</div>
+							<!--end of marinecleanup modal-->
+
+
+
+
+
+
+
+
 
 					</section>
 

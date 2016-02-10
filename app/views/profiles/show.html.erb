@@ -37,7 +37,7 @@
     <%= f.label :expo, "Yes", :value => "true",:class=>'radio-inline'  %>
     <%= f.radio_button :expo, true %>
     <%= f.label :expo, "No", :value => "false",:class=>'radio-inline' %>
-    <%= f.radio_button :expo, false, :checked => true %>
+    <%= f.radio_button :expo, false%>
   </div>
 
 
@@ -87,5 +87,5 @@
   </div>
 </div>
 -->
-<%= f.submit "submit" %>
+<%= f.submit "submit",:class=>'btn btn-success' %>
 <% end %>
