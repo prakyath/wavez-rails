@@ -212,13 +212,19 @@
 										<li>
 											<a href="#footer"><i class="fa fa-phone"></i>Contact</a>
 										</li>
-										<li id="main_login_button">
-											<a><span class="e" style="cursor: pointer"><i class="fa fa-user"></i>Login/Register</span></a>
-										</li>
-										<li id="main_logout_button" style="display:none" >
+										<li>
+                                            <% if user_signed_in? %>
+									       
 											<%= link_to('Logout', destroy_user_session_path, :method => :delete,:class =>'e',style:'cursor: pointer') %>
+									        <% elsif %> 
+			                                  <%# link_to 'Login/Register', :class=>'e',:style=>'cursor: pointer',:id=>'main_login_button' %>
+			              
+			                                  <%= link_to 'Login/Register','#', {:class => "e",style:'cursor: pointer', :id=>'main_login_button'} %>
+			                                  						        
+             
+
+									        <% end %>
 										</li>
-										
 								   </ul>
 							    </div>
 							 
@@ -269,9 +275,10 @@
                                                   <%= f.submit "Sign in", :class =>'btn btn-info btn-lg', :id =>'login-button',:style =>'margin-top:5px; width:180.063px;'  %> 
  <% end %>
   <script type="text/javascript">
+  document.getElementById("main_login_button").removeAttribute("href");
+
 $(document).ready(function($) {
-
-
+ 
     function show_alert(){  
    $.alert("Problem statements for Roboceana and RC Boats released!!",{
          title : "wavez 2016",
@@ -665,7 +672,7 @@ $(document).ready(function($) {
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg eprblmstmt" role="button" id="eprblmstmt">Problem Statement
  											</a>&nbsp;
- 											<a class="btn btn-info btn-lg eprize" role="button" id="erules">Registration Status
+ 											<a class="btn btn-info btn-lg estatus" role="button" id="estatus">Registration Status
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
  											</a>
@@ -684,7 +691,8 @@ $(document).ready(function($) {
  											<p id="pprize" class="phidden pprize">amount</p>
  											<p id="pprblmstmt" class="phidden pprblmstmt"><%= link_to "Problem Statement", "/RCBOATS_PS.pdf",:target => "_blank" %></p>
  											<p id="pcontact" class="phidden pcontact">Bhuvan-+919940499788,Sambit-+919445485261</p>
-                                            <p id="pregister" class="phidden pregister">
+                                            <p id="pstatus" class="phidden pstatus">
+ 											 
  											 <% if user_signed_in? %>
  											    <% if current_user.expo=="true" %>
                                                     <%= "Thanks for registering with this event, our team will be in touch with you soon!!" %>
@@ -695,6 +703,7 @@ $(document).ready(function($) {
                                               <% elsif %>
                                                 <%="please login to see your registration status"%>
                                                <% end %>          
+                                            
                                              </p>
 
         								</div>
@@ -1489,7 +1498,7 @@ $(document).ready(function($) {
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg erules" role="button" id="eprize">Rules
  											</a>&nbsp;
- 											<a class="btn btn-info btn-lg eprize" role="button" id="erules">Registration Status
+ 											<a class="btn btn-info btn-lg estatus" role="button" id="estatus">Registration Status
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
  											</a>
@@ -1507,7 +1516,7 @@ $(document).ready(function($) {
  											<p id="pcontact" class="phidden pcontact">Ritish Lalam.</p>
  											<p id="pregister" class="phidden pregister">
  											 <% if user_signed_in? %>
- 											    <% if current_user.expo=="true" %>
+ 											    <% if current_user.robo=="true" %>
                                                     <%= "Thanks for registering with this event, our team will be in touch with you soon!!" %>
                                                  <% elsif %>
                                                  <%= "You have not registered yourself with this event,please visit the profile link to regster" %>
@@ -1549,7 +1558,7 @@ $(document).ready(function($) {
           									<br>
  											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
  											</a>&nbsp;
- 											<a class="btn btn-info btn-lg eprize" role="button" id="erules">Registration Status
+ 											<a class="btn btn-info btn-lg estatus" role="button" id="estatus">Registration Status
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
  											</a>
@@ -1561,9 +1570,9 @@ $(document).ready(function($) {
  											
  											</p>
  											<p id="pcontact" class="phidden pcontact">Jyotsna-+919444291472</p>
- 											<p id="pregister" class="phidden pregister">
+ 											<p id="pstatus" class="phidden pstatus">
  											 <% if user_signed_in? %>
- 											    <% if current_user.expo=="true" %>
+ 											    <% if current_user.ansys=="true" %>
                                                     <%= "Thanks for registering with this event, our team will be in touch with you soon!!" %>
                                                  <% elsif %>
                                                  <%= "You have not registered yourself with this event,please visit the profile link to regster" %>
@@ -1595,13 +1604,13 @@ $(document).ready(function($) {
         								<div class="modal-header">
           									<button type="button" class="close" data-dismiss="modal">&times;
           									</button>
-          									<h4 class="modal-title">Marine Cleanup
+          									<h4 class="modal-title">Matlab Workshop
           									<br>
  											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg eschedule" role="button" id="eschedule">Schedule
  											</a>&nbsp;
- 											<a class="btn btn-info btn-lg eprize" role="button" id="erules">Registration Status
+ 											<a class="btn btn-info btn-lg estatus" role="button" id="estatus">Registration Status
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
  											</a>
@@ -1615,9 +1624,9 @@ $(document).ready(function($) {
  											
  											</p>
  											<p id="pschedule" class="phidden pschedule">Will be published soon.</p>
- 											<p id="pregister" class="phidden pregister">
+ 											<p id="pstatus" class="phidden pstatus">
  											 <% if user_signed_in? %>
- 											    <% if current_user.expo=="true" %>
+ 											    <% if current_user.matlab=="true" %>
                                                     <%= "Thanks for registering with this event, our team will be in touch with you soon!!" %>
                                                  <% elsif %>
                                                  <%= "You have not registered yourself with this event,please visit the profile link to regster" %>
@@ -1650,13 +1659,13 @@ $(document).ready(function($) {
         								<div class="modal-header">
           									<button type="button" class="close" data-dismiss="modal">&times;
           									</button>
-          									<h4 class="modal-title">Marine Cleanup
+          									<h4 class="modal-title">Angular JS
           									<br>
  											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg eschedule" role="button" id="eschedule">Schedule
  											</a>&nbsp;
- 											<a class="btn btn-info btn-lg eprize" role="button" id="erules">Registration Status
+ 											<a class="btn btn-info btn-lg estatus" role="button" id="estatus">Registration Status
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
  											</a>
@@ -1669,9 +1678,9 @@ $(document).ready(function($) {
  											
  											</p>
  											<p id="pschedule" class="phidden pschedule">Will be published soon.</p>
- 											<p id="pregister" class="phidden pregister">
+ 											<p id="pstatus" class="phidden pstatus">
  											 <% if user_signed_in? %>
- 											    <% if current_user.expo=="true" %>
+ 											    <% if current_user.webd=="true" %>
                                                     <%= "Thanks for registering with this event, our team will be in touch with you soon!!" %>
                                                  <% elsif %>
                                                  <%= "You have not registered yourself with this event,please visit the profile link to regster" %>
@@ -2671,6 +2680,12 @@ $(window).resize(function(){
 					$(this).addClass("livetab");
 					$(this).closest("div").next().children("p").hide(10);
 					$(this).closest("div").next().children(".pregister").slideDown();
+				});
+				$(".estatus").click(function(){
+					$(this).closest("h4").children("a").removeClass("livetab");
+					$(this).addClass("livetab");
+					$(this).closest("div").next().children("p").hide(10);
+					$(this).closest("div").next().children(".pstatus").slideDown();
 				});
 				$(".eschedule").click(function(){
 					$(this).closest("h4").children("a").removeClass("livetab");
