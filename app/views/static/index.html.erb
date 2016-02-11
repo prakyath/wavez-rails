@@ -74,7 +74,7 @@
 		top: 0;
 		left: 0;
 	}
-	#departmentlogo, #facebooklogo, #iitmlogo
+	#departmentlogo, #facebooklogo, #iitmlogo, #spelogo
 	{
 		background-color: #FFFFFF;
 		width: 100px;
@@ -109,7 +109,12 @@
 		background-image: url("assets/facebooklogo.png");
   		z-index: 110;
   	}
-	#departmentlogo:hover, #iitmlogo:hover, #facebooklogo:hover
+  	#spelogo
+	{
+		background-image: url("assets/spelogo.gif");
+  		z-index: 131;
+  	}
+	#departmentlogo:hover, #iitmlogo:hover, #facebooklogo:hover, #spelogo:hover
 	{
   		box-shadow: 0 9px 8px #FFFFFF;
 	}
@@ -386,7 +391,7 @@ $(document).ready(function($) {
                                                 	    <%= f.telephone_field :phone,:id=>'enter_name',:class =>'input_field',:placeholder=>'Enter a valid phone number' %>
 
                                                 	  </span>
-                                                	</div>RoboceanRoboceana ERoboceana Ea E
+                                                	</div>
 
 
                                                 	<div class="col-md-offset-1 col-md-3 col-xs-10 col-xs-offset-1" style="padding-bottom:40px">
@@ -420,15 +425,12 @@ $(document).ready(function($) {
                                                     </div>  
                                                     <div id="choose-buttons" text-align="center">
    -->  <div class="form-group">
-<div class="col-sm-offset-2 col-sm-10">
+<!--<div class="col-sm-offset-2 col-sm-10">
 <label for="inputEvent" style="align:center">Events you want to register</label>
  <label class="radio-inline">
-   <% Event.all.each do |event| %>
-     <%= check_box_tag "user[event_ids][]", event.id %>
-     <%= event.name %>
-    <% end %>  
+    
 </div>                                                          
-   </div>                                                   
+   </div>              -->                                     
           									  <!--  <a class="btn btn-info btn-lg " role="button" id="login-button" style="margin-left:20vw; margin-right:20vw; margin-top:30px;" >Register
  											    </a>
  											    -->
@@ -506,6 +508,7 @@ $(document).ready(function($) {
 			<div id="header" class="content-block">
 				<section class="center">
 					<div id="homeframe">
+		<a href="https://spe.iitm.ac.in/spe.php"><div id="spelogo"> </div> </a>
 		<a href="http://www.doe.iitm.ac.in/blog/naval-architecture/"><div id="departmentlogo"> </div></a>
 		<a href="https://www.iitm.ac.in/"><div id="iitmlogo"> </div></a>
 		<a href="https://www.facebook.com/Wavez.iitm/"><div id="facebooklogo"> </div></a>
@@ -595,6 +598,8 @@ $(document).ready(function($) {
           									<br>
  											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
  											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eeformat" role="button" id="eeformat">Event Format
+ 											</a>&nbsp;
  											<a class="btn btn-info btn-lg eprize" role="button" id="eprize">Prize
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg eprblmstmt" role="button" id="eprblmstmt">Problem Statement
@@ -624,6 +629,16 @@ $(document).ready(function($) {
 
  											</p>
 
+ 											<p id="peformat" class="phidden peformat">
+ 												TEAM STRUCTURE :- Team can consist of maximum of 5 students. 
+ 												Students need not to be from same institution.
+ 												Each should be enrolled in a institution and need to produce ID cards on events day.
+ 												<br>
+ 												<br>
+
+ 												MISSION :- The teams will need to complete the problem statement successfully.
+ 												Team with high score grabs away the prize money.
+ 											</p>
  											<p id="pprize" class="phidden pprize">amount</p>
  											<p id="pprblmstmt" class="phidden pprblmstmt"><%= link_to "Problem Statement", "/Roboceana_PS.pdf",:target => "_blank" %></p>
  											<p id="pcontact" class="phidden pcontact">Tony-+919791483921,Yashdhar-+919940115352,Sandeep goerge-+919447881702</p>
@@ -668,6 +683,10 @@ $(document).ready(function($) {
           									<br>
  											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
  											</a>&nbsp;
+
+ 											<a class="btn btn-info btn-lg eeformat" role="button" id="eeformat">Event Format
+ 											</a>&nbsp;
+
  											<a class="btn btn-info btn-lg eprize" role="button" id="eprize">Prize
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg eprblmstmt" role="button" id="eprblmstmt">Problem Statement
@@ -689,6 +708,25 @@ $(document).ready(function($) {
 											promising crowd puller as it induces curiosity and thrill in audience.
  											</p>
  											<p id="pprize" class="phidden pprize">amount</p>
+ 											<p id="peformat" class="phidden peformat">
+ 												TEAM STRUCTURE :- Team can consist of maximum of 5 students. 
+ 												Students need not to be from same institution. 
+ 												Each should be enrolled in a institution and need to produce ID cards on events day. 
+ 												<br>
+ 												<br>
+
+ 												Round 1 :- Each team will need to complete in an 8 shaped  track in least possible time.
+ 												<br>
+ 												<br>
+ 												Round 2 :- Two teams compete at a time and complete the prescribed mission.
+ 												<br>
+ 												<br>
+ 												Final Round :- Top 4 teams will compete in the final round.
+ 												<br>
+ 												<br>
+ 												Registration Fee :- 500 in which we’ll provide you boat hull (if you are unable to get one)
+ 											</p>
+
  											<p id="pprblmstmt" class="phidden pprblmstmt"><%= link_to "Problem Statement", "/RCBOATS_PS.pdf",:target => "_blank" %></p>
  											<p id="pcontact" class="phidden pcontact">Bhuvan-+919940499788,Sambit-+919445485261</p>
                                             <p id="pstatus" class="phidden pstatus">
@@ -850,6 +888,8 @@ $(document).ready(function($) {
           									<br>
  											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
  											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eeformat" role="button" id="eeformat">Event Format
+ 											</a>&nbsp;
  											<a class="btn btn-info btn-lg eprize" role="button" id="erules">Registration Status
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
@@ -864,6 +904,15 @@ $(document).ready(function($) {
 
 											various fields of Naval Architecture & Ocean Engineering.
  											
+ 											</p>
+ 											<p id="peformat" class="phidden peformat">
+ 												It's a poster presentation.
+ 												<br>
+ 												<br>
+ 												Registered participants need to fill the content in the template shared by us.
+ 												<br>
+ 												<br>
+ 												Note :- We'll get print out of it.
  											</p>
  											<p id="pcontact" class="phidden pcontact">Jyotsna-+919444291472</p>
 
@@ -891,10 +940,11 @@ $(document).ready(function($) {
           									<br>
  											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
  											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eeformat" role="button" id="eeformat">Event Format
+ 											</a>&nbsp;
  											<a class="btn btn-info btn-lg eprize" role="button" id="eprize">Prize
  											</a>&nbsp;
- 											<a class="btn btn-info btn-lg erules" role="button" id="erules">Rules
- 											</a>&nbsp;
+ 											
  											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
  											</a>
           									</h4>
@@ -910,8 +960,22 @@ $(document).ready(function($) {
 											Madras but also from colleges in and around Chennai.
 
  											</p>
+ 											<p id="peformat" class="phidden peformat">
+ 												
+ 												Round 1 :- Contestants get their own songs and perform.
+ 												<br>
+ 												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 												Top 4 contestants will be selected to round 2.
+
+ 												<br>
+ 												<br>
+ 												Round 2 :- This is a dance battle. Contestants dance for the same song given by the coordinator.
+ 												<br>
+ 												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 												Finally, the judge announces the winner.
+ 											</p>
  											<p id="pprize" class="phidden pprize">amount</p>
- 											<p id="prules" class="phidden prules">Will be published soon.</p>
+ 											
  											<p id="pcontact" class="phidden pcontact">Nikhila-+919790464960</p>
 
         								</div>
@@ -1005,7 +1069,7 @@ $(document).ready(function($) {
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg eprize" role="button" id="eprize">Prize
  											</a>&nbsp;
- 											<a class="btn btn-info btn-lg erules" role="button" id="erules">Rules
+ 											<a class="btn btn-info btn-lg erules" role="button" id="erules"> Event Format
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
  											</a>
@@ -1023,7 +1087,13 @@ $(document).ready(function($) {
  											
  											</p>
  											<p id="pprize" class="phidden pprize">amount</p>
- 											<p id="prules" class="phidden prules">Will be published soon.</p>
+ 											<p id="prules" class="phidden prules">
+ 												
+ 												Theme for Pencil Sketching :- Lake View
+ 												<br>
+ 												<br>
+ 												Theme for Painting :- Chennai Floods
+ 											</p>
  											<p id="pcontact" class="phidden pcontact">Vishakh-+919176492462</p>
 
         								</div>
@@ -1066,6 +1136,8 @@ $(document).ready(function($) {
 											Kryptx. Codes and puzzles are put up on Wavez Facebook page for the participants to crack them 
 
 											and win cash prize. Being an online event, people can participate from anywhere in Chennai.
+
+											Event Starts on February 23rd.
  											
 
  											
@@ -1107,7 +1179,7 @@ $(document).ready(function($) {
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg eprize" role="button" id="eprize">Prize
  											</a>&nbsp;
- 											<a class="btn btn-info btn-lg erules" role="button" id="erules">Rules
+ 											<a class="btn btn-info btn-lg erules" role="button" id="erules">Event Format
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
  											</a>
@@ -1123,7 +1195,14 @@ $(document).ready(function($) {
 
  											</p>
  											<p id="pprize" class="phidden pprize">amount</p>
- 											<p id="prules" class="phidden prules">Will be published soon.</p>
+ 											<p id="prules" class="phidden prules">
+ 												A 2 Day Event for Gamers :-
+ 												<br>
+ 												<br>
+ 												Day 1 :- FIFA
+ 												<br>
+ 												Day 2 :- Counter Strike
+ 											</p>
  											<p id="pcontact" class="phidden pcontact">Aditya-+919447916998,Jason Stanley-+917299061097</p>
 
         								</div>
@@ -1200,6 +1279,9 @@ $(document).ready(function($) {
           									<br>
  											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
  											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eeformat" role="button" id="eeformat">
+ 											Event Format
+ 											</a>&nbsp;
  											<a class="btn btn-info btn-lg eprize" role="button" id="eprize">Prize
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
@@ -1217,6 +1299,14 @@ $(document).ready(function($) {
 											speed. 
 
 
+ 											</p>
+ 											<p id="peformat" class="phidden peformat">
+ 												
+ 												Prelims :- The prelims will be a basic session with about 50 questions from various fields like sports,cinema, and basic general knowledge.
+ 												<br>
+ 												<br>
+
+ 												Finals :- This round will be a speak aloud session-with questions asked to the finalists of wavez quiz one by one by the quiz master.
  											</p>
  											<p id="pprize" class="phidden pprize">amount</p>
  											<p id="pcontact" class="phidden pcontact">Lakshmi-+919176484371,Shanthi-+919566242429</p>
@@ -1392,7 +1482,7 @@ $(document).ready(function($) {
 
 
 							<div class="col-sm-4">
-								<a class="recent-work e" style="background-image:url(assets/e16.png)" id="e16">
+								<a class="recent-work e" style="background-image:url(assets/e16.jpg)" id="e16">
 									<span class="btn btn-o-white">Extempore</span>
 								</a>
 							</div>
@@ -1467,6 +1557,8 @@ $(document).ready(function($) {
 
 											Chennai Beach.
 
+											Event is on February 28th.
+
 
  											
  											</p>
@@ -1481,7 +1573,7 @@ $(document).ready(function($) {
 							<!--end of marinecleanup modal-->
 
 							<div class="col-sm-4">
-								<a class="recent-work e" style="background-image:url(assets/e16.png)" id="e18">
+								<a class="recent-work e" style="background-image:url(assets/waterbot.jpg)" id="e18">
 									<span class="btn btn-o-white">Roboceana Workshop</span>
 								</a>
 							</div>
@@ -1498,7 +1590,7 @@ $(document).ready(function($) {
           									<br>
  											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
  											</a>&nbsp;
- 											<a class="btn btn-info btn-lg erules" role="button" id="eprize">Rules
+ 											<a class="btn btn-info btn-lg eeformat" role="button" id="eeformat">Workshop Format
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg estatus" role="button" id="estatus">Registration Status
  											</a>&nbsp;
@@ -1508,10 +1600,20 @@ $(document).ready(function($) {
         								</div>
         								<div class="modal-body">
           									<p  id="poverview" class="poverview">
-          								    writeup yet to be posted!!
+          								    Robots become inevitable for the growth and development of new generation.
+
+          								    The goal of this workshop is to bring people together and to make a common platform to exchange their ideas and expand their knowledge.
 
 
  											
+ 											</p>
+
+ 											<p id="peformat" class="phidden peformat">
+ 												This workshop gives you a basic idea of design and build.
+
+ 												You will learn basic alignments of electrical connection and robotic arm (picking and throwing) so that the bot doesn’t clung.
+
+ 												The event serves as a best start up to work on robotics.
  											</p>
  											<p id="pprize" class="phidden prules">Rules</p>
  											<p id="prules" class="phidden pprize">Will be published soon.</p>
@@ -1542,7 +1644,7 @@ $(document).ready(function($) {
 
                         <div class="row">
                         	<div class="col-sm-4">
-								<a class="recent-work e" style="background-image:url(assets/e16.png)" id="e3">
+								<a class="recent-work e" style="background-image:url(assets/ansys.gif)" id="e3">
 									<span class="btn btn-o-white">Ansys Workshop</span>
 								</a>
 							</div>
@@ -1568,7 +1670,21 @@ $(document).ready(function($) {
         								</div>
         								<div class="modal-body">
           									<p id="poverview" class="poverview">
-          									writeup pending!!!
+          									ANSYS Fluent Workshop from Ansys delegates for duration of 10-12 hrs which includes:
+          									<br>
+          									<br>
+          									&nbsp;&nbsp; > Introduction and basics of multi physics and multi phase simulation.
+          									<br>
+          									<br>
+          									&nbsp;&nbsp; > Introduction to fluid meshing.
+          									<br>
+          									<br>
+          									&nbsp;&nbsp; > Understanding of fluid structure interaction.
+
+          									<br>
+          									<br>
+          									Registration Fee :- 100
+
  											
  											</p>
  											<p id="pcontact" class="phidden pcontact">Jyotsna-+919444291472</p>
@@ -1593,7 +1709,7 @@ $(document).ready(function($) {
 							<!--end of researchexpo moda -->
 			        
 							<div class="col-sm-4">
-								<a class="recent-work e" style="background-image:url(assets/e16.png)" id="e17">
+								<a class="recent-work e" style="background-image:url(assets/matlab.png)" id="e17">
 									<span class="btn btn-o-white">Matlab Workshop</span>
 								</a>
 							</div>
@@ -1620,8 +1736,30 @@ $(document).ready(function($) {
         								</div>
         								<div class="modal-body">
           									<p id="poverview" class="poverview">
-          									writeup to be prepared!!
+          									
+          									Matlab : (Matlab workshop Advanced) from HT Labs for a duration of 7-8 hrs which includes :
+          									<br>
+          									<br>
+          									&nbsp;&nbsp; > Algorithms including advanced functions and plugins.
+          									<br>
+          									<br>
+          									&nbsp;&nbsp; > Analysis techniques including FEM, signal processing and regression analysis.
+          									<br>
+          									<br>
+          									&nbsp;&nbsp; > Graphical interface in Matlab.
+          									<br>
+          									<br>
+          									&nbsp;&nbsp; > Advanced Optimization techniques.
 
+          									<br>
+          									<br>
+          									Registration Fee :- 100
+
+          									<br>
+          									<br>
+          									Prerequisite :- Participants need to bring there laptops.
+
+ 											
 
  											
  											</p>
@@ -1648,7 +1786,7 @@ $(document).ready(function($) {
 							<!--end of marinecleanup modal-->
 
                              <div class="col-sm-4">
-								<a class="recent-work e" style="background-image:url(assets/e16.png)" id="e17">
+								<a class="recent-work e" style="background-image:url(assets/wd.png)" id="e17">
 									<span class="btn btn-o-white">Web Development Workshop</span>
 								</a>
 							</div>
@@ -2484,6 +2622,7 @@ $(document).ready(function($) {
   	document.getElementById('anchorcontainer').style.width = 0.025*windowheight + "px";
   	document.getElementById('anchor').style.height = 0.04*windowheight + "px";
   	document.getElementById('anchor').style.width = 0.025*windowheight + "px";
+  	document.getElementById('spelogo').style.left = (0.95*windowwidth) + "px";
   	document.getElementById('departmentlogo').style.left = (0.95*windowwidth) + "px";
   	document.getElementById('iitmlogo').style.left = (0.95*windowwidth) + "px";
   	document.getElementById('facebooklogo').style.left = (0.95*windowwidth) + "px";
@@ -2521,32 +2660,91 @@ $(document).ready(function($) {
   	$("#waveztextcontainer").mouseenter(function(){
   		TweenLite.fromTo(waveztextcontainer, 1, {autoAlpha:0, scale:0.7}, {autoAlpha:1, scale:1});
   	});
-  	TweenLite.to(departmentlogo, 1.9, {
+
+
+
+
+  	TweenLite.to(spelogo, 1.43, {
  									   top:(windowheight-40),
   									   scale:0.5,
   									   ease:Bounce.easeOut});
-  	TweenLite.to(boatcontainer, 1.9, {scale:1.1, ease:Bounce.easeOut});
-  	TweenLite.to(departmentlogo, 3.8, {rotation:-1080,
- 									   left:(0.9*windowwidth-104), delay:1.9});
- 	TweenLite.to(iitmlogo, 1.9, {
+  	TweenLite.to(boatcontainer, 1.43, {scale:1.1, ease:Bounce.easeOut});
+  	TweenLite.to(spelogo, 4.3, {rotation:-1440,
+ 									   left:(0.9*windowwidth-156), delay:1.43});
+
+
+
+
+
+
+  	TweenLite.to(departmentlogo, 1.43, {
+ 									   top:(windowheight-40),
+  									   scale:0.5,
+  									   ease:Bounce.easeOut,
+  									   delay:1.43});
+  	TweenLite.to(boatcontainer, 1.43, {scale:1.1, ease:Bounce.easeOut});
+  	TweenLite.to(departmentlogo, 2.86, {rotation:-1080,
+ 									   left:(0.9*windowwidth-104), delay:2.86});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 	TweenLite.to(iitmlogo, 1.43, {
  							     top:(windowheight-40),
   							     scale:0.5,
   								 ease:Bounce.easeOut,
-  								 delay:1.9});
-  	TweenLite.to(boatcontainer, 1.9, {scale:1.2,
+  								 delay:2.86});
+  	TweenLite.to(boatcontainer, 1.43, {scale:1.2,
   									  ease:Bounce.easeOut,
   								   	  delay:1.9});
-  	TweenLite.to(iitmlogo, 1.9, {rotation:-720,
- 									   left:(0.9*windowwidth-52), delay:3.8});
- 	TweenLite.to(facebooklogo, 1.9, {
+  	TweenLite.to(iitmlogo, 1.43, {rotation:-720,
+ 									   left:(0.9*windowwidth-52), delay:4.3});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 	TweenLite.to(facebooklogo, 1.43, {
  									 top:(windowheight-40),
   									 scale:0.5,
   									 ease:Bounce.easeOut,
+  									 delay:4.3});
+  	TweenLite.to(boatcontainer, 1.43, {scale:1.3, ease:Bounce.easeOut,
   									 delay:3.8});
-  	TweenLite.to(boatcontainer, 1.9, {scale:1.3, ease:Bounce.easeOut,
-  									 delay:3.8});
-  	TweenLite.to(facebooklogo, 1, {rotation:-360,
+  	TweenLite.to(facebooklogo, .7, {rotation:-360,
  									   left:(0.9*windowwidth), delay:5.7});
+
+
+
+
+
+
+
   	TweenLite.from(waveztextcontainer,  1, {scale:0.01, autoAlpha:0, delay:5.7});
   	
 });
@@ -2565,6 +2763,7 @@ $(window).resize(function(){
   	document.getElementById('anchorcontainer').style.width = 0.025*windowheight + "px";
   	document.getElementById('anchor').style.height = 0.04*windowheight + "px";
   	document.getElementById('anchor').style.width = 0.025*windowheight + "px";
+  	document.getElementById('spelogo').style.left = (0.95*windowwidth) + "px";
   	document.getElementById('departmentlogo').style.left = (0.95*windowwidth) + "px";
   	document.getElementById('iitmlogo').style.left = (0.95*windowwidth) + "px";
   	document.getElementById('facebooklogo').style.left = (0.95*windowwidth) + "px";
@@ -2600,32 +2799,87 @@ $(window).resize(function(){
   	$("#waveztextcontainer").mouseenter(function(){
   		TweenLite.fromTo(waveztextcontainer, 1, {autoAlpha:0, scale:0.7}, {autoAlpha:1, scale:1});
   	});
-  	TweenLite.to(departmentlogo, 1.9, {
+  	TweenLite.to(spelogo, 1.43, {
  									   top:(windowheight-40),
   									   scale:0.5,
   									   ease:Bounce.easeOut});
-  	TweenLite.to(boatcontainer, 1.9, {scale:1.1, ease:Bounce.easeOut});
-  	TweenLite.to(departmentlogo, 3.8, {rotation:-1080,
- 									   left:(0.9*windowwidth-104), delay:1.9});
- 	TweenLite.to(iitmlogo, 1.9, {
+  	TweenLite.to(boatcontainer, 1.43, {scale:1.1, ease:Bounce.easeOut});
+  	TweenLite.to(spelogo, 4.3, {rotation:-1440,
+ 									   left:(0.9*windowwidth-156), delay:1.43});
+
+
+
+
+
+
+  	TweenLite.to(departmentlogo, 1.43, {
+ 									   top:(windowheight-40),
+  									   scale:0.5,
+  									   ease:Bounce.easeOut,
+  									   delay:1.43});
+  	TweenLite.to(boatcontainer, 1.43, {scale:1.1, ease:Bounce.easeOut});
+  	TweenLite.to(departmentlogo, 2.86, {rotation:-1080,
+ 									   left:(0.9*windowwidth-104), delay:2.86});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 	TweenLite.to(iitmlogo, 1.43, {
  							     top:(windowheight-40),
   							     scale:0.5,
   								 ease:Bounce.easeOut,
-  								 delay:1.9});
-  	TweenLite.to(boatcontainer, 1.9, {scale:1.2,
+  								 delay:2.86});
+  	TweenLite.to(boatcontainer, 1.43, {scale:1.2,
   									  ease:Bounce.easeOut,
   								   	  delay:1.9});
-  	TweenLite.to(iitmlogo, 1.9, {rotation:-720,
- 									   left:(0.9*windowwidth-52), delay:3.8});
- 	TweenLite.to(facebooklogo, 1.9, {
+  	TweenLite.to(iitmlogo, 1.43, {rotation:-720,
+ 									   left:(0.9*windowwidth-52), delay:4.3});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 	TweenLite.to(facebooklogo, 1.43, {
  									 top:(windowheight-40),
   									 scale:0.5,
   									 ease:Bounce.easeOut,
+  									 delay:4.3});
+  	TweenLite.to(boatcontainer, 1.43, {scale:1.3, ease:Bounce.easeOut,
   									 delay:3.8});
-  	TweenLite.to(boatcontainer, 1.9, {scale:1.3, ease:Bounce.easeOut,
-  									 delay:3.8});
-  	TweenLite.to(facebooklogo, 1, {rotation:-360,
+  	TweenLite.to(facebooklogo, .7, {rotation:-360,
  									   left:(0.9*windowwidth), delay:5.7});
+
+
+
+
+
+
+
   	TweenLite.from(waveztextcontainer,  1, {scale:0.01, autoAlpha:0, delay:5.7});
   	
 });
@@ -2694,6 +2948,12 @@ $(window).resize(function(){
 					$(this).addClass("livetab");
 					$(this).closest("div").next().children("p").hide(10);
 					$(this).closest("div").next().children(".pschedule").slideDown();
+				});
+				$(".eeformat").click(function(){
+					$(this).closest("h4").children("a").removeClass("livetab");
+					$(this).addClass("livetab");
+					$(this).closest("div").next().children("p").hide(10);
+					$(this).closest("div").next().children(".peformat").slideDown();
 				});
 /* ...................events triggers ends........................... */
 /* ...................schedule triggers starts........................... */
