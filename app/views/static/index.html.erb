@@ -449,7 +449,8 @@ $(document).ready(function($) {
      $('#main_login_button').hide(); 	
      $('#login_model').modal('hide');
      $('#main_logout_button').show();
-     $.alert("Welcome "+Nam,"Wavez 2016 Team"); 
+     $.alert("Welcome "+Nam,"Wavez 2016 Team");
+     location.reload(); 
 
     })
     .bind("ajax:error", function(evt, xhr, status, error) {
