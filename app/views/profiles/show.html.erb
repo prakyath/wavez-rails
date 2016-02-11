@@ -42,6 +42,26 @@
     <%= f.radio_button :robo, false%>
   </div> 
 </div>
+  <div class="alert alert-info">
+   <h3>Roboceana Event</h3>
+   <div class="form-inline">
+    <%# f.label :expo,:class=>'radio-inline' %>
+    <%= f.label :roboe, "Yes", :value => "true",:class=>'radio-inline'  %>
+    <%= f.radio_button :roboe, true %>
+    <%= f.label :roboe, "No", :value => "false",:class=>'radio-inline' %>
+    <%= f.radio_button :roboe, false%>
+  </div> 
+</div>
+<div class="alert alert-info">
+   <h3>Autonomous Watercraft Event</h3>
+   <div class="form-inline">
+    <%# f.label :expo,:class=>'radio-inline' %>
+    <%= f.label :awc, "Yes", :value => "true",:class=>'radio-inline'  %>
+    <%= f.radio_button :awc, true %>
+    <%= f.label :awc, "No", :value => "false",:class=>'radio-inline' %>
+    <%= f.radio_button :awc, false%>
+  </div> 
+</div>
 <div class="alert alert-info"> 
 <h3>RC Boats</h3>
    <div class="form-inline">
@@ -96,7 +116,7 @@
 </div>  
 
 
-
+<!--
 <div class="alert alert-info">
 <h3>IDP problem statement one</h3>
   <div class="form-inline">

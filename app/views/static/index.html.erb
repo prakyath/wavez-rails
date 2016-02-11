@@ -733,6 +733,8 @@ $(document).ready(function($) {
           									<br>
  											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
  											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eprblmstmt" role="button" id="eprblmstmt">Problem Statement
+ 											</a>&nbsp;
  											<a class="btn btn-info btn-lg eprize" role="button" id="eprize">Prize
  											</a>&nbsp;
  											<!-- <a class="btn btn-info btn-lg eprblmstmt" role="button" id="eprblmstmt">Problem Statement
@@ -748,7 +750,7 @@ $(document).ready(function($) {
  											</p>
 
  											<p id="pprize" class="phidden pprize">amount</p>
- 											<p id="pprblmstmt" class="phidden pprblmstmt"><a href="http://www.filehosting.org/file/details/540124/RC%20BOATS%20-%20Edited.docx" download="problem statement">Problem Statement</a></p>
+ 										    <p id="pprblmstmt" class="phidden pprblmstmt"><%= link_to "Problem Statement", "/AWC_PS..pdf",:target => "_blank" %></p>
  											<p id="pcontact" class="phidden pcontact">Vamsi krishna-+91967720885,Kamalanaabha Rao G-+919442159632</p>
  											<p id="pregister" class="phidden pregister">
  											 <% if user_signed_in? %>
@@ -1421,7 +1423,7 @@ $(document).ready(function($) {
  											</p>
  											<p id="pschedule" class="phidden pschedule">Will be published soon.</p>
  											<p id="pregister" class="phidden pregister">Not started yet.</p>
- 											<p id="pcontact" class="phidden pcontact">Ravali-+919710291142</p>
+ 											<p id="pcontact" class="phidden pcontact">vivek- 9745228430</p>
 
         								</div>
       								</div>
@@ -1514,7 +1516,7 @@ $(document).ready(function($) {
  											<p id="pprize" class="phidden prules">Rules</p>
  											<p id="prules" class="phidden pprize">Will be published soon.</p>
  											<p id="pcontact" class="phidden pcontact">Ritish Lalam.</p>
- 											<p id="pregister" class="phidden pregister">
+ 											<p id="pstatus" class="phidden pstatus">
  											 <% if user_signed_in? %>
  											    <% if current_user.robo=="true" %>
                                                     <%= "Thanks for registering with this event, our team will be in touch with you soon!!" %>
