@@ -31,7 +31,61 @@
         <input type="radio" name="optradio">No
         </label>
   </div> -->
-  <h3>Research Expo</h3>
+
+  <div class="alert alert-info">
+   <h3>Roboceana Workshop</h3>
+   <div class="form-inline">
+    <%# f.label :expo,:class=>'radio-inline' %>
+    <%= f.label :robo, "Yes", :value => "true",:class=>'radio-inline'  %>
+    <%= f.radio_button :robo, true %>
+    <%= f.label :robo, "No", :value => "false",:class=>'radio-inline' %>
+    <%= f.radio_button :robo, false%>
+  </div> 
+</div>
+<div class="alert alert-info"> 
+<h3>RC Boats</h3>
+   <div class="form-inline">
+    <%# f.label :expo,:class=>'radio-inline' %>
+    <%= f.label :rc, "Yes", :value => "true",:class=>'radio-inline'  %>
+    <%= f.radio_button :rc, true %>
+    <%= f.label :rc, "No", :value => "false",:class=>'radio-inline' %>
+    <%= f.radio_button :rc, false%>
+  </div>
+</div>   
+
+<div class="alert alert-info">
+   <h3>Ansys Workshop</h3>
+    <div class="form-inline">
+    <%# f.label :expo,:class=>'radio-inline' %>
+    <%= f.label :ansys, "Yes", :value => "true",:class=>'radio-inline'  %>
+    <%= f.radio_button :ansys, true %>
+    <%= f.label :ansys, "No", :value => "false",:class=>'radio-inline' %>
+    <%= f.radio_button :ansys, false%>
+  </div> 
+</div>
+
+<div class="alert alert-info">
+   <h3>Matlab Workshop</h3>
+   <div class="form-inline">
+    <%# f.label :expo,:class=>'radio-inline' %>
+    <%= f.label :matlab, "Yes", :value => "true",:class=>'radio-inline'  %>
+    <%= f.radio_button :matlab, true %>
+    <%= f.label :matlab, "No", :value => "false",:class=>'radio-inline' %>
+    <%= f.radio_button :matlab, false%>
+  </div>
+</div>
+<div class="alert alert-info">
+   <h3>WebDevelopment Workshop</h3>
+   <div class="form-inline">
+    <%# f.label :expo,:class=>'radio-inline' %>
+    <%= f.label :webd, "Yes", :value => "true",:class=>'radio-inline'  %>
+    <%= f.radio_button :webd, true %>
+    <%= f.label :webd, "No", :value => "false",:class=>'radio-inline' %>
+    <%= f.radio_button :webd, false%>
+  </div> 
+</div>
+<div class="alert alert-info"> 
+<h3>Research Expo</h3>
    <div class="form-inline">
     <%# f.label :expo,:class=>'radio-inline' %>
     <%= f.label :expo, "Yes", :value => "true",:class=>'radio-inline'  %>
@@ -39,33 +93,10 @@
     <%= f.label :expo, "No", :value => "false",:class=>'radio-inline' %>
     <%= f.radio_button :expo, false%>
   </div>
+</div>  
 
 
-<div class="alert alert-info">
-   <h3>Ansys Workshop</h3>
-  <div class="form-inline">
 
-        <label class="radio-inline">
-        <input type="radio" name="opt0radio">Yes
-        </label>
-        <label class="radio-inline">
-        <input type="radio" name="opt0radio">No
-        </label>
-  </div>
-</div>
-
-<div class="alert alert-info">
-   <h3>Matlab Workshop</h3>
-  <div class="form-inline">
-
-        <label class="radio-inline">
-        <input type="radio" name="opt1radio">Yes
-        </label>
-        <label class="radio-inline">
-        <input type="radio" name="opt1radio">No
-        </label>
-  </div>
-</div>
 <div class="alert alert-info">
 <h3>IDP problem statement one</h3>
   <div class="form-inline">

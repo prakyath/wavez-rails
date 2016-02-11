@@ -665,6 +665,8 @@ $(document).ready(function($) {
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg eprblmstmt" role="button" id="eprblmstmt">Problem Statement
  											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eprize" role="button" id="erules">Registration Status
+ 											</a>&nbsp;
  											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
  											</a>
           									</h4>
@@ -682,7 +684,18 @@ $(document).ready(function($) {
  											<p id="pprize" class="phidden pprize">amount</p>
  											<p id="pprblmstmt" class="phidden pprblmstmt"><%= link_to "Problem Statement", "/RCBOATS_PS.pdf",:target => "_blank" %></p>
  											<p id="pcontact" class="phidden pcontact">Bhuvan-+919940499788,Sambit-+919445485261</p>
-
+                                            <p id="pregister" class="phidden pregister">
+ 											 <% if user_signed_in? %>
+ 											    <% if current_user.expo=="true" %>
+                                                    <%= "Thanks for registering with this event, our team will be in touch with you soon!!" %>
+                                                 <% elsif %>
+                                                 <%= "You have not registered yourself with this event,please visit the profile link to regster" %>
+                                                 <%= link_to "Profile page", :controller => :profiles, :action => :show%>
+                                                 <% end %>
+                                              <% elsif %>
+                                                <%="please login to see your registration status"%>
+                                               <% end %>          
+                                             </p>
 
         								</div>
       								</div>
@@ -728,6 +741,18 @@ $(document).ready(function($) {
  											<p id="pprize" class="phidden pprize">amount</p>
  											<p id="pprblmstmt" class="phidden pprblmstmt"><a href="http://www.filehosting.org/file/details/540124/RC%20BOATS%20-%20Edited.docx" download="problem statement">Problem Statement</a></p>
  											<p id="pcontact" class="phidden pcontact">Vamsi krishna-+91967720885,Kamalanaabha Rao G-+919442159632</p>
+ 											<p id="pregister" class="phidden pregister">
+ 											 <% if user_signed_in? %>
+ 											    <% if current_user.expo=="true" %>
+                                                    <%= "Thanks for registering with this event, our team will be in touch with you soon!!" %>
+                                                 <% elsif %>
+                                                 <%= "You have not registered yourself with this event,please visit the profile link to regster" %>
+                                                 <%= link_to "Profile page", :controller => :profiles, :action => :show%>
+                                                 <% end %>
+                                              <% elsif %>
+                                                <%="please login to see your registration status"%>
+                                               <% end %>          
+                                             </p>
 
         								</div>
       								</div>
@@ -767,6 +792,8 @@ $(document).ready(function($) {
  											<a class="btn btn-info btn-lg eprize" role="button" id="eprize">Prize
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg eprblmstmt" role="button" id="eprblmstmt">Problem Statement
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eprize" role="button" id="erules">Registration Status
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
  											</a>
@@ -811,6 +838,8 @@ $(document).ready(function($) {
           									<h4 class="modal-title">Research Expo
           									<br>
  											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eprize" role="button" id="erules">Registration Status
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
  											</a>
@@ -1441,7 +1470,7 @@ $(document).ready(function($) {
 							<!--end of marinecleanup modal-->
 
 							<div class="col-sm-4">
-								<a class="recent-work e" style="background-image:url(assets/e18.png)" id="e18">
+								<a class="recent-work e" style="background-image:url(assets/e16.png)" id="e18">
 									<span class="btn btn-o-white">Roboceana Workshop</span>
 								</a>
 							</div>
@@ -1476,6 +1505,18 @@ $(document).ready(function($) {
  											<p id="pprize" class="phidden prules">Rules</p>
  											<p id="prules" class="phidden pprize">Will be published soon.</p>
  											<p id="pcontact" class="phidden pcontact">Ritish Lalam.</p>
+ 											<p id="pregister" class="phidden pregister">
+ 											 <% if user_signed_in? %>
+ 											    <% if current_user.expo=="true" %>
+                                                    <%= "Thanks for registering with this event, our team will be in touch with you soon!!" %>
+                                                 <% elsif %>
+                                                 <%= "You have not registered yourself with this event,please visit the profile link to regster" %>
+                                                 <%= link_to "Profile page", :controller => :profiles, :action => :show%>
+                                                 <% end %>
+                                              <% elsif %>
+                                                <%="please login to see your registration status"%>
+                                               <% end %>          
+                                             </p>
 
         								</div>
       								</div>
@@ -1490,7 +1531,7 @@ $(document).ready(function($) {
 
                         <div class="row">
                         	<div class="col-sm-4">
-								<a class="recent-work e" style="background-image:url(assets/e3.png)" id="e3">
+								<a class="recent-work e" style="background-image:url(assets/e16.png)" id="e3">
 									<span class="btn btn-o-white">Ansys Workshop</span>
 								</a>
 							</div>
@@ -1508,6 +1549,8 @@ $(document).ready(function($) {
           									<br>
  											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
  											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eprize" role="button" id="erules">Registration Status
+ 											</a>&nbsp;
  											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
  											</a>
           									</h4>
@@ -1518,6 +1561,18 @@ $(document).ready(function($) {
  											
  											</p>
  											<p id="pcontact" class="phidden pcontact">Jyotsna-+919444291472</p>
+ 											<p id="pregister" class="phidden pregister">
+ 											 <% if user_signed_in? %>
+ 											    <% if current_user.expo=="true" %>
+                                                    <%= "Thanks for registering with this event, our team will be in touch with you soon!!" %>
+                                                 <% elsif %>
+                                                 <%= "You have not registered yourself with this event,please visit the profile link to regster" %>
+                                                 <%= link_to "Profile page", :controller => :profiles, :action => :show%>
+                                                 <% end %>
+                                              <% elsif %>
+                                                <%="please login to see your registration status"%>
+                                               <% end %>          
+                                             </p>
 
         								</div>
       								</div>
@@ -1527,7 +1582,7 @@ $(document).ready(function($) {
 							<!--end of researchexpo moda -->
 			        
 							<div class="col-sm-4">
-								<a class="recent-work e" style="background-image:url(assets/e17.png)" id="e17">
+								<a class="recent-work e" style="background-image:url(assets/e16.png)" id="e17">
 									<span class="btn btn-o-white">Matlab Workshop</span>
 								</a>
 							</div>
@@ -1546,6 +1601,8 @@ $(document).ready(function($) {
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg eschedule" role="button" id="eschedule">Schedule
  											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eprize" role="button" id="erules">Registration Status
+ 											</a>&nbsp;
  											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
  											</a>
           									</h4>
@@ -1558,6 +1615,18 @@ $(document).ready(function($) {
  											
  											</p>
  											<p id="pschedule" class="phidden pschedule">Will be published soon.</p>
+ 											<p id="pregister" class="phidden pregister">
+ 											 <% if user_signed_in? %>
+ 											    <% if current_user.expo=="true" %>
+                                                    <%= "Thanks for registering with this event, our team will be in touch with you soon!!" %>
+                                                 <% elsif %>
+                                                 <%= "You have not registered yourself with this event,please visit the profile link to regster" %>
+                                                 <%= link_to "Profile page", :controller => :profiles, :action => :show%>
+                                                 <% end %>
+                                              <% elsif %>
+                                                <%="please login to see your registration status"%>
+                                               <% end %>          
+                                             </p>
  										
 
         								</div>
@@ -1568,7 +1637,7 @@ $(document).ready(function($) {
 							<!--end of marinecleanup modal-->
 
                              <div class="col-sm-4">
-								<a class="recent-work e" style="background-image:url(assets/e17.png)" id="e17">
+								<a class="recent-work e" style="background-image:url(assets/e16.png)" id="e17">
 									<span class="btn btn-o-white">Web Development Workshop</span>
 								</a>
 							</div>
@@ -1587,6 +1656,8 @@ $(document).ready(function($) {
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg eschedule" role="button" id="eschedule">Schedule
  											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg eprize" role="button" id="erules">Registration Status
+ 											</a>&nbsp;
  											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
  											</a>
           									</h4>
@@ -1598,6 +1669,18 @@ $(document).ready(function($) {
  											
  											</p>
  											<p id="pschedule" class="phidden pschedule">Will be published soon.</p>
+ 											<p id="pregister" class="phidden pregister">
+ 											 <% if user_signed_in? %>
+ 											    <% if current_user.expo=="true" %>
+                                                    <%= "Thanks for registering with this event, our team will be in touch with you soon!!" %>
+                                                 <% elsif %>
+                                                 <%= "You have not registered yourself with this event,please visit the profile link to regster" %>
+                                                 <%= link_to "Profile page", :controller => :profiles, :action => :show%>
+                                                 <% end %>
+                                              <% elsif %>
+                                                <%="please login to see your registration status"%>
+                                               <% end %>          
+                                             </p>
  										
 
         								</div>
