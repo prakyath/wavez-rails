@@ -14,6 +14,6 @@ class User < ActiveRecord::Base
   validates :phone, presence: true
   validates :email, presence: true, uniqueness: true
   validates :college, presence: true
-  validates :roll, presence: true, uniqueness: true     
+  validates :roll, presence: true 
 end
 
