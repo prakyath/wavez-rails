@@ -27,7 +27,7 @@ def create
   def sign_up_params
   #devise_parameter_sanitizer.sanitize(:sign_up).push(:name,:nick,:roll,:college)
  # devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name, :nick, :roll,:college, :email, :password, :password_confirmation) }
-   params.require(:user).permit(:phone,:email, :password, :password_confirmation, :name, :nick,:roll,:college, event_ids: [])
+   params.require(:user).permit(:phone,:email, :password, :password_confirmation, :name, :nick,:roll,:college,:accom)
   end
    
   def update_resource(resource, params)

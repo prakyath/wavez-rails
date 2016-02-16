@@ -418,14 +418,19 @@ $(document).ready(function($) {
                                                 	  </span>
                                                 	</div>
 
-                                      <!--              <div class="col-md-offset-1 col-md-3  col-xs-offset-2 col-sm-offset-3" style="padding-top:8px; padding-bottom:20px" id="checkboxes">
-                                                    	<form action="">
-                                                            <input type="checkbox" name="gender" value="male">Male
-                                                            <input type="checkbox" name="gender" value="female"  style="margin-left:20px">Female 
-                                                        </form>
+                                               <div class="col-md-offset-1 col-md-3  col-xs-offset-2 col-sm-offset-3" style="padding-top:8px; padding-bottom:20px" id="checkboxes">
+                                                    <b>Accomodation</b>
+                                                <div class="form-horizontal">
+              <%# f.label :expo,:class=>'radio-inline' %>
+              <%= f.label :accom, "Yes", :value => "true",:class=>'radio-inline'  %>
+              <%= f.radio_button :accom, true %>
+              <%= f.label :accom, "No", :value => "false",:class=>'radio-inline' %>
+              <%= f.radio_button :accom, false, :checked =>true%>
+  </div> 	 
+                                
                                                     </div>  
                                                     <div id="choose-buttons" text-align="center">
-   -->  <div class="form-group">
+  <div class="form-group">
 <!--<div class="col-sm-offset-2 col-sm-10">
 <label for="inputEvent" style="align:center">Events you want to register</label>
  <label class="radio-inline">

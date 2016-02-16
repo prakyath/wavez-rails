@@ -38,4 +38,34 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+
+unless Rails.application.config.consider_all_requests_local
+  rescue_from Exception, :with => :method_missing
+  rescue_from ActiveRecord::RecordNotFound, :with => :method_missing
+  rescue_from AbstractController::ActionNotFound, :with => :method_missing
+  rescue_from ActionController::RoutingError, :with => :method_missing
+  rescue_from ActionController::UnknownController, :with => :method_missing
+  rescue_from ActionController::UnknownAction, :with => :method_missing
 end
+
+
+
+
+
+
+
+
+
+
+
+
+end
+
+
+
+
+
+
+
+
