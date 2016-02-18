@@ -662,9 +662,9 @@ $(document).ready(function($) {
  											    <% if current_user.roboe=="true" %>
                                                     <%= "Hello "+current_user.name %>
  											        <br>
-                                                    <%= "Thanks for registering with this event,Please pay the registration fees through Payslip or online net banking and mail the screenshot of the payment to webops@wavez.org.in" %>
+                                                    <%= "Thanks for registering with this event,Please pay the registration fees through pay-in-slip or online net banking and mail the screenshot of the payment to webops@wavez.org.in" %>
                                                     <br>
-                                                    <%= "Banking Details are:- Account Name:OCEANA,Account number: 2722101002500, IFSC code: CNRB0002722" %>
+                                                    <%= "Banking Details are:- Bank name: SBI, Branch name: IIT chennai, Account Name:OCEANA,Account number: 2722101002500, IFSC code: CNRB0002722" %>
                                                  <% elsif %>
                                                  <%= "You have not registered yourself with this event,please visit the profile page to register" %>
                                                  <%= link_to "Profile page", :controller => :profiles, :action => :show%>
@@ -759,9 +759,9 @@ $(document).ready(function($) {
  											    <% if current_user.rc=="true" %>
                                                     <%= "Hello "+current_user.name %>
  											        <br>
-                                                    <%= "Thanks for registering with this event,Please pay the registration fees through Payslip or online net banking and mail the screenshot of the payment to webops@wavez.org.in" %>
+                                                    <%= "Thanks for registering with this event,Please pay the registration fees through pay-in-slip or online net banking and mail the screenshot of the payment to webops@wavez.org.in" %>
                                                     <br>
-                                                    <%= "Banking Details are:- Account Name:OCEANA,Account number: 2722101002500, IFSC code: CNRB0002722" %>
+                                                    <%= "Banking Details are:- Bank name: SBI, Branch name: IIT chennai, Account Name:OCEANA,Account number: 2722101002500, IFSC code: CNRB0002722" %>
                                                  <% elsif %>
                                                  <%= "You have not registered yourself with this event,please visit the profile page to register" %>
                                                  <%= link_to "Profile page", :controller => :profiles, :action => :show%>
@@ -801,6 +801,8 @@ $(document).ready(function($) {
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg eprblmstmt" role="button" id="eprblmstmt">Problem Statement
  											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg estatus" role="button" id="estatus">Registration Status
+ 											</a>&nbsp;
  											<a class="btn btn-info btn-lg eprize" role="button" id="eprize">Prize
  											</a>&nbsp;
  											<!-- <a class="btn btn-info btn-lg eprblmstmt" role="button" id="eprblmstmt">Problem Statement
@@ -823,14 +825,14 @@ $(document).ready(function($) {
  											</p>
  										    <p id="pprblmstmt" class="phidden pprblmstmt"><%= link_to "Problem Statement", "/AWC_PS..pdf",:target => "_blank" %></p>
  											<p id="pcontact" class="phidden pcontact">Vamsi krishna-+91967720885,Kamalanaabha Rao G-+919442159632</p>
- 											<p id="pregister" class="phidden pregister">
+ 											<p id="pstatus" class="phidden pstatus">
  											 <% if user_signed_in? %>
  											    <% if current_user.awc=="true" %>
                                                     <%= "Hello "+current_user.name %>
  											        <br>
-                                                    <%= "Thanks for registering with this event,Please pay the registration fees through Payslip or online net banking and mail the screenshot of the payment to webops@wavez.org.in" %>
+                                                    <%= "Thanks for registering with this event,Please pay the registration fees through pay-in-slip or online net banking and mail the screenshot of the payment to webops@wavez.org.in" %>
                                                     <br>
-                                                    <%= "Banking Details are:- Account Name:OCEANA,Account number: 2722101002500, IFSC code: CNRB0002722" %>
+                                                    <%= "Banking Details are:- Bank name: SBI, Branch name: IIT chennai, Account Name:OCEANA,Account number: 2722101002500, IFSC code: CNRB0002722" %>
                                                  <% elsif %>
                                                  <%= "You have not registered yourself with this event,please visit the profile page to register" %>
                                                  <%= link_to "Profile page", :controller => :profiles, :action => :show%>
@@ -879,7 +881,7 @@ $(document).ready(function($) {
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg eprblmstmt" role="button" id="eprblmstmt">Problem Statement
  											</a>&nbsp;
- 											<a class="btn btn-info btn-lg eprize" role="button" id="erules">Registration Status
+ 											<a class="btn btn-info btn-lg estatus" role="button" id="estatus">Registration Status
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
  											</a>
@@ -896,7 +898,21 @@ $(document).ready(function($) {
 											judged by esteemed of our department.
  											</p>
  											<p id="pprize" class="phidden pprize">Total amount:- 4000</p>
- 											<p id="pprblmstmt" class="phidden pprblmstmt">Not Published yet</p>
+ 											<p id="pprblmstmt" class="phidden pprblmstmt">
+                                            
+                                            <% if user_signed_in? %>
+ 											<%= link_to "Problem statement level 1", "/idp_level_1.pdf",:target => "_blank" %>
+ 											<br>
+                                            <%= link_to "Problem Statement level 2", "/idp_level_2.pdf",:target => "_blank" %>
+                                            <% else %>
+                                            <%= "please login to view the problem statements" %>
+
+
+                                            <% end %>
+ 											</p>
+ 											<p id="pstatus" class="phidden pstatus">
+ 											<%="this is the registration status"%>	
+ 											</p>
  											<p id="pcontact" class="phidden pcontact">Lalam Rithish-+919884180378</p>
 
         								</div>
@@ -927,7 +943,9 @@ $(document).ready(function($) {
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg eeformat" role="button" id="eeformat">Event Format
  											</a>&nbsp;
- 											<a class="btn btn-info btn-lg eprize" role="button" id="erules">Registration Status
+ 											<a class="btn btn-info btn-lg eprize" role="button" id="eprize">prize
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg estatus" role="button" id="estatus">Registration Status
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
  											</a>
@@ -952,6 +970,20 @@ $(document).ready(function($) {
  												Note :- We'll get print out of it.
  											</p>
  											<p id="pcontact" class="phidden pcontact">Jyotsna-+919444291472</p>
+ 											<p id="pstatus" class="phidden pstatus">
+ 											 <% if user_signed_in? %>
+ 											    <% if current_user.expo=="true" %>
+ 											        <%= "Hello "+current_user.name %>
+ 											        <br>
+                                                  
+                                                 <% elsif %>
+                                                 <%= "You have not registered yourself with this event,please visit the profile page to register" %>
+                                                 <%= link_to "Profile page", :controller => :profiles, :action => :show%>
+                                                 <% end %>
+                                              <% elsif %>
+                                                <%="please login to see your registration status"%>
+                                               <% end %>          
+                                             </p>
  											<p id="pprize" class="phidden pprize">Total amount:- 2500
  											<br>
                                             1st prize:- 1500
@@ -984,6 +1016,8 @@ $(document).ready(function($) {
  											<a class="btn btn-info btn-lg livetab eoverview" role="button" id="eoverview">Overview
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg eeformat" role="button" id="eeformat">Event Format
+ 											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg estatus" role="button" id="estatus">Registration Status
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg eprize" role="button" id="eprize">Prize
  											</a>&nbsp;
@@ -1025,7 +1059,20 @@ $(document).ready(function($) {
                                             <br>
                                             3rd Prize:- 1000
  											</p>
- 											
+ 											<p id="pstatus" class="phidden pstatus">
+ 											 <% if user_signed_in? %>
+ 											    <% if current_user.freestyle=="true" %>
+ 											        <%= "Hello "+current_user.name %>
+ 											        <br>
+                                                  
+                                                 <% elsif %>
+                                                 <%= "You have not registered yourself with this event,please visit the profile page to register" %>
+                                                 <%= link_to "Profile page", :controller => :profiles, :action => :show%>
+                                                 <% end %>
+                                              <% elsif %>
+                                                <%="please login to see your registration status"%>
+                                               <% end %>          
+                                             </p>
  											<p id="pcontact" class="phidden pcontact">Nikhila-+919790464960</p>
 
         								</div>
@@ -1712,9 +1759,9 @@ $(document).ready(function($) {
  											    <% if current_user.robo=="true" %>
  											        <%= "Hello "+current_user.name %>
  											        <br>
-                                                    <%= "Thanks for registering with this event,Please pay the registration fees through Payslip or online net banking and mail the screenshot of the payment to webops@wavez.org.in" %>
+                                                    <%= "Thanks for registering with this event,Please pay the registration fees through pay-in-slip or online net banking and mail the screenshot of the payment to webops@wavez.org.in" %>
                                                     <br>
-                                                    <%= "Banking Details are:- Account Name:OCEANA,Account number: 2722101002500, IFSC code: CNRB0002722" %>
+                                                    <%= "Banking Details are:- Bank name: SBI, Branch name: IIT chennai, Account Name:OCEANA,Account number: 2722101002500, IFSC code: CNRB0002722" %>
                                                  <% elsif %>
                                                  <%= "You have not registered yourself with this event,please visit the profile page to register" %>
                                                  <%= link_to "Profile page", :controller => :profiles, :action => :show%>
@@ -1786,9 +1833,9 @@ $(document).ready(function($) {
  											    <% if current_user.ansys=="true" %>
                                                     <%= "Hello "+current_user.name %>
  											        <br>
-                                                    <%= "Thanks for registering with this event,Please pay the registration fees through Payslip or online net banking and mail the screenshot of the payment to webops@wavez.org.in" %>
+                                                    <%= "Thanks for registering with this event,Please pay the registration fees through pay-in-slip or online net banking and mail the screenshot of the payment to webops@wavez.org.in" %>
                                                     <br>
-                                                    <%= "Banking Details are:- Account Name:OCEANA,Account number: 2722101002500, IFSC code: CNRB0002722" %>
+                                                    <%= "Banking Details are:- Bank name: SBI, Branch name: IIT chennai, Account Name:OCEANA,Account number: 2722101002500, IFSC code: CNRB0002722" %>
                                                  <% elsif %>
                                                  <%= "You have not registered yourself with this event,please visit the profile page to register" %>
                                                  <%= link_to "Profile page", :controller => :profiles, :action => :show%>
@@ -1866,9 +1913,9 @@ $(document).ready(function($) {
  											    <% if current_user.matlab=="true" %>
                                                    <%= "Hello "+current_user.name %>
  											        <br>
-                                                    <%= "Thanks for registering with this event,Please pay the registration fees through Payslip or online net banking and mail the screenshot of the payment to webops@wavez.org.in" %>
+                                                    <%= "Thanks for registering with this event,Please pay the registration fees through pay-in-slip or online net banking and mail the screenshot of the payment to webops@wavez.org.in" %>
                                                     <br>
-                                                    <%= "Banking Details are:- Account Name:OCEANA,Account number: 2722101002500, IFSC code: CNRB0002722" %>
+                                                    <%= "Banking Details are:- Bank name: SBI, Branch name: IIT chennai, Account Name:OCEANA,Account number: 2722101002500, IFSC code: CNRB0002722" %>
                                                  <% elsif %>
                                                  <%= "You have not registered yourself with this event,please visit the profile page to register" %>
                                                  <%= link_to "Profile page", :controller => :profiles, :action => :show%>
@@ -1931,9 +1978,9 @@ $(document).ready(function($) {
  											    <% if current_user.webd=="true" %>
                                                     <%= "Hello "+current_user.name %>
  											        <br>
-                                                    <%= "Thanks for registering with this event,Please pay the registration fees through Payslip or online net banking and mail the screenshot of the payment to webops@wavez.org.in" %>
+                                                    <%= "Thanks for registering with this event,Please pay the registration fees through pay-in-slip or online net banking and mail the screenshot of the payment to webops@wavez.org.in" %>
                                                     <br>
-                                                    <%= "Banking Details are:- Account Name:OCEANA,Account number: 2722101002500, IFSC code: CNRB0002722" %>
+                                                    <%= "Banking Details are:- Bank name: SBI, Branch name: IIT chennai, Account Name:OCEANA,Account number: 2722101002500, IFSC code: CNRB0002722" %>
                                                  <% elsif %>
                                                  <%= "You have not registered yourself with this event,please visit the profile page to register" %>
                                                  <%= link_to "Profile page", :controller => :profiles, :action => :show%>
