@@ -3,5 +3,6 @@ class AddSomeToUsers < ActiveRecord::Migration
     add_column :users, :avatar1, :string
     add_column :users, :freestyle, :string
     add_column :users, :research, :string
+    add_column :users, :game, :string
   end
 end

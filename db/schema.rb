@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 20160218150117) do
     t.string   "avatar1",                limit: 255
     t.string   "freestyle",              limit: 255
     t.string   "research",               limit: 255
+    t.string   "game",                   limit: 255
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

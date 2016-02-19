@@ -19,14 +19,9 @@
       <p class="form-control-static">prakhyat</p>
     </div>
   </div>
-<div style="color:red">
-<% if !(@user.errors.any?) %>
-    <%= "The submission failed due to the reasons mentioned below, please try again!!" %>
-
-<% elsif %>
-<br>     
+<div style="color:red">     
 <%= @user.errors.full_messages %>
-<% end %>
+
 </div>
 <!--  <div class="form-inline">
 
@@ -119,7 +114,19 @@
     <%= f.label :freestyle, "No", :value => "false",:class=>'radio-inline' %>
     <%= f.radio_button :freestyle, false%>
   </div> 
-</div>  
+</div>
+
+<div class="alert alert-info">
+   <h3>Game Drone</h3>
+    <div class="form-inline">
+    <%# f.label :expo,:class=>'radio-inline' %>
+    <%= f.label :game, "Yes", :value => "true",:class=>'radio-inline'  %>
+    <%= f.radio_button :game, true %>
+    <%= f.label :game, "No", :value => "false",:class=>'radio-inline' %>
+    <%= f.radio_button :game, false%>
+  </div> 
+</div>    
+
 
 <div class="alert alert-info"> 
 <h3>Research Expo</h3>

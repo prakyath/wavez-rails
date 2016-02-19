@@ -1322,6 +1322,8 @@ $(document).ready(function($) {
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg erules" role="button" id="erules">Event Format
  											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg estatus" role="button" id="estatus">Registration Status
+ 											</a>&nbsp;
  											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
  											</a>
           									</h4>
@@ -1344,6 +1346,20 @@ $(document).ready(function($) {
  												<br>
  												Day 2 :- Counter Strike
  											</p>
+ 											<p id="pstatus" class="phidden pstatus">
+ 											 <% if user_signed_in? %>
+ 											    <% if current_user.game=="true" %>
+                                                    <%= "Hello "+current_user.name %>
+ 											        <br>
+                                                    <%= "Thanks for registering with this event" %>
+                                                 <% elsif %>
+                                                 <%= "You have not registered yourself with this event,please visit the profile page to register" %>
+                                                 <%= link_to "Profile page", :controller => :profiles, :action => :show %>
+                                                 <% end %>
+                                              <% elsif %>
+                                                <%= "please login to see your registration status" %>
+                                               <% end %>          
+                                             </p>
  											<p id="pcontact" class="phidden pcontact">Aditya-+919447916998,Jason Stanley-+917299061097</p>
 
         								</div>

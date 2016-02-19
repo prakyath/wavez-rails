@@ -32,7 +32,7 @@ end
 
 private
 def user_params
-    params.require(:user).permit(:avatar,:avatar1,:expo,:robo,:rc,:ansys,:matlab,:webd,:freestyle,:research)
+    params.require(:user).permit(:avatar,:avatar1,:game,:expo,:robo,:rc,:ansys,:matlab,:webd,:freestyle,:research)
 end
 
 end	
