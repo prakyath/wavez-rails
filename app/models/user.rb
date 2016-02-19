@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   
   mount_uploader :avatar, AvatarUploader
   mount_uploader :avatar1, AvatarUploader
+  mount_uploader :research, AvatarUploader
   validates :password, confirmation: true
 #  validates :password_confirmation, presence: true 
   validates :name, presence: true

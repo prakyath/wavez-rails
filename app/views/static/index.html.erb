@@ -835,10 +835,10 @@ $(document).ready(function($) {
                                                     <%= "Banking Details are:- Bank name: SBI, Branch name: IIT chennai, Account Name:OCEANA,Account number: 2722101002500, IFSC code: CNRB0002722" %>
                                                  <% elsif %>
                                                  <%= "You have not registered yourself with this event,please visit the profile page to register" %>
-                                                 <%= link_to "Profile page", :controller => :profiles, :action => :show%>
+                                                 <%= link_to "Profile page", :controller => :profiles, :action => :show %>
                                                  <% end %>
                                               <% elsif %>
-                                                <%="please login to see your registration status"%>
+                                                <%= "please login to see your registration status" %>
                                                <% end %>          
                                              </p>
 
@@ -896,6 +896,8 @@ $(document).ready(function($) {
 											be solved. The most practical and cost-effective solution is a key for this event. The solutions are 
 
 											judged by esteemed of our department.
+											<br>
+											Please upload your solutions as pdf files,visit registration status tab for more details.
  											</p>
  											<p id="pprize" class="phidden pprize">Total amount:- 4000</p>
  											<p id="pprblmstmt" class="phidden pprblmstmt">
@@ -911,7 +913,24 @@ $(document).ready(function($) {
                                             <% end %>
  											</p>
  											<p id="pstatus" class="phidden pstatus">
- 											<%="this is the registration status"%>	
+ 											<% if user_signed_in? %>
+ 											 <%= "You can submit or change the file submisssion in the profile page(please note: only pdf formats are allowed)" %>
+ 											 <%= link_to "Profile page", :controller => :profiles, :action => :show %>
+ 											   <br>
+ 											   <% if current_user.avatar.file %>
+ 											   <%= "Thanks for participating,we have received your file for problem statement level 1" %>
+ 											   <br>
+ 											   <%= "File name(LEVEL 1):-"+current_user.avatar.file.filename %>
+ 											   <% end %> 
+                                                <br>
+                                               <% if current_user.avatar1.file %>
+                                               <%= "Thanks for participating, we have received your file for problem statement level 2." %>
+                                               <br>
+                                               <%= "File name(LEVEL 2):-"+current_user.avatar1.file.filename %>
+                                               <% end %>
+ 											<% elsif  %> 
+ 											<%= "please login to see the submisssion status" %>  
+ 											<% end %>   	
  											</p>
  											<p id="pcontact" class="phidden pcontact">Lalam Rithish-+919884180378</p>
 
@@ -958,7 +977,6 @@ $(document).ready(function($) {
 											with a larger audience.<br> This event showcases the work and research done by our scholars in 
 
 											various fields of Naval Architecture & Ocean Engineering.
- 											
  											</p>
  											<p id="peformat" class="phidden peformat">
  												It's a poster presentation.
@@ -973,8 +991,17 @@ $(document).ready(function($) {
  											<p id="pstatus" class="phidden pstatus">
  											 <% if user_signed_in? %>
  											    <% if current_user.expo=="true" %>
- 											        <%= "Hello "+current_user.name %>
- 											        <br>
+ 											          <% if current_user.research.file  %>
+ 											         <%= "You are successfully registered with this event,we have successfully received your file." %>
+ 											           <br>
+ 											          <%= "File name:-"+current_user.research.file.filename %>
+ 											          <% elsif %>
+ 											            <%= "thanks for registering,but you are yet to upload your file in the profile page" %>
+ 											             <%= link_to "Profile page", :controller => :profiles, :action => :show%>
+ 											          <% end %>
+ 											          	
+ 					
+ 											        
                                                   
                                                  <% elsif %>
                                                  <%= "You have not registered yourself with this event,please visit the profile page to register" %>
@@ -1640,7 +1667,7 @@ $(document).ready(function($) {
           									AN SPE sponsored event which questions your basic knowledge in oil and gas industry and offshore structures.This event challenges your oral presentation skills and spontaneity 
  											</p>
  											<p id="pschedule" class="phidden pschedule">Will be published soon.</p>
- 											<p id="pregister" class="phidden pregister">Not started yet.</p>
+ 											<p id="pregister" class="phidden pregister">On spot registration only.</p>
  											<p id="pprize" class="phidden pprize">Total amount:- 4000</p>
  											<p id="pcontact" class="phidden pcontact">vivek- 9745228430</p>
 
