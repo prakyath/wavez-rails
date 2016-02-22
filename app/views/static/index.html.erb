@@ -611,7 +611,7 @@ $(document).ready(function($) {
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg eprblmstmt" role="button" id="eprblmstmt">Problem Statement
  											</a>&nbsp;
- 											<a class="btn btn-success btn-lg eregister" role="button" id="eregister">Registration status
+ 											<a class="btn btn-success btn-lg estatus" role="button" id="estatus">Registration status
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg econtact" role="button" id="econtact">Contact
  											</a>
@@ -657,7 +657,7 @@ $(document).ready(function($) {
  											<p id="pprblmstmt" class="phidden pprblmstmt"><%= link_to "Problem Statement", "/Roboceana_PS.pdf",:target => "_blank" %></p>
  											<p id="pcontact" class="phidden pcontact">Tony-+919791483921,Yashdhar-+919940115352,Sandeep goerge-+919447881702</p>
 
- 											<p id="pregister" class="phidden pregister">
+ 											<p id="pstatus" class="phidden pstatus">
  											 <% if user_signed_in? %>
  											    <% if current_user.roboe=="true" %>
                                                     <%= "Hello "+current_user.name %>
@@ -813,7 +813,11 @@ $(document).ready(function($) {
         								</div>
         								<div class="modal-body">
           									<p id="poverview" class="poverview">
-          									This event takes your arduino skills to next level, where teams compete to build and code crafts which would cross the treacherous arena autonomously.<br> It will be a real thrilling experience to watch these bots perform, so don't miss the fun!
+          									Want to try your skills on arduino platform...?? start your journey with a basic coding in arduino in making your water craft.. Work with intriguing , intelligent sensors to maneuver your watercraft. Also get your hands on motors, motor drivers, IC's and lot more.. After all surprise yourself watching your craft moving in according to light beam in your hand
+          									<br>
+          									Mission:
+          									<br>
+          									Participants have to make an autonomous bot, programmed and controlled by arduino to solve a predefined problem statement. The nature of the PS will be so as to provide adequate space for individuality and innovation (each bot can be different).
 
  											</p>
 
@@ -1091,7 +1095,7 @@ $(document).ready(function($) {
  											    <% if current_user.freestyle=="true" %>
  											        <%= "Hello "+current_user.name %>
  											        <br>
-                                                  
+                                                   <%="Thanks for registering with the event"%>
                                                  <% elsif %>
                                                  <%= "You have not registered yourself with this event,please visit the profile page to register" %>
                                                  <%= link_to "Profile page", :controller => :profiles, :action => :show%>
