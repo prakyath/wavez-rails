@@ -56,7 +56,7 @@ when 5
   @yo.save
   end   
 when 6
-  if result=='international monetory fund'
+  if result=='international monetary fund'
   flash[:success] = "Congratulation,now try the next one"  
   @yo.score=@yo.score+1
   @yo.save
