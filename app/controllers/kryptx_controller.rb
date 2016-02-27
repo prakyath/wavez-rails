@@ -50,7 +50,7 @@ when 4
   @yo.save
   end   
 when 5
-  if result=='american academy of arts and science'
+  if result=='american academy of arts and sciences'
   flash[:success] = "Congratulation,now try the next one"  
   @yo.score=@yo.score+1
   @yo.save
