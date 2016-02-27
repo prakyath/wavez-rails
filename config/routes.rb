@@ -11,7 +11,8 @@ Rails.application.routes.draw do
   get 'kryptx' =>'kryptx#index'
   get 'kryptx/play' =>'kryptx#show'
   patch 'kryptx' =>'kryptx#update' 
-  resources :posts   
+  resources :posts
+   
     # devise_for :users, :controllers => {sessions: 'sessions', registrations: 'registrations'}  
 
   # The priority is based upon order of creation: first created -> highest priority.
