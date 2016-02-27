@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_many :events, through: :categorizations
   has_many :categorizations
+  has_one :status
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,

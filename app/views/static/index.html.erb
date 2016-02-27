@@ -274,7 +274,7 @@
           									    </div>
           									    <div class="row" style="padding-bottom:50px"> 
           									        <div style="text-align: center" >
-          									            <%= f.password_field :password,:id =>'enter_email', :class =>'col-xs-10 col-sm-8 col-sm-offset-2 col-xs-offset-1 col-md-6 col-md-offset-3 ',:placeholder=> '(min 8 characters)' ,:style=>'letter-spacing:1px', autocomplete: "off" %>
+          									            <%= f.password_field :password,:id =>'enter_email', :class =>'col-xs-10 col-sm-8 col-sm-offset-2 col-xs-offset-1 col-md-6 col-md-offset-3 ',:placeholder=> 'Password' ,:style=>'letter-spacing:1px', autocomplete: "off" %>
           									        </div>
           									    </div>
                                                 <div class="row" id="choose-buttons">
@@ -354,7 +354,7 @@ $(document).ready(function($) {
                                                 	    <i class="fa fa-lock" height="20px" width="20px"></i>
                                                <!-- 	    <input name="enter_name" id="enter_name"  placeholder="Enter Password" type="text" required style="letter-spacing:1px; margin-left:5px; border-top:none"> -->
                                                
-                                               <%= f.password_field :password,:id=>'enter_name',:class =>'input_field',:placeholder=>'Enter your Password' %>
+                                               <%= f.password_field :password,:id=>'enter_name',:class =>'input_field',:placeholder=>'Password(min 8 characters)' %>
                                                 	  </span>
                                                 	  
                                                 	</div>
@@ -1266,6 +1266,8 @@ $(document).ready(function($) {
  											</a>&nbsp;
  											<a class="btn btn-info btn-lg erules" role="button" id="erules">Rules
  											</a>&nbsp;
+ 											<a class="btn btn-info btn-lg estatus" role="button" id="estatus">Play
+ 											</a>&nbsp;
           									</h4>
         								</div>
         								<div class="modal-body">
@@ -1289,6 +1291,15 @@ $(document).ready(function($) {
                                             2nd Prize:- 1000
  											</p>
  											<p id="prules" class="phidden prules">Will be published soon.</p>
+ 											<p id="pstatus" class="phidden pstatus">
+ 											   <% if user_signed_in? %>
+ 											     <%="Visit the wavez kryptx page to get started!!" %>
+ 											     <%= link_to "Kryptx", :controller => :kryptx, :action => :index %>
+ 											   <% elsif %>
+ 											     <%="Please login first to participate in this event" %>
+ 											   <% end %>  	
+
+ 											</p>
  											<p id="pcontact" class="phidden pcontact">Joshua,Revanth </p>
 
         								</div>

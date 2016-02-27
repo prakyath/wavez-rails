@@ -7,7 +7,11 @@ Rails.application.routes.draw do
       }
   get 'profile' =>'profiles#show'
   put 'profile' => 'profiles#update'
-  patch 'profile' => 'profiles#update'    
+  patch 'profile' => 'profiles#update'
+  get 'kryptx' =>'kryptx#index'
+  get 'kryptx/play' =>'kryptx#show'
+  patch 'kryptx' =>'kryptx#update' 
+  resources :posts   
     # devise_for :users, :controllers => {sessions: 'sessions', registrations: 'registrations'}  
 
   # The priority is based upon order of creation: first created -> highest priority.

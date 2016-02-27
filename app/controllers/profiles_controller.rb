@@ -1,5 +1,4 @@
 class ProfilesController < ApplicationController
-puts "my custom controller called yay!!"
 def show
   @user=current_user
 end	

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" type="image/png" href="assets/images/wavezlogo.png">
+	<title>Krytpx - Questions | Wavez 2016</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"/>
+		
+		<!-- google fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Raleway:500,300' rel='stylesheet' type='text/css'>
+		
+		<!-- css -->
+		<!--
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/css/animate.css">
+		<link rel="stylesheet" href="assets/css/style.css" media="screen"/>
+        -->
+</head>
+<body>
+<header class="top-header" style="background: rgba(43, 62, 81, 0.77) none repeat scroll 0% 0%; visibilty:visible;">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-xs-5 col-sm-3 header-logo">
+						<br>
+						<a href="index.html"> 
+							<h1 class="logo">Wavez <span class="logo-head">2016</span></h1>
+						</a>
+					</div>
+
+					<div class="col-md-9 col-xs-7 col-sm-9">
+						<nav class="navbar navbar-default">
+						  	<div class="container-fluid nav-bar">
+						          	<ul class="nav navbar-nav navbar-right">
+						          	<!--
+							        	<li>
+											<a href="scoreboard.html"><i class="fa fa-star"></i>Scoreboard</a>
+										</li>
+										-->
+										<li>
+											<a href="kryptx.html"><i class="fa fa-home"></i> Home</a>
+										</li>
+							        	<li>
+											<%= link_to('Logout', destroy_user_session_path, :method => :delete,:class =>'e',style:'cursor: pointer') %>
+										</li>
+									</ul>
+						  	</div><!-- / .container-fluid -->
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header><!-- /navbar-collapse -->
+		<div class="container " style=" padding-top:100px; text-align:center">
+			<div>
+			    <h1>KRYPTX 2016</h1>
+			</div>					
+<%= form_for @user, :url => url_for(:controller => 'kryptx', :action => 'update') do |f| %>			
+			<div>
+			 <div class="container">
+        <% flash.each do |key, value| %>
+        <div class="alert alert-success">
+        <%if value=="Congratulation,now try the next one"%> 
+        <%= value %>
+        <%end%>
+        </div>
+ <% end %>
+ </div>
+                <% @req=@user.status.score %>  
+				<h2 style="padding-top:10px">Question - <%=@req%> </h2>
+				<!--
+				<div class="row"><h4 class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" style="text-align:left">Question Description</h4></div>
+				-->
+				<div style="text-align:center; margin-bottom:15px;" class="row ">
+               <!--
+               <img src="assets/images/<%=@user.status.score%>.JPG">
+               -->
+               
+               <%= image_tag Post.find(@req+1).image.url %>
+
+
+
+				</div>
+				<input name="enter_text" id="answer" type="text" required style="letter-spacing:1px;">
+
+				<button class="answerBtn">Submit Answer</button>
+<% end %>
+			</div>
+		</div>
+</body>
+</html>
