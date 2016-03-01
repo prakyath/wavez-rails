@@ -62,7 +62,7 @@ when 6
   @yo.save
   end   
 when 7
-  if result=='462001'
+  if result=='bhopal'
   flash[:success] = "Congratulation,now try the next one"  
   @yo.score=@yo.score+1
   @yo.save
