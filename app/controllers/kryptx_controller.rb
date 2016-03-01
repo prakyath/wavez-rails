@@ -148,7 +148,10 @@ render :template => 'kryptx/show'
 
 end
 
-
+def score
+@result=Status.order(score: :desc, updated_at: :asc)  
+render :template => 'kryptx/scoreboard' 
+end  
 
 
 

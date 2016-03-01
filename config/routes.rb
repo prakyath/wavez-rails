@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   patch 'profile' => 'profiles#update'
   get 'kryptx' =>'kryptx#index'
   get 'kryptx/play' =>'kryptx#show'
+  get 'kryptx/scoreboard' =>'kryptx#score'
   patch 'kryptx' =>'kryptx#update' 
   resources :posts
    
