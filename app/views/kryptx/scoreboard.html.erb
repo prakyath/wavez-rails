@@ -202,9 +202,6 @@ border-width:0px 0px 1px 1px;
                         <td>
                             Solved Questions
                         </td>
-                         <td>
-                            Number
-                        </td>
                     </tr>
 <%@t=0%>
 <% @result.each do |t| %>
@@ -213,7 +210,6 @@ border-width:0px 0px 1px 1px;
   <td><%= @t %></td>
   <td><%= t.user.nick %></td>
   <td><%= t.score-1  %></td>
-  <td><%= t.user.phone  %></td>
 </tr>
 <% end %>                   
                     
